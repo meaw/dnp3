@@ -1,0 +1,625 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\PhysicalLayer">
+      <UniqueIdentifier>{6e4a5276-1d16-4fdb-92a3-abf27903b49b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PhysicalLayer\Base">
+      <UniqueIdentifier>{3e52ea85-f2f2-4ed8-8897-ec9635d62c61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PhysicalLayer\Factory">
+      <UniqueIdentifier>{4b1ebd7a-f2a8-4a46-8042-4a0870032600}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PhysicalLayer\Serial">
+      <UniqueIdentifier>{cd76dbe0-c1e7-4754-b2c1-3a536de2452c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PhysicalLayer\TCP">
+      <UniqueIdentifier>{c80f9f0a-e6c7-4d85-bb9f-c95fec84e5ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PhysicalLayer\Monitor">
+      <UniqueIdentifier>{bc24a9a3-e451-4e70-b671-ef69c6f081e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Log">
+      <UniqueIdentifier>{22187097-df94-4f84-b2e2-996e606d39c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Threading">
+      <UniqueIdentifier>{ecad84cd-f0bd-4fde-9f24-54ac77170e89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Threading\Locks">
+      <UniqueIdentifier>{0a55ca71-2737-4f7d-8ecb-b158ca193f8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Common">
+      <UniqueIdentifier>{7e7b6df6-a12d-44ed-a021-50c476d32703}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Protocol">
+      <UniqueIdentifier>{6e44639d-2647-4205-87a7-b0dc79048a5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Protocol\Packing">
+      <UniqueIdentifier>{fec27d31-413d-4167-ac60-dc79dfc47211}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Protocol\Interfaces">
+      <UniqueIdentifier>{3999097e-70bd-414e-b1ad-82f56dfbda60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Protocol\Buffers">
+      <UniqueIdentifier>{9edc7dba-39bc-43f8-9b07-c494fba3cbeb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Protocol\CRC">
+      <UniqueIdentifier>{124938b3-f425-4610-aea8-eadaf2f5abdc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Timers">
+      <UniqueIdentifier>{5d88faf9-8053-4e71-8924-e1540b16beb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AsyncTasks">
+      <UniqueIdentifier>{01c1c60f-7bdf-4214-bb0e-029ff485ccd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Data">
+      <UniqueIdentifier>{e77a0db3-00d2-411f-98dc-d77593a75b95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Function">
+      <UniqueIdentifier>{634ac8ba-0f99-4f91-b47b-6f1782bb7f3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Timers\Time">
+      <UniqueIdentifier>{fd80c12e-1fc7-4597-b148-f4ff134f1a08}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\opendnp3\APL\IPhysicalLayerSource.h">
+      <Filter>Source Files\PhysicalLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\PhysicalLayerInstance.h">
+      <Filter>Source Files\PhysicalLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\PhysicalLayerManager.h">
+      <Filter>Source Files\PhysicalLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\PhysicalLayerMap.h">
+      <Filter>Source Files\PhysicalLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\PhysLayerSettings.h">
+      <Filter>Source Files\PhysicalLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\PhysLoopback.h">
+      <Filter>Source Files\PhysicalLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\IHandlerAsync.h">
+      <Filter>Source Files\PhysicalLayer\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\IOService.h">
+      <Filter>Source Files\PhysicalLayer\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\IPhysicalLayerAsync.h">
+      <Filter>Source Files\PhysicalLayer\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\PhysicalLayerAsyncASIO.h">
+      <Filter>Source Files\PhysicalLayer\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\PhysicalLayerAsyncBase.h">
+      <Filter>Source Files\PhysicalLayer\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\PhysicalLayerFactory.h">
+      <Filter>Source Files\PhysicalLayer\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\PhysicalLayerFunctors.h">
+      <Filter>Source Files\PhysicalLayer\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\ASIOSerialHelpers.h">
+      <Filter>Source Files\PhysicalLayer\Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\PhysicalLayerAsyncSerial.h">
+      <Filter>Source Files\PhysicalLayer\Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\SerialTypes.h">
+      <Filter>Source Files\PhysicalLayer\Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\PhysicalLayerAsyncBaseTCP.h">
+      <Filter>Source Files\PhysicalLayer\TCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\PhysicalLayerAsyncTCPClient.h">
+      <Filter>Source Files\PhysicalLayer\TCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\PhysicalLayerAsyncTCPServer.h">
+      <Filter>Source Files\PhysicalLayer\TCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\IPhysicalLayerObserver.h">
+      <Filter>Source Files\PhysicalLayer\Monitor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\PhysicalLayerMonitor.h">
+      <Filter>Source Files\PhysicalLayer\Monitor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\PhysicalLayerMonitorStates.h">
+      <Filter>Source Files\PhysicalLayer\Monitor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\PhysicalLayerStates.h">
+      <Filter>Source Files\PhysicalLayer\Monitor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\CachedLogVariable.h">
+      <Filter>Source Files\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\Log.h">
+      <Filter>Source Files\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\LogBase.h">
+      <Filter>Source Files\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\LogEntry.h">
+      <Filter>Source Files\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\LogEntryCircularBuffer.h">
+      <Filter>Source Files\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\Loggable.h">
+      <Filter>Source Files\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\Logger.h">
+      <Filter>Source Files\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\LogToFile.h">
+      <Filter>Source Files\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\LogToStdio.h">
+      <Filter>Source Files\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\LogTypes.h">
+      <Filter>Source Files\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\LogVar.h">
+      <Filter>Source Files\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\MetricBuffer.h">
+      <Filter>Source Files\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\EventSet.h">
+      <Filter>Source Files\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\IOServiceThread.h">
+      <Filter>Source Files\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\ISubject.h">
+      <Filter>Source Files\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\ITransactable.h">
+      <Filter>Source Files\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\SubjectBase.h">
+      <Filter>Source Files\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\SyncVar.h">
+      <Filter>Source Files\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\Thread.h">
+      <Filter>Source Files\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\Threadable.h">
+      <Filter>Source Files\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\ThreadBase.h">
+      <Filter>Source Files\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\ThreadBoost.h">
+      <Filter>Source Files\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\BoundNotifier.h">
+      <Filter>Source Files\Threading\Locks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\EventLock.h">
+      <Filter>Source Files\Threading\Locks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\EventLockBase.h">
+      <Filter>Source Files\Threading\Locks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\IEventLock.h">
+      <Filter>Source Files\Threading\Locks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\INotifier.h">
+      <Filter>Source Files\Threading\Locks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\Lock.h">
+      <Filter>Source Files\Threading\Locks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\LockBase.h">
+      <Filter>Source Files\Threading\Locks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\LockBoost.h">
+      <Filter>Source Files\Threading\Locks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\Notifier.h">
+      <Filter>Source Files\Threading\Locks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\Configure.h">
+      <Filter>Source Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\DeleteAny.h">
+      <Filter>Source Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\Exception.h">
+      <Filter>Source Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\GetKeys.h">
+      <Filter>Source Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\Parsing.h">
+      <Filter>Source Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\Random.h">
+      <Filter>Source Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\RandomDouble.h">
+      <Filter>Source Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\Singleton.h">
+      <Filter>Source Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\Types.h">
+      <Filter>Source Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\Uncopyable.h">
+      <Filter>Source Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\Util.h">
+      <Filter>Source Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\ITimeSource.h">
+      <Filter>Source Files\Timers\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\TimeBase.h">
+      <Filter>Source Files\Timers\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\TimeBoost.h">
+      <Filter>Source Files\Timers\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\Timeout.h">
+      <Filter>Source Files\Timers\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\TimeSource.h">
+      <Filter>Source Files\Timers\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\TimeTypes.h">
+      <Filter>Source Files\Timers\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\TimingTools.h">
+      <Filter>Source Files\Timers\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\LowerLayerToPhysAdapter.h">
+      <Filter>Source Files\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\ProtocolUtil.h">
+      <Filter>Source Files\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\ToHex.h">
+      <Filter>Source Files\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\PackingTemplates.h">
+      <Filter>Source Files\Protocol\Packing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\PackingUnpacking.h">
+      <Filter>Source Files\Protocol\Packing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\AsyncLayerInterfaces.h">
+      <Filter>Source Files\Protocol\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\CopyableBuffer.h">
+      <Filter>Source Files\Protocol\Buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\RandomizedBuffer.h">
+      <Filter>Source Files\Protocol\Buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\ShiftableBuffer.h">
+      <Filter>Source Files\Protocol\Buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\CRC.h">
+      <Filter>Source Files\Protocol\CRC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\AsyncResult.h">
+      <Filter>Source Files\Timers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\ITimer.h">
+      <Filter>Source Files\Timers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\ITimerSource.h">
+      <Filter>Source Files\Timers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\PostingNotifier.h">
+      <Filter>Source Files\Timers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\PostingNotifierSource.h">
+      <Filter>Source Files\Timers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\SuspendTimerSource.h">
+      <Filter>Source Files\Timers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\TimerASIO.h">
+      <Filter>Source Files\Timers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\TimerSourceASIO.h">
+      <Filter>Source Files\Timers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\AsyncTaskBase.h">
+      <Filter>Source Files\AsyncTasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\AsyncTaskContinuous.h">
+      <Filter>Source Files\AsyncTasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\AsyncTaskGroup.h">
+      <Filter>Source Files\AsyncTasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\AsyncTaskInterfaces.h">
+      <Filter>Source Files\AsyncTasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\AsyncTaskNonPeriodic.h">
+      <Filter>Source Files\AsyncTasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\AsyncTaskPeriodic.h">
+      <Filter>Source Files\AsyncTasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\AsyncTaskScheduler.h">
+      <Filter>Source Files\AsyncTasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\TrackingTaskGroup.h">
+      <Filter>Source Files\AsyncTasks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\BaseDataTypes.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\ChangeBuffer.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\CommandInterfaces.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\CommandManager.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\CommandQueue.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\CommandResponseQueue.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\CommandTypes.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\DataInterfaces.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\DataTypes.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\FlexibleDataObserver.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\MultiplexingDataObserver.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\QualityConverter.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\QualityMasks.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\QueueingFDO.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\APL\Function.h">
+      <Filter>Source Files\Function</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\opendnp3\APL\PhysicalLayerInstance.cpp">
+      <Filter>Source Files\PhysicalLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\PhysicalLayerManager.cpp">
+      <Filter>Source Files\PhysicalLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\PhysicalLayerMap.cpp">
+      <Filter>Source Files\PhysicalLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\PhysLoopback.cpp">
+      <Filter>Source Files\PhysicalLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\IHandlerAsync.cpp">
+      <Filter>Source Files\PhysicalLayer\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\IOService.cpp">
+      <Filter>Source Files\PhysicalLayer\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\PhysicalLayerAsyncBase.cpp">
+      <Filter>Source Files\PhysicalLayer\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\PhysicalLayerFactory.cpp">
+      <Filter>Source Files\PhysicalLayer\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\ASIOSerialHelpers.cpp">
+      <Filter>Source Files\PhysicalLayer\Serial</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\PhysicalLayerAsyncSerial.cpp">
+      <Filter>Source Files\PhysicalLayer\Serial</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\PhysicalLayerAsyncBaseTCP.cpp">
+      <Filter>Source Files\PhysicalLayer\TCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\PhysicalLayerAsyncTCPClient.cpp">
+      <Filter>Source Files\PhysicalLayer\TCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\PhysicalLayerAsyncTCPServer.cpp">
+      <Filter>Source Files\PhysicalLayer\TCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\PhysicalLayerMonitor.cpp">
+      <Filter>Source Files\PhysicalLayer\Monitor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\PhysicalLayerMonitorStates.cpp">
+      <Filter>Source Files\PhysicalLayer\Monitor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\PhysicalLayerStates.cpp">
+      <Filter>Source Files\PhysicalLayer\Monitor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\Log.cpp">
+      <Filter>Source Files\Log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\LogEntry.cpp">
+      <Filter>Source Files\Log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\LogEntryCircularBuffer.cpp">
+      <Filter>Source Files\Log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\Loggable.cpp">
+      <Filter>Source Files\Log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\Logger.cpp">
+      <Filter>Source Files\Log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\LogToFile.cpp">
+      <Filter>Source Files\Log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\LogToStdio.cpp">
+      <Filter>Source Files\Log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\LogTypes.cpp">
+      <Filter>Source Files\Log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\MetricBuffer.cpp">
+      <Filter>Source Files\Log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\IOServiceThread.cpp">
+      <Filter>Source Files\Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\Threadable.cpp">
+      <Filter>Source Files\Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\ThreadBase.cpp">
+      <Filter>Source Files\Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\ThreadBoost.cpp">
+      <Filter>Source Files\Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\EventLock.cpp">
+      <Filter>Source Files\Threading\Locks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\LockBase.cpp">
+      <Filter>Source Files\Threading\Locks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\LockBoost.cpp">
+      <Filter>Source Files\Threading\Locks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\Exception.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\Parsing.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\Util.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\TimeBase.cpp">
+      <Filter>Source Files\Timers\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\TimeBoost.cpp">
+      <Filter>Source Files\Timers\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\Timeout.cpp">
+      <Filter>Source Files\Timers\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\TimeSource.cpp">
+      <Filter>Source Files\Timers\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\TimingTools.cpp">
+      <Filter>Source Files\Timers\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\LowerLayerToPhysAdapter.cpp">
+      <Filter>Source Files\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\ProtocolUtil.cpp">
+      <Filter>Source Files\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\ToHex.cpp">
+      <Filter>Source Files\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\PackingUnpacking.cpp">
+      <Filter>Source Files\Protocol\Packing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\AsyncLayerInterfaces.cpp">
+      <Filter>Source Files\Protocol\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\CopyableBuffer.cpp">
+      <Filter>Source Files\Protocol\Buffers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\RandomizedBuffer.cpp">
+      <Filter>Source Files\Protocol\Buffers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\ShiftableBuffer.cpp">
+      <Filter>Source Files\Protocol\Buffers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\CRC.cpp">
+      <Filter>Source Files\Protocol\CRC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\AsyncResult.cpp">
+      <Filter>Source Files\Timers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\ITimerSource.cpp">
+      <Filter>Source Files\Timers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\PostingNotifier.cpp">
+      <Filter>Source Files\Timers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\PostingNotifierSource.cpp">
+      <Filter>Source Files\Timers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\SuspendTimerSource.cpp">
+      <Filter>Source Files\Timers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\TimerASIO.cpp">
+      <Filter>Source Files\Timers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\TimerSourceASIO.cpp">
+      <Filter>Source Files\Timers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\AsyncTaskBase.cpp">
+      <Filter>Source Files\AsyncTasks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\AsyncTaskContinuous.cpp">
+      <Filter>Source Files\AsyncTasks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\AsyncTaskGroup.cpp">
+      <Filter>Source Files\AsyncTasks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\AsyncTaskNonPeriodic.cpp">
+      <Filter>Source Files\AsyncTasks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\AsyncTaskPeriodic.cpp">
+      <Filter>Source Files\AsyncTasks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\AsyncTaskScheduler.cpp">
+      <Filter>Source Files\AsyncTasks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\TrackingTaskGroup.cpp">
+      <Filter>Source Files\AsyncTasks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\BaseDataTypes.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\CommandManager.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\CommandQueue.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\CommandResponseQueue.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\CommandTypes.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\FlexibleDataObserver.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\MultiplexingDataObserver.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\APL\QualityConverter.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

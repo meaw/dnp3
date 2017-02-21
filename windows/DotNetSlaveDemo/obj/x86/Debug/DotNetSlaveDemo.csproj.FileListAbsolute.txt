@@ -1,0 +1,10 @@
+D:\582\dnp3-master\windows\DotNetSlaveDemo\obj\x86\Debug\DotNetSlaveDemo.csprojResolveAssemblyReference.cache
+D:\582\dnp3-master\windows\DotNetSlaveDemo\bin\Debug\DotNetSlaveDemo.exe.config
+D:\582\dnp3-master\windows\DotNetSlaveDemo\bin\Debug\DotNetSlaveDemo.exe
+D:\582\dnp3-master\windows\DotNetSlaveDemo\bin\Debug\DotNetSlaveDemo.pdb
+D:\582\dnp3-master\windows\DotNetSlaveDemo\bin\Debug\DotNetAdapter.dll
+D:\582\dnp3-master\windows\DotNetSlaveDemo\bin\Debug\DotNetInterface.dll
+D:\582\dnp3-master\windows\DotNetSlaveDemo\bin\Debug\DotNetInterface.pdb
+D:\582\dnp3-master\windows\DotNetSlaveDemo\bin\Debug\DotNetAdapter.pdb
+D:\582\dnp3-master\windows\DotNetSlaveDemo\obj\x86\Debug\DotNetSlaveDemo.exe
+D:\582\dnp3-master\windows\DotNetSlaveDemo\obj\x86\Debug\DotNetSlaveDemo.pdb

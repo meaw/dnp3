@@ -1,0 +1,5 @@
+D:\582\dnp3-master\windows\CSToCppXMLBinder\bin\debug\CSToCppXMLBinder.exe
+D:\582\dnp3-master\windows\CSToCppXMLBinder\bin\debug\CSToCppXMLBinder.pdb
+D:\582\dnp3-master\windows\CSToCppXMLBinder\obj\Debug\CSToCppXMLBinder.csprojResolveAssemblyReference.cache
+D:\582\dnp3-master\windows\CSToCppXMLBinder\obj\Debug\CSToCppXMLBinder.exe
+D:\582\dnp3-master\windows\CSToCppXMLBinder\obj\Debug\CSToCppXMLBinder.pdb

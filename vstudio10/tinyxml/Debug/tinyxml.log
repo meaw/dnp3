@@ -1,0 +1,20 @@
+﻿Build started 2/20/2017 12:45:50 AM.
+     1>Project "D:\582\dnp3-master\vstudio10\tinyxml.vcxproj" on node 4 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _WIN32_WINNT=0x0501 /D BOOST_ASIO_ENABLE_CANCELIO /D BOOST_REGEX_NO_LIB /D BOOST_ALL_DYN_LINK /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"tinyxml\Debug\\" /Fd"tinyxml\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ..\src\tinyxml\tinystr.cpp ..\src\tinyxml\tinyxml.cpp ..\src\tinyxml\tinyxmlerror.cpp ..\src\tinyxml\tinyxmlparser.cpp
+         tinyxmlparser.cpp
+         tinyxmlerror.cpp
+         tinyxml.cpp
+         tinystr.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\Lib.exe /OUT:"tinyxml\Debug\tinyxml.lib" /NOLOGO tinyxml\Debug\tinystr.obj
+         tinyxml\Debug\tinyxml.obj
+         tinyxml\Debug\tinyxmlerror.obj
+         tinyxml\Debug\tinyxmlparser.obj
+         tinyxml.vcxproj -> D:\582\dnp3-master\vstudio10\tinyxml\Debug\tinyxml.lib
+     1>Done Building Project "D:\582\dnp3-master\vstudio10\tinyxml.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.28

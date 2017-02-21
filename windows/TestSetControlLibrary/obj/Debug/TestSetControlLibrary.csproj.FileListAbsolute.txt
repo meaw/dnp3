@@ -1,0 +1,16 @@
+D:\582\dnp3-master\windows\TestSetControlLibrary\bin\Debug\TestSetControlLibrary.pdb
+D:\582\dnp3-master\windows\TestSetControlLibrary\obj\Debug\TestSetControlLibrary.csprojResolveAssemblyReference.cache
+D:\582\dnp3-master\windows\TestSetControlLibrary\obj\Debug\TestSetControlLibrary.LinkLayerSettingsControl.resources
+D:\582\dnp3-master\windows\TestSetControlLibrary\obj\Debug\DotNetTestSet.LogControl.resources
+D:\582\dnp3-master\windows\TestSetControlLibrary\obj\Debug\TestSetControlLibrary.MasterDataDisplay.resources
+D:\582\dnp3-master\windows\TestSetControlLibrary\obj\Debug\TestSetControlLibrary.MasterSettingsForm.resources
+D:\582\dnp3-master\windows\TestSetControlLibrary\obj\Debug\TestSetControlLibrary.SerialSettingsForm.resources
+D:\582\dnp3-master\windows\TestSetControlLibrary\obj\Debug\TestSetControlLibrary.SetpointForm.resources
+D:\582\dnp3-master\windows\TestSetControlLibrary\obj\Debug\TestSetControlLibrary.StackBrowser.resources
+D:\582\dnp3-master\windows\TestSetControlLibrary\obj\Debug\TestSetControlLibrary.StackDisplayControl.resources
+D:\582\dnp3-master\windows\TestSetControlLibrary\obj\Debug\TestSetControlLibrary.TcpSettingsForm.resources
+D:\582\dnp3-master\windows\TestSetControlLibrary\obj\Debug\TestSetControlLibrary.TimeSeriesChartForm.resources
+D:\582\dnp3-master\windows\TestSetControlLibrary\obj\Debug\TestSetControlLibrary.csproj.GenerateResource.Cache
+D:\582\dnp3-master\windows\TestSetControlLibrary\obj\Debug\TestSetControlLibrary.dll
+D:\582\dnp3-master\windows\TestSetControlLibrary\obj\Debug\TestSetControlLibrary.pdb
+D:\582\dnp3-master\windows\TestSetControlLibrary\bin\Debug\TestSetControlLibrary.dll

@@ -1,0 +1,72 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly DotNetAdapter, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly DotNetInterface, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class DNP3.Adapter.CommandAcceptorAdapter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(apl.ICommandAcceptor*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    DNP3.Interface.ICommandAcceptor
+    System.IDisposable
+  Methods:
+    AcceptCommand(Setpoint, UInt32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    AcceptCommand(BinaryOutput, UInt32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class DNP3.Adapter.LogAdapterWrapper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(DNP3.Interface.ILogHandler): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    GetLogAdapter(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Struct DNP3.Adapter.MasterDataObserverAdapter: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Class DNP3.Adapter.MasterDataObserverAdapterWrapper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(DNP3.Interface.IDataObserver): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    GetDataObserver(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class DNP3.Adapter.SlaveCommandAcceptorAdapterWrapper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(DNP3.Interface.ICommandAcceptor): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    GetCommandAcceptor(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class DNP3.Adapter.ResponseDelegateAdapter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(apl.IResponseAcceptor*, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    OnResult(CommandStatus): PrivateScope, Public, HideBySig
+Class DNP3.Adapter.SlaveDataObserverAdapter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(apl.IDataObserver*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    DNP3.Interface.IDataObserver
+  Methods:
+    Start(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Update(SetpointStatus, UInt32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Update(ControlStatus, UInt32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Update(Counter, UInt32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Update(Analog, UInt32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Update(Binary, UInt32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    End(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class DNP3.Adapter.StackManager: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    AddTCPClient(String, FilterLevel, UInt64, String, UInt16): PrivateScope, Public, HideBySig
+    AddTCPServer(String, FilterLevel, UInt64, String, UInt16): PrivateScope, Public, HideBySig
+    AddSerial(String, FilterLevel, UInt64, SerialSettings): PrivateScope, Public, HideBySig
+    AddMaster(String, String, FilterLevel, IDataObserver, MasterStackConfig): PrivateScope, Public, HideBySig
+    AddSlave(String, String, FilterLevel, ICommandAcceptor, SlaveStackConfig): PrivateScope, Public, HideBySig
+    RemovePort(String): PrivateScope, Public, HideBySig
+    RemoveStack(String): PrivateScope, Public, HideBySig
+    AddLogHandler(ILogHandler): PrivateScope, Public, HideBySig

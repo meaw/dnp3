@@ -1,0 +1,15 @@
+D:\582\dnp3-master\windows\DotNetTestSet\obj\x86\Debug\DotNetTestSet.csprojResolveAssemblyReference.cache
+D:\582\dnp3-master\windows\DotNetTestSet\obj\x86\Debug\DotNetTestSet.TestSetForm.resources
+D:\582\dnp3-master\windows\DotNetTestSet\obj\x86\Debug\DotNetTestSet.Properties.Resources.resources
+D:\582\dnp3-master\windows\DotNetTestSet\obj\x86\Debug\DotNetTestSet.csproj.GenerateResource.Cache
+D:\582\dnp3-master\windows\DotNetTestSet\bin\Debug\DotNetTestSet.exe.config
+D:\582\dnp3-master\windows\DotNetTestSet\bin\Debug\DotNetTestSet.exe
+D:\582\dnp3-master\windows\DotNetTestSet\bin\Debug\DotNetTestSet.pdb
+D:\582\dnp3-master\windows\DotNetTestSet\bin\Debug\DotNetAdapter.dll
+D:\582\dnp3-master\windows\DotNetTestSet\bin\Debug\DotNetInterface.dll
+D:\582\dnp3-master\windows\DotNetTestSet\bin\Debug\TestSetControlLibrary.dll
+D:\582\dnp3-master\windows\DotNetTestSet\bin\Debug\TestSetControlLibrary.pdb
+D:\582\dnp3-master\windows\DotNetTestSet\bin\Debug\DotNetAdapter.pdb
+D:\582\dnp3-master\windows\DotNetTestSet\bin\Debug\DotNetInterface.pdb
+D:\582\dnp3-master\windows\DotNetTestSet\obj\x86\Debug\DotNetTestSet.exe
+D:\582\dnp3-master\windows\DotNetTestSet\obj\x86\Debug\DotNetTestSet.pdb

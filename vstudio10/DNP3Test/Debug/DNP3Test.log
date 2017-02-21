@@ -1,0 +1,120 @@
+﻿Build started 2/20/2017 12:06:21 AM.
+     1>Project "D:\582\dnp3-master\vstudio10\DNP3Test.vcxproj" on node 4 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"D:\582\dnp3-master\vstudio10\\..\src\\" /I"D:\582\dnp3-master\vstudio10\\" /IC:\boost\boost_1_55_0\ /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _CONSOLE /D _DEBUG /D _WIN32_WINNT=0x0501 /D BOOST_ASIO_ENABLE_CANCELIO /D BOOST_REGEX_NO_LIB /D BOOST_ALL_DYN_LINK /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"DNP3Test\Debug\\" /Fd"DNP3Test\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt /wd4355 ..\src\opendnp3\DNP3\test\TestStackManager.cpp ..\src\opendnp3\DNP3\test\TestStartBoostUTF.cpp ..\src\opendnp3\DNP3\test\TestAPDU.cpp ..\src\opendnp3\DNP3\test\TestAPDUWriting.cpp ..\src\opendnp3\DNP3\test\TestAppLayer.cpp ..\src\opendnp3\DNP3\test\TestObjects.cpp ..\src\opendnp3\DNP3\test\AppLayerTest.cpp ..\src\opendnp3\DNP3\test\MockAppUser.cpp ..\src\opendnp3\DNP3\test\TestCRC.cpp ..\src\opendnp3\DNP3\test\TestLinkFrameDNP.cpp ..\src\opendnp3\DNP3\test\TestLinkLayer.cpp ..\src\opendnp3\DNP3\test\TestLinkLayerRouter.cpp ..\src\opendnp3\DNP3\test\TestLinkReceiver.cpp ..\src\opendnp3\DNP3\test\TestLinkRoute.cpp ..\src\opendnp3\DNP3\test\DNPHelpers.cpp ..\src\opendnp3\DNP3\test\LinkLayerRouterTest.cpp ..\src\opendnp3\DNP3\test\LinkLayerTest.cpp ..\src\opendnp3\DNP3\test\MockFrameSink.cpp ..\src\opendnp3\DNP3\test\TestIntegration.cpp ..\src\opendnp3\DNP3\test\TestStartupTeardown.cpp ..\src\opendnp3\DNP3\test\ComparingDataObserver.cpp ..\src\opendnp3\DNP3\test\IntegrationTest.cpp ..\src\opendnp3\DNP3\test\StartupTeardownTest.cpp ..\src\opendnp3\DNP3\test\TestMaster.cpp ..\src\opendnp3\DNP3\test\TestResponseLoader.cpp ..\src\opendnp3\DNP3\test\MasterTestObject.cpp ..\src\opendnp3\DNP3\test\MockAppLayer.cpp ..\src\opendnp3\DNP3\test\ResponseLoaderTestObject.cpp ..\src\opendnp3\DNP3\test\TestDatabase.cpp ..\src\opendnp3\DNP3\test\TestEventBufferBase.cpp ..\src\opendnp3\DNP3\test\TestEventBuffers.cpp ..\src\opendnp3\DNP3\test\TestSlave.cpp ..\src\opendnp3\DNP3\test\TestSlaveEventBuffer.cpp ..\src\opendnp3\DNP3\test\SlaveTestObject.cpp ..\src\opendnp3\DNP3\test\TestTransportLayer.cpp ..\src\opendnp3\DNP3\test\TestTransportLoopback.cpp ..\src\opendnp3\DNP3\test\TestTransportScalability.cpp ..\src\opendnp3\DNP3\test\TransportTestObject.cpp ..\src\opendnp3\DNP3\test\TransportIntegrationStack.cpp ..\src\opendnp3\DNP3\test\TransportLoopbackTestObject.cpp ..\src\opendnp3\DNP3\test\TransportScalabilityTestObject.cpp ..\src\opendnp3\DNP3\test\TransportStackPair.cpp ..\src\opendnp3\DNP3\test\TestEnhancedVtoRouter.cpp ..\src\opendnp3\DNP3\test\TestVtoInterface.cpp ..\src\opendnp3\DNP3\test\TestVtoLoopbackIntegration.cpp ..\src\opendnp3\DNP3\test\TestVtoOnewayIntegration.cpp ..\src\opendnp3\DNP3\test\TestVtoRouter.cpp ..\src\opendnp3\DNP3\test\TestVtoRouterManager.cpp ..\src\opendnp3\DNP3\test\TestVtoWriter.cpp ..\src\opendnp3\DNP3\test\VtoIntegrationTestBase.cpp
+         VtoIntegrationTestBase.cpp
+         TestVtoWriter.cpp
+         TestVtoRouterManager.cpp
+         TestVtoRouter.cpp
+         TestVtoOnewayIntegration.cpp
+         TestVtoLoopbackIntegration.cpp
+         TestVtoInterface.cpp
+         TestEnhancedVtoRouter.cpp
+         TransportStackPair.cpp
+         TransportScalabilityTestObject.cpp
+         TransportLoopbackTestObject.cpp
+         TransportIntegrationStack.cpp
+         TransportTestObject.cpp
+         TestTransportScalability.cpp
+         TestTransportLoopback.cpp
+         TestTransportLayer.cpp
+         SlaveTestObject.cpp
+         TestSlaveEventBuffer.cpp
+         TestSlave.cpp
+         TestEventBuffers.cpp
+         Generating Code...
+         Compiling...
+         TestEventBufferBase.cpp
+         TestDatabase.cpp
+         ResponseLoaderTestObject.cpp
+         MockAppLayer.cpp
+         MasterTestObject.cpp
+         TestResponseLoader.cpp
+         TestMaster.cpp
+         StartupTeardownTest.cpp
+         IntegrationTest.cpp
+         ComparingDataObserver.cpp
+         TestStartupTeardown.cpp
+         TestIntegration.cpp
+         MockFrameSink.cpp
+         LinkLayerTest.cpp
+         LinkLayerRouterTest.cpp
+         DNPHelpers.cpp
+         TestLinkRoute.cpp
+         TestLinkReceiver.cpp
+         TestLinkLayerRouter.cpp
+         TestLinkLayer.cpp
+         Generating Code...
+         Compiling...
+         TestLinkFrameDNP.cpp
+         TestCRC.cpp
+         MockAppUser.cpp
+         AppLayerTest.cpp
+         TestObjects.cpp
+         TestAppLayer.cpp
+         TestAPDUWriting.cpp
+         TestAPDU.cpp
+         TestStartBoostUTF.cpp
+         TestStackManager.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"DNP3Test\Debug\DNP3Test.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\boost\boost_1_55_0\stage\lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"DNP3Test\Debug\DNP3Test.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"DNP3Test\Debug\DNP3Test.lib" /MACHINE:X86 /SAFESEH DNP3Test\Debug\TestStackManager.obj
+         DNP3Test\Debug\TestStartBoostUTF.obj
+         DNP3Test\Debug\TestAPDU.obj
+         DNP3Test\Debug\TestAPDUWriting.obj
+         DNP3Test\Debug\TestAppLayer.obj
+         DNP3Test\Debug\TestObjects.obj
+         DNP3Test\Debug\AppLayerTest.obj
+         DNP3Test\Debug\MockAppUser.obj
+         DNP3Test\Debug\TestCRC.obj
+         DNP3Test\Debug\TestLinkFrameDNP.obj
+         DNP3Test\Debug\TestLinkLayer.obj
+         DNP3Test\Debug\TestLinkLayerRouter.obj
+         DNP3Test\Debug\TestLinkReceiver.obj
+         DNP3Test\Debug\TestLinkRoute.obj
+         DNP3Test\Debug\DNPHelpers.obj
+         DNP3Test\Debug\LinkLayerRouterTest.obj
+         DNP3Test\Debug\LinkLayerTest.obj
+         DNP3Test\Debug\MockFrameSink.obj
+         DNP3Test\Debug\TestIntegration.obj
+         DNP3Test\Debug\TestStartupTeardown.obj
+         DNP3Test\Debug\ComparingDataObserver.obj
+         DNP3Test\Debug\IntegrationTest.obj
+         DNP3Test\Debug\StartupTeardownTest.obj
+         DNP3Test\Debug\TestMaster.obj
+         DNP3Test\Debug\TestResponseLoader.obj
+         DNP3Test\Debug\MasterTestObject.obj
+         DNP3Test\Debug\MockAppLayer.obj
+         DNP3Test\Debug\ResponseLoaderTestObject.obj
+         DNP3Test\Debug\TestDatabase.obj
+         DNP3Test\Debug\TestEventBufferBase.obj
+         DNP3Test\Debug\TestEventBuffers.obj
+         DNP3Test\Debug\TestSlave.obj
+         DNP3Test\Debug\TestSlaveEventBuffer.obj
+         DNP3Test\Debug\SlaveTestObject.obj
+         DNP3Test\Debug\TestTransportLayer.obj
+         DNP3Test\Debug\TestTransportLoopback.obj
+         DNP3Test\Debug\TestTransportScalability.obj
+         DNP3Test\Debug\TransportTestObject.obj
+         DNP3Test\Debug\TransportIntegrationStack.obj
+         DNP3Test\Debug\TransportLoopbackTestObject.obj
+         DNP3Test\Debug\TransportScalabilityTestObject.obj
+         DNP3Test\Debug\TransportStackPair.obj
+         DNP3Test\Debug\TestEnhancedVtoRouter.obj
+         DNP3Test\Debug\TestVtoInterface.obj
+         DNP3Test\Debug\TestVtoLoopbackIntegration.obj
+         DNP3Test\Debug\TestVtoOnewayIntegration.obj
+         DNP3Test\Debug\TestVtoRouter.obj
+         DNP3Test\Debug\TestVtoRouterManager.obj
+         DNP3Test\Debug\TestVtoWriter.obj
+         DNP3Test\Debug\VtoIntegrationTestBase.obj
+         "D:\582\dnp3-master\vstudio10\APLTestTools\Debug\APLTestTools.lib"
+         "D:\582\dnp3-master\vstudio10\DNP3\Debug\DNP3.lib"
+         "D:\582\dnp3-master\vstudio10\APL\Debug\APL.lib"
+     1>TestStackManager.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+         DNP3Test.vcxproj -> D:\582\dnp3-master\vstudio10\DNP3Test\Debug\DNP3Test.exe
+     1>Done Building Project "D:\582\dnp3-master\vstudio10\DNP3Test.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:03:19.91

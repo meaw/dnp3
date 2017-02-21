@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E053E7ED-F462-4DE0-8D69-6D97045FFB25}</ProjectGuid>
+    <RootNamespace>DNP3</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\config\local_dir.props" />
+    <Import Project="..\config\output_dirs.props" />
+    <Import Project="..\config\boost_includes.props" />
+    <Import Project="..\config\common_boost_defines.props" />
+    <Import Project="..\config\disable_specific_warnings.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\config\local_dir.props" />
+    <Import Project="..\config\output_dirs.props" />
+    <Import Project="..\config\boost_includes.props" />
+    <Import Project="..\config\common_boost_defines.props" />
+    <Import Project="..\config\disable_specific_warnings.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\config\local_dir.props" />
+    <Import Project="..\config\output_dirs.props" />
+    <Import Project="..\config\boost_includes.props" />
+    <Import Project="..\config\common_boost_defines.props" />
+    <Import Project="..\config\disable_specific_warnings.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\config\local_dir.props" />
+    <Import Project="..\config\output_dirs.props" />
+    <Import Project="..\config\boost_includes.props" />
+    <Import Project="..\config\common_boost_defines.props" />
+    <Import Project="..\config\disable_specific_warnings.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4355;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4355;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\opendnp3\DNP3\DNPConstants.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\DNPExceptions.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\DNPFromStream.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\DNPToStream.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\DNPCrc.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\IFrameSink.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\ILinkContext.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\ILinkRouter.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\LinkConfig.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\LinkFrame.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\LinkHeader.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\LinkLayer.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\LinkLayerConstants.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\LinkLayerReceiver.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\LinkLayerRouter.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\LinkReceiverStates.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\LinkRoute.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\PriLinkLayerStates.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\SecLinkLayerStates.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\BufferSetTypes.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\BufferTypes.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\ClassCounter.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\ClassMask.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\Database.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\DatabaseInterfaces.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\DeviceTemplate.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\DeviceTemplateTypes.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\DNPCommandMaster.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\DNPDatabaseTypes.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\EventBufferBase.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\EventBuffers.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\EventTypes.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\PointClass.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\ResponseContext.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\Slave.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\SlaveConfig.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\SlaveEventBuffer.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\SlaveResponseTypes.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\SlaveStates.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\MasterStack.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\SlaveStack.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\Stack.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\CTOHistory.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\Master.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\MasterConfig.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\MasterConfigTypes.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\MasterSchedule.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\MasterStates.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\ResponseLoader.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\ControlTasks.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\DataPoll.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\MasterTaskBase.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\StartupTasks.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\VtoTransmitTask.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\TLS_Base.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\TransportConstants.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\TransportLayer.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\TransportRx.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\TransportStates.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\TransportTx.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\AsyncStackManager.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\IStackObserver.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\LinkChannel.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\MasterStackConfig.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\SlaveStackConfig.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\StackManager.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\AlwaysOpeningVtoRouter.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\EnhancedVto.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\EnhancedVtoRouter.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\IVtoEventAcceptor.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\VtoConfig.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\VtoData.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\VtoDataInterface.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\VtoEventBufferAdapter.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\VtoReader.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\VtoRouter.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\VtoRouterManager.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\VtoRouterSettings.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\VtoWriter.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\AppConfig.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\AppInterfaces.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\AppLayer.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\APDU.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\APDUConstants.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\AppHeader.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\ObjectHeader.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\ObjectInterfaces.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\Objects.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\HeaderReadIterator.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\IndexedWriteIterator.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\ObjectReadIterator.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\ObjectWriteIterator.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\AppChannelStates.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\AppLayerChannel.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\SolicitedChannel.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\UnsolicitedChannel.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\opendnp3\DNP3\DNPCrc.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\LinkFrame.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\LinkHeader.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\LinkLayer.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\LinkLayerConstants.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\LinkLayerReceiver.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\LinkLayerRouter.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\LinkReceiverStates.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\LinkRoute.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\PriLinkLayerStates.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\SecLinkLayerStates.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\BufferTypes.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\ClassCounter.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\Database.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\DeviceTemplate.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\DNPCommandMaster.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\PointClass.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\ResponseContext.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\Slave.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\SlaveConfig.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\SlaveEventBuffer.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\SlaveResponseTypes.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\SlaveStates.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\MasterStack.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\SlaveStack.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\Stack.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\Master.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\MasterSchedule.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\MasterStates.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\ResponseLoader.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\ControlTasks.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\DataPoll.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\MasterTaskBase.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\StartupTasks.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\VtoTransmitTask.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\TLS_Base.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\TransportLayer.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\TransportRx.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\TransportStates.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\TransportTx.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\AsyncStackManager.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\IStackObserver.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\LinkChannel.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\StackManager.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\AlwaysOpeningVtoRouter.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\EnhancedVto.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\EnhancedVtoRouter.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\VtoData.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\VtoReader.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\VtoRouter.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\VtoRouterManager.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\VtoRouterSettings.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\VtoWriter.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\AppInterfaces.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\AppLayer.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\APDU.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\APDUConstants.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\AppHeader.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\ObjectHeader.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\ObjectInterfaces.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\Objects.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\HeaderReadIterator.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\IndexedWriteIterator.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\ObjectReadIterator.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\ObjectWriteIterator.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\AppChannelStates.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\AppLayerChannel.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\SolicitedChannel.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\UnsolicitedChannel.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

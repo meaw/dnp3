@@ -1,0 +1,32 @@
+﻿Build started 2/20/2017 12:45:51 AM.
+     1>Project "D:\582\dnp3-master\vstudio10\Terminal.vcxproj" on node 5 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"D:\582\dnp3-master\vstudio10\\..\src\\" /I"D:\582\dnp3-master\vstudio10\\" /IC:\boost\boost_1_55_0\ /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _WIN32_WINNT=0x0501 /D BOOST_ASIO_ENABLE_CANCELIO /D BOOST_REGEX_NO_LIB /D BOOST_ALL_DYN_LINK /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Terminal\Debug\\" /Fd"Terminal\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt /wd4355 ..\src\opendnp3\terminal\LineReader.cpp ..\src\opendnp3\terminal\Terminal.cpp ..\src\opendnp3\terminal\TerminalInterfaces.cpp ..\src\opendnp3\terminal\PhysicalLayerIOStreamAsync.cpp ..\src\opendnp3\terminal\PhysicalLayerSyncProxy.cpp ..\src\opendnp3\terminal\ControlResponseTE.cpp ..\src\opendnp3\terminal\ControlTerminalExtension.cpp ..\src\opendnp3\terminal\DOTerminalExtension.cpp ..\src\opendnp3\terminal\FlexibleObserverTerminalExtension.cpp ..\src\opendnp3\terminal\LogTerminalExtension.cpp
+         LogTerminalExtension.cpp
+         FlexibleObserverTerminalExtension.cpp
+         DOTerminalExtension.cpp
+         ControlTerminalExtension.cpp
+         ControlResponseTE.cpp
+         PhysicalLayerSyncProxy.cpp
+         PhysicalLayerIOStreamAsync.cpp
+         TerminalInterfaces.cpp
+         Terminal.cpp
+         LineReader.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\Lib.exe /OUT:"Terminal\Debug\Terminal.lib" /NOLOGO Terminal\Debug\LineReader.obj
+         Terminal\Debug\Terminal.obj
+         Terminal\Debug\TerminalInterfaces.obj
+         Terminal\Debug\PhysicalLayerIOStreamAsync.obj
+         Terminal\Debug\PhysicalLayerSyncProxy.obj
+         Terminal\Debug\ControlResponseTE.obj
+         Terminal\Debug\ControlTerminalExtension.obj
+         Terminal\Debug\DOTerminalExtension.obj
+         Terminal\Debug\FlexibleObserverTerminalExtension.obj
+         Terminal\Debug\LogTerminalExtension.obj
+         Terminal.vcxproj -> D:\582\dnp3-master\vstudio10\Terminal\Debug\Terminal.lib
+     1>Done Building Project "D:\582\dnp3-master\vstudio10\Terminal.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:45.50

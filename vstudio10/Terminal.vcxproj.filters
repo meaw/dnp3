@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\PhysicalLayer">
+      <UniqueIdentifier>{5f62e6f5-60b6-4f57-9cf2-a5a444c5d6ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Extensions">
+      <UniqueIdentifier>{435004df-5f79-4c02-bd97-c45e74ec5d0a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\opendnp3\terminal\LineReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\terminal\Terminal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\terminal\TerminalInterfaces.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\terminal\PhysicalLayerIOStreamAsync.cpp">
+      <Filter>Source Files\PhysicalLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\terminal\PhysicalLayerSyncProxy.cpp">
+      <Filter>Source Files\PhysicalLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\terminal\ControlResponseTE.cpp">
+      <Filter>Source Files\Extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\terminal\ControlTerminalExtension.cpp">
+      <Filter>Source Files\Extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\terminal\DOTerminalExtension.cpp">
+      <Filter>Source Files\Extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\terminal\FlexibleObserverTerminalExtension.cpp">
+      <Filter>Source Files\Extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opendnp3\terminal\LogTerminalExtension.cpp">
+      <Filter>Source Files\Extensions</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\opendnp3\terminal\LineReader.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\terminal\Terminal.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\terminal\TerminalInterfaces.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\terminal\TokenNode.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\terminal\PhysicalLayerIOStreamAsync.h">
+      <Filter>Source Files\PhysicalLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\terminal\PhysicalLayerSyncProxy.h">
+      <Filter>Source Files\PhysicalLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\terminal\ControlResponseTE.h">
+      <Filter>Source Files\Extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\terminal\ControlTerminalExtension.h">
+      <Filter>Source Files\Extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\terminal\DOTerminalExtension.h">
+      <Filter>Source Files\Extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\terminal\FlexibleObserverTerminalExtension.h">
+      <Filter>Source Files\Extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opendnp3\terminal\LogTerminalExtension.h">
+      <Filter>Source Files\Extensions</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

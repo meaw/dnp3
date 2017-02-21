@@ -1,0 +1,14 @@
+﻿Build started 2/20/2017 12:42:48 AM.
+     1>Project "D:\582\dnp3-master\windows\DotNetAdapter\DotNetAdapter.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         DotNetAdapter.vcxproj -> D:\582\dnp3-master\windows\DotNetAdapter\DotNetAdapter\Debug\DotNetAdapter.dll
+       PostBuildEvent:
+         xcopy /y /d   "D:\582\dnp3-master\windows\DotNetAdapter\DotNetAdapter\Debug\*.dll" "D:\582\dnp3-master\windows\DotNetAdapter\..\shared\"
+         :VCEnd
+         D:\582\dnp3-master\windows\DotNetAdapter\DotNetAdapter\Debug\DotNetInterface.dll
+         1 File(s) copied
+     1>Done Building Project "D:\582\dnp3-master\windows\DotNetAdapter\DotNetAdapter.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.30

@@ -1,0 +1,384 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly DotNetInterface, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Struct DNP3.Interface.CommandModes: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    DNP3.Interface.CommandModes CM_SBO_ONLY = 0 : Public, Static, Literal, HasDefault
+    DNP3.Interface.CommandModes CM_DO_ONLY = 1 : Public, Static, Literal, HasDefault
+    DNP3.Interface.CommandModes CM_SBO_OR_DO = 2 : Public, Static, Literal, HasDefault
+Struct DNP3.Interface.CommandTypes: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    DNP3.Interface.CommandTypes CT_BINARY_OUTPUT = 0 : Public, Static, Literal, HasDefault
+    DNP3.Interface.CommandTypes CT_SETPOINT = 1 : Public, Static, Literal, HasDefault
+    DNP3.Interface.CommandTypes CT_NONE = 2 : Public, Static, Literal, HasDefault
+Struct DNP3.Interface.CommandStatus: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    DNP3.Interface.CommandStatus CS_SUCCESS = 0 : Public, Static, Literal, HasDefault
+    DNP3.Interface.CommandStatus CS_TIMEOUT = 1 : Public, Static, Literal, HasDefault
+    DNP3.Interface.CommandStatus CS_NO_SELECT = 2 : Public, Static, Literal, HasDefault
+    DNP3.Interface.CommandStatus CS_FORMAT_ERROR = 3 : Public, Static, Literal, HasDefault
+    DNP3.Interface.CommandStatus CS_NOT_SUPPORTED = 4 : Public, Static, Literal, HasDefault
+    DNP3.Interface.CommandStatus CS_ALREADY_ACTIVE = 5 : Public, Static, Literal, HasDefault
+    DNP3.Interface.CommandStatus CS_HARDWARE_ERROR = 6 : Public, Static, Literal, HasDefault
+    DNP3.Interface.CommandStatus CS_LOCAL = 7 : Public, Static, Literal, HasDefault
+    DNP3.Interface.CommandStatus CS_TOO_MANY_OPS = 8 : Public, Static, Literal, HasDefault
+    DNP3.Interface.CommandStatus CS_NOT_AUTHORIZED = 9 : Public, Static, Literal, HasDefault
+    DNP3.Interface.CommandStatus CS_UNDEFINED = 10 : Public, Static, Literal, HasDefault
+Struct DNP3.Interface.ControlCode: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    DNP3.Interface.ControlCode CC_NULL = 0 : Public, Static, Literal, HasDefault
+    DNP3.Interface.ControlCode CC_PULSE = 1 : Public, Static, Literal, HasDefault
+    DNP3.Interface.ControlCode CC_LATCH_ON = 2 : Public, Static, Literal, HasDefault
+    DNP3.Interface.ControlCode CC_LATCH_OFF = 3 : Public, Static, Literal, HasDefault
+    DNP3.Interface.ControlCode CC_PULSE_CLOSE = 4 : Public, Static, Literal, HasDefault
+    DNP3.Interface.ControlCode CC_PULSE_TRIP = 5 : Public, Static, Literal, HasDefault
+    DNP3.Interface.ControlCode CC_UNDEFINED = 6 : Public, Static, Literal, HasDefault
+Class DNP3.Interface.BinaryOutput: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(DNP3.Interface.ControlCode, Byte, UInt16, UInt16): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    DNP3.Interface.ControlCode code : Public, InitOnly
+    Byte count : Public, InitOnly
+    UInt16 onTime : Public, InitOnly
+    UInt16 offTime : Public, InitOnly
+Struct DNP3.Interface.SetpointEncodingType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    DNP3.Interface.SetpointEncodingType SPET_INT16 = 0 : Public, Static, Literal, HasDefault
+    DNP3.Interface.SetpointEncodingType SPET_INT32 = 1 : Public, Static, Literal, HasDefault
+    DNP3.Interface.SetpointEncodingType SPET_FLOAT = 2 : Public, Static, Literal, HasDefault
+    DNP3.Interface.SetpointEncodingType SPET_DOUBLE = 3 : Public, Static, Literal, HasDefault
+    DNP3.Interface.SetpointEncodingType SPET_AUTO_INT = 4 : Public, Static, Literal, HasDefault
+    DNP3.Interface.SetpointEncodingType SPET_AUTO_DOUBLE = 5 : Public, Static, Literal, HasDefault
+    DNP3.Interface.SetpointEncodingType SPET_UNSET = 6 : Public, Static, Literal, HasDefault
+Class DNP3.Interface.Setpoint: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Int16): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Single): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double value : Public, InitOnly
+    DNP3.Interface.SetpointEncodingType encodingType : Public
+Class DNP3.Interface.LinkConfig: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Boolean, Boolean, UInt32, UInt16, UInt16, UInt64): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Boolean, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Boolean isMaster : Public
+    Boolean useConfirms : Public
+    UInt32 numRetry : Public
+    UInt16 localAddr : Public
+    UInt16 remoteAddr : Public
+    UInt64 timeout : Public
+Class DNP3.Interface.AppConfig: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int64, Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int64 rspTimeout : Public
+    Int32 numRetry : Public
+    Int32 fragSize : Public
+Class DNP3.Interface.ExceptionScan: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Int32, Int64): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 classMask : Public
+    Int64 scanRateMs : Public
+Struct DNP3.Interface.PointClass: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    DNP3.Interface.PointClass PC_CLASS_0 = 1 : Public, Static, Literal, HasDefault
+    DNP3.Interface.PointClass PC_CLASS_1 = 2 : Public, Static, Literal, HasDefault
+    DNP3.Interface.PointClass PC_CLASS_2 = 4 : Public, Static, Literal, HasDefault
+    DNP3.Interface.PointClass PC_CLASS_3 = 8 : Public, Static, Literal, HasDefault
+    DNP3.Interface.PointClass PC_ALL_EVENTS = 14 : Public, Static, Literal, HasDefault
+    DNP3.Interface.PointClass PC_INVALID = 16 : Public, Static, Literal, HasDefault
+Class DNP3.Interface.MasterConfig: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 fragSize : Public
+    Boolean allowTimeSync : Public
+    Boolean doUnsolOnStartup : Public
+    Boolean enableUnsol : Public
+    Int32 unsolClassMask : Public
+    Int64 integrityRate : Public
+    Int64 taskRetryRate : Public
+    System.Collections.Generic.List`1[DNP3.Interface.ExceptionScan] scans : Public
+  Methods:
+    AddExceptionScan(Int32, Int64): PrivateScope, Public, HideBySig
+Struct DNP3.Interface.ClassMask: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+    Void .ctor(Boolean, Boolean, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Boolean class1 : Public
+    Boolean class2 : Public
+    Boolean class3 : Public
+Struct DNP3.Interface.GrpVar: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+    Void .ctor(Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 grp : Public
+    Int32 var : Public
+Class DNP3.Interface.EventMaxConfig: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(UInt32, UInt32, UInt32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    UInt32 maxBinaryEvents : Public
+    UInt32 maxAnalogEvents : Public
+    UInt32 maxCounterEvents : Public
+Class DNP3.Interface.SlaveConfig: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    UInt32 maxControls : Public
+    Boolean disableUnsol : Public
+    DNP3.Interface.ClassMask unsolMask : Public
+    Boolean allowTimeSync : Public
+    Int64 timeSyncPeriod : Public
+    Int64 unsolPackDelay : Public
+    Int64 unsolRetryDelay : Public
+    UInt32 maxFragSize : Public
+    DNP3.Interface.EventMaxConfig eventMaxConfig : Public
+    DNP3.Interface.GrpVar staticBinary : Public
+    DNP3.Interface.GrpVar staticAnalog : Public
+    DNP3.Interface.GrpVar staticCounter : Public
+    DNP3.Interface.GrpVar staticSetpointStatus : Public
+    DNP3.Interface.GrpVar eventBinary : Public
+    DNP3.Interface.GrpVar eventAnalog : Public
+    DNP3.Interface.GrpVar eventCounter : Public
+Class DNP3.Interface.PointRecord: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class DNP3.Interface.EventPointRecord: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :DNP3.Interface.PointRecord
+    Void .ctor(DNP3.Interface.PointClass): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    DNP3.Interface.PointClass pointClass : Public
+Class DNP3.Interface.DeadbandEventPointRecord: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :DNP3.Interface.EventPointRecord
+    Void .ctor(DNP3.Interface.PointClass, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double deadband : Public
+Class DNP3.Interface.ControlRecord: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :DNP3.Interface.PointRecord
+    Void .ctor(DNP3.Interface.CommandModes, Int64): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    DNP3.Interface.CommandModes mode : Public
+    Int64 selectTimeoutMs : Public
+Class DNP3.Interface.DeviceTemplate: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Collections.Generic.List`1[DNP3.Interface.EventPointRecord] binaries : Public
+    System.Collections.Generic.List`1[DNP3.Interface.EventPointRecord] counters : Public
+    System.Collections.Generic.List`1[DNP3.Interface.DeadbandEventPointRecord] analogs : Public
+    System.Collections.Generic.List`1[DNP3.Interface.PointRecord] controlStatii : Public
+    System.Collections.Generic.List`1[DNP3.Interface.PointRecord] setpointStatii : Public
+    System.Collections.Generic.List`1[DNP3.Interface.ControlRecord] controls : Public
+    System.Collections.Generic.List`1[DNP3.Interface.ControlRecord] setpoints : Public
+Class DNP3.Interface.MasterStackConfig: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    DNP3.Interface.MasterConfig master : Public
+    DNP3.Interface.AppConfig app : Public
+    DNP3.Interface.LinkConfig link : Public
+Class DNP3.Interface.SlaveStackConfig: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    DNP3.Interface.SlaveConfig slave : Public
+    DNP3.Interface.DeviceTemplate device : Public
+    DNP3.Interface.AppConfig app : Public
+    DNP3.Interface.LinkConfig link : Public
+Class DNP3.Interface.TimeStamp: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Convert(Int64): PrivateScope, Public, Static, HideBySig
+    Convert(DateTime): PrivateScope, Public, Static, HideBySig
+Struct DNP3.Interface.BinaryQuality: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    DNP3.Interface.BinaryQuality BQ_ONLINE = 1 : Public, Static, Literal, HasDefault
+    DNP3.Interface.BinaryQuality BQ_RESTART = 2 : Public, Static, Literal, HasDefault
+    DNP3.Interface.BinaryQuality BQ_COMM_LOST = 4 : Public, Static, Literal, HasDefault
+    DNP3.Interface.BinaryQuality BQ_REMOTE_FORCED_DATA = 8 : Public, Static, Literal, HasDefault
+    DNP3.Interface.BinaryQuality BQ_LOCAL_FORCED_DATA = 16 : Public, Static, Literal, HasDefault
+    DNP3.Interface.BinaryQuality BQ_CHATTER_FILTER = 32 : Public, Static, Literal, HasDefault
+    DNP3.Interface.BinaryQuality BQ_RESERVED = 64 : Public, Static, Literal, HasDefault
+    DNP3.Interface.BinaryQuality BQ_STATE = 128 : Public, Static, Literal, HasDefault
+Class DNP3.Interface.Binary: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Boolean, Byte, System.DateTime): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Boolean value : Public, InitOnly
+    Byte quality : Public, InitOnly
+    System.DateTime time : Public, InitOnly
+Struct DNP3.Interface.AnalogQuality: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    DNP3.Interface.AnalogQuality AQ_ONLINE = 1 : Public, Static, Literal, HasDefault
+    DNP3.Interface.AnalogQuality AQ_RESTART = 2 : Public, Static, Literal, HasDefault
+    DNP3.Interface.AnalogQuality AQ_COMM_LOST = 4 : Public, Static, Literal, HasDefault
+    DNP3.Interface.AnalogQuality AQ_REMOTE_FORCED_DATA = 8 : Public, Static, Literal, HasDefault
+    DNP3.Interface.AnalogQuality AQ_LOCAL_FORCED_DATA = 16 : Public, Static, Literal, HasDefault
+    DNP3.Interface.AnalogQuality AQ_OVERRANGE = 32 : Public, Static, Literal, HasDefault
+    DNP3.Interface.AnalogQuality AQ_REFERENCE_CHECK = 64 : Public, Static, Literal, HasDefault
+    DNP3.Interface.AnalogQuality AQ_RESERVED = 128 : Public, Static, Literal, HasDefault
+Class DNP3.Interface.Analog: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Double, Byte, System.DateTime): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double value : Public, InitOnly
+    Byte quality : Public, InitOnly
+    System.DateTime time : Public, InitOnly
+Struct DNP3.Interface.CounterQuality: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    DNP3.Interface.CounterQuality CQ_ONLINE = 1 : Public, Static, Literal, HasDefault
+    DNP3.Interface.CounterQuality CQ_RESTART = 2 : Public, Static, Literal, HasDefault
+    DNP3.Interface.CounterQuality CQ_COMM_LOST = 4 : Public, Static, Literal, HasDefault
+    DNP3.Interface.CounterQuality CQ_REMOTE_FORCED_DATA = 8 : Public, Static, Literal, HasDefault
+    DNP3.Interface.CounterQuality CQ_LOCAL_FORCED_DATA = 16 : Public, Static, Literal, HasDefault
+    DNP3.Interface.CounterQuality CQ_ROLLOVER = 32 : Public, Static, Literal, HasDefault
+    DNP3.Interface.CounterQuality CQ_DISCONTINUITY = 64 : Public, Static, Literal, HasDefault
+    DNP3.Interface.CounterQuality CQ_RESERVED = 128 : Public, Static, Literal, HasDefault
+Class DNP3.Interface.Counter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(UInt32, Byte, System.DateTime): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    UInt32 value : Public, InitOnly
+    Byte quality : Public, InitOnly
+    System.DateTime time : Public, InitOnly
+Struct DNP3.Interface.ControlQuality: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    DNP3.Interface.ControlQuality TQ_ONLINE = 1 : Public, Static, Literal, HasDefault
+    DNP3.Interface.ControlQuality TQ_RESTART = 2 : Public, Static, Literal, HasDefault
+    DNP3.Interface.ControlQuality TQ_COMM_LOST = 4 : Public, Static, Literal, HasDefault
+    DNP3.Interface.ControlQuality TQ_REMOTE_FORCED_DATA = 8 : Public, Static, Literal, HasDefault
+    DNP3.Interface.ControlQuality TQ_LOCAL_FORCED_DATA = 16 : Public, Static, Literal, HasDefault
+    DNP3.Interface.ControlQuality TQ_RESERVED_1 = 32 : Public, Static, Literal, HasDefault
+    DNP3.Interface.ControlQuality TQ_RESERVED_2 = 64 : Public, Static, Literal, HasDefault
+    DNP3.Interface.ControlQuality TQ_STATE = 128 : Public, Static, Literal, HasDefault
+Class DNP3.Interface.ControlStatus: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Boolean, Byte, System.DateTime): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Boolean value : Public, InitOnly
+    Byte quality : Public, InitOnly
+    System.DateTime time : Public, InitOnly
+Struct DNP3.Interface.SetpointQuality: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    DNP3.Interface.SetpointQuality PQ_ONLINE = 1 : Public, Static, Literal, HasDefault
+    DNP3.Interface.SetpointQuality PQ_RESTART = 2 : Public, Static, Literal, HasDefault
+    DNP3.Interface.SetpointQuality PQ_COMM_LOST = 4 : Public, Static, Literal, HasDefault
+    DNP3.Interface.SetpointQuality PQ_REMOTE_FORCED_DATA = 8 : Public, Static, Literal, HasDefault
+    DNP3.Interface.SetpointQuality PQ_RESERVED_1 = 16 : Public, Static, Literal, HasDefault
+    DNP3.Interface.SetpointQuality PQ_RESERVED_2 = 32 : Public, Static, Literal, HasDefault
+    DNP3.Interface.SetpointQuality PQ_RESERVED_3 = 64 : Public, Static, Literal, HasDefault
+    DNP3.Interface.SetpointQuality PQ_RESERVED_4 = 128 : Public, Static, Literal, HasDefault
+Class DNP3.Interface.SetpointStatus: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Double, Byte, System.DateTime): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double value : Public, InitOnly
+    Byte quality : Public, InitOnly
+    System.DateTime time : Public, InitOnly
+Interface DNP3.Interface.ICommandAcceptor: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    AcceptCommand(BinaryOutput, UInt32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    AcceptCommand(Setpoint, UInt32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface DNP3.Interface.IDataObserver: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    Start(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Update(Binary, UInt32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Update(Analog, UInt32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Update(Counter, UInt32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Update(ControlStatus, UInt32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Update(SetpointStatus, UInt32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    End(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class DNP3.Interface.FutureCallback`1[T]: AutoLayout, AnsiClass, Class, Public, Sealed
+  Type parameter: T
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(T): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(T, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface DNP3.Interface.IFuture`1[T]: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Type parameter: T
+  Methods:
+    Await(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Listen(FutureCallback`1): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class DNP3.Interface.Future`1[T]: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Type parameter: T
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    DNP3.Interface.IFuture`1[T]
+  Methods:
+    Await(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Listen(FutureCallback`1): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Set(T): PrivateScope, Public, HideBySig
+Class DNP3.Interface.LogEntry: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(DNP3.Interface.FilterLevel, System.String, System.String, System.String, System.DateTime, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    DNP3.Interface.FilterLevel filterLevel : Public, InitOnly
+    System.String loggerName : Public, InitOnly
+    System.String location : Public, InitOnly
+    System.String message : Public, InitOnly
+    System.DateTime time : Public, InitOnly
+    Int32 errorCode : Public, InitOnly
+    System.Collections.Generic.IDictionary`2[System.String,System.String] keyValues : Public, InitOnly
+Interface DNP3.Interface.ILogHandler: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    Log(LogEntry): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SetVar(String, String, Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Struct DNP3.Interface.FilterLevel: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    DNP3.Interface.FilterLevel LEV_EVENT = 0 : Public, Static, Literal, HasDefault
+    DNP3.Interface.FilterLevel LEV_ERROR = 1 : Public, Static, Literal, HasDefault
+    DNP3.Interface.FilterLevel LEV_WARNING = 2 : Public, Static, Literal, HasDefault
+    DNP3.Interface.FilterLevel LEV_INFO = 3 : Public, Static, Literal, HasDefault
+    DNP3.Interface.FilterLevel LEV_INTERPRET = 4 : Public, Static, Literal, HasDefault
+    DNP3.Interface.FilterLevel LEV_COMM = 5 : Public, Static, Literal, HasDefault
+    DNP3.Interface.FilterLevel LEV_DEBUG = 6 : Public, Static, Literal, HasDefault
+Struct DNP3.Interface.Parity: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    DNP3.Interface.Parity NONE = 0 : Public, Static, Literal, HasDefault
+    DNP3.Interface.Parity EVEN = 1 : Public, Static, Literal, HasDefault
+    DNP3.Interface.Parity ODD = 2 : Public, Static, Literal, HasDefault
+Struct DNP3.Interface.FlowControl: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    DNP3.Interface.FlowControl NONE = 0 : Public, Static, Literal, HasDefault
+    DNP3.Interface.FlowControl HARDWARE = 1 : Public, Static, Literal, HasDefault
+    DNP3.Interface.FlowControl XONXOFF = 2 : Public, Static, Literal, HasDefault
+Class DNP3.Interface.SerialSettings: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String, Int32, Int32, Int32, DNP3.Interface.Parity, DNP3.Interface.FlowControl): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String port : Public, InitOnly
+    Int32 baud : Public, InitOnly
+    Int32 dataBits : Public, InitOnly
+    Int32 stopBits : Public, InitOnly
+    DNP3.Interface.Parity parity : Public, InitOnly
+    DNP3.Interface.FlowControl flowControl : Public, InitOnly
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig

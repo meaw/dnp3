@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{893D4C53-0729-480D-8F40-75E7139224DF}</ProjectGuid>
+    <RootNamespace>DNP3Test</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\config\boost_includes.props" />
+    <Import Project="..\config\boost_lib.props" />
+    <Import Project="..\config\local_dir.props" />
+    <Import Project="..\config\output_dirs.props" />
+    <Import Project="..\config\common_boost_defines.props" />
+    <Import Project="..\config\disable_specific_warnings.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\config\boost_includes.props" />
+    <Import Project="..\config\local_dir.props" />
+    <Import Project="..\config\output_dirs.props" />
+    <Import Project="..\config\common_boost_defines.props" />
+    <Import Project="..\config\disable_specific_warnings.props" />
+    <Import Project="..\config\boost_lib_64.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\config\boost_includes.props" />
+    <Import Project="..\config\boost_lib.props" />
+    <Import Project="..\config\local_dir.props" />
+    <Import Project="..\config\output_dirs.props" />
+    <Import Project="..\config\common_boost_defines.props" />
+    <Import Project="..\config\disable_specific_warnings.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\config\boost_includes.props" />
+    <Import Project="..\config\local_dir.props" />
+    <Import Project="..\config\output_dirs.props" />
+    <Import Project="..\config\common_boost_defines.props" />
+    <Import Project="..\config\disable_specific_warnings.props" />
+    <Import Project="..\config\boost_lib_64.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CONSOLE;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CONSOLE;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="APLTestTools.vcxproj">
+      <Project>{41d4b22b-f06e-4230-9aa8-3bff096cc710}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="DNP3.vcxproj">
+      <Project>{e053e7ed-f462-4de0-8d69-6d97045ffb25}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="APL.vcxproj">
+      <Project>{761218b0-f2b7-42da-9c9b-413fa34886df}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TestStackManager.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TestStartBoostUTF.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TestAPDU.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TestAPDUWriting.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TestAppLayer.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TestObjects.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\AppLayerTest.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\MockAppUser.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TestCRC.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TestLinkFrameDNP.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TestLinkLayer.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TestLinkLayerRouter.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TestLinkReceiver.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TestLinkRoute.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\DNPHelpers.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\LinkLayerRouterTest.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\LinkLayerTest.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\MockFrameSink.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TestIntegration.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TestStartupTeardown.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\ComparingDataObserver.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\IntegrationTest.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\StartupTeardownTest.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TestMaster.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TestResponseLoader.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\MasterTestObject.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\MockAppLayer.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\ResponseLoaderTestObject.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TestDatabase.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TestEventBufferBase.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TestEventBuffers.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TestSlave.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TestSlaveEventBuffer.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\SlaveTestObject.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TestTransportLayer.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TestTransportLoopback.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TestTransportScalability.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TransportTestObject.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TransportIntegrationStack.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TransportLoopbackTestObject.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TransportScalabilityTestObject.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TransportStackPair.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TestEnhancedVtoRouter.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TestVtoInterface.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TestVtoLoopbackIntegration.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TestVtoOnewayIntegration.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TestVtoRouter.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TestVtoRouterManager.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\TestVtoWriter.cpp" />
+    <ClCompile Include="..\src\opendnp3\DNP3\test\VtoIntegrationTestBase.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\opendnp3\DNP3\test\AppLayerTest.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\test\MockAppUser.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\test\DNPHelpers.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\test\LinkLayerRouterTest.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\test\LinkLayerTest.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\test\LinkReceiverTest.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\test\MockFrameSink.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\test\ComparingDataObserver.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\test\IntegrationTest.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\test\StartupTeardownTest.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\test\MasterTestObject.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\test\MockAppLayer.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\test\QueueingStackObserver.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\test\ResponseLoaderTestObject.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\test\DatabaseTestObject.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\test\SlaveTestObject.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\test\TransportTestObject.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\test\TransportIntegrationStack.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\test\TransportLoopbackTestObject.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\test\TransportScalabilityTestObject.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\test\TransportStackPair.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\test\ReadableVtoWriter.h" />
+    <ClInclude Include="..\src\opendnp3\DNP3\test\VtoIntegrationTestBase.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

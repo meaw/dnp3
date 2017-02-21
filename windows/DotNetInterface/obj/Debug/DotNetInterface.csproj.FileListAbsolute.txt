@@ -1,0 +1,4 @@
+D:\582\dnp3-master\windows\DotNetInterface\bin\Debug\DotNetInterface.dll
+D:\582\dnp3-master\windows\DotNetInterface\bin\Debug\DotNetInterface.pdb
+D:\582\dnp3-master\windows\DotNetInterface\obj\Debug\DotNetInterface.dll
+D:\582\dnp3-master\windows\DotNetInterface\obj\Debug\DotNetInterface.pdb

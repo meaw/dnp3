@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{761218B0-F2B7-42DA-9C9B-413FA34886DF}</ProjectGuid>
+    <RootNamespace>DNPStack</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+    <Import Project="..\config\boost_includes.props" />
+    <Import Project="..\config\local_dir.props" />
+    <Import Project="..\config\output_dirs.props" />
+    <Import Project="..\config\common_boost_defines.props" />
+    <Import Project="..\config\disable_specific_warnings.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+    <Import Project="..\config\boost_includes.props" />
+    <Import Project="..\config\local_dir.props" />
+    <Import Project="..\config\output_dirs.props" />
+    <Import Project="..\config\common_boost_defines.props" />
+    <Import Project="..\config\disable_specific_warnings.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+    <Import Project="..\config\boost_includes.props" />
+    <Import Project="..\config\local_dir.props" />
+    <Import Project="..\config\output_dirs.props" />
+    <Import Project="..\config\common_boost_defines.props" />
+    <Import Project="..\config\disable_specific_warnings.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+    <Import Project="..\config\boost_includes.props" />
+    <Import Project="..\config\local_dir.props" />
+    <Import Project="..\config\output_dirs.props" />
+    <Import Project="..\config\common_boost_defines.props" />
+    <Import Project="..\config\disable_specific_warnings.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4355;4503;4180;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4355;4503;4180;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__USE_W32_SOCKETS; WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)DNPStack.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__USE_W32_SOCKETS; WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)DNPStack.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\opendnp3\APL\IPhysicalLayerSource.h" />
+    <ClInclude Include="..\src\opendnp3\APL\PhysicalLayerInstance.h" />
+    <ClInclude Include="..\src\opendnp3\APL\PhysicalLayerManager.h" />
+    <ClInclude Include="..\src\opendnp3\APL\PhysicalLayerMap.h" />
+    <ClInclude Include="..\src\opendnp3\APL\PhysLayerSettings.h" />
+    <ClInclude Include="..\src\opendnp3\APL\PhysLoopback.h" />
+    <ClInclude Include="..\src\opendnp3\APL\IHandlerAsync.h" />
+    <ClInclude Include="..\src\opendnp3\APL\IOService.h" />
+    <ClInclude Include="..\src\opendnp3\APL\IPhysicalLayerAsync.h" />
+    <ClInclude Include="..\src\opendnp3\APL\PhysicalLayerAsyncASIO.h" />
+    <ClInclude Include="..\src\opendnp3\APL\PhysicalLayerAsyncBase.h" />
+    <ClInclude Include="..\src\opendnp3\APL\PhysicalLayerFactory.h" />
+    <ClInclude Include="..\src\opendnp3\APL\PhysicalLayerFunctors.h" />
+    <ClInclude Include="..\src\opendnp3\APL\ASIOSerialHelpers.h" />
+    <ClInclude Include="..\src\opendnp3\APL\PhysicalLayerAsyncSerial.h" />
+    <ClInclude Include="..\src\opendnp3\APL\SerialTypes.h" />
+    <ClInclude Include="..\src\opendnp3\APL\PhysicalLayerAsyncBaseTCP.h" />
+    <ClInclude Include="..\src\opendnp3\APL\PhysicalLayerAsyncTCPClient.h" />
+    <ClInclude Include="..\src\opendnp3\APL\PhysicalLayerAsyncTCPServer.h" />
+    <ClInclude Include="..\src\opendnp3\APL\IPhysicalLayerObserver.h" />
+    <ClInclude Include="..\src\opendnp3\APL\PhysicalLayerMonitor.h" />
+    <ClInclude Include="..\src\opendnp3\APL\PhysicalLayerMonitorStates.h" />
+    <ClInclude Include="..\src\opendnp3\APL\PhysicalLayerStates.h" />
+    <ClInclude Include="..\src\opendnp3\APL\CachedLogVariable.h" />
+    <ClInclude Include="..\src\opendnp3\APL\Log.h" />
+    <ClInclude Include="..\src\opendnp3\APL\LogBase.h" />
+    <ClInclude Include="..\src\opendnp3\APL\LogEntry.h" />
+    <ClInclude Include="..\src\opendnp3\APL\LogEntryCircularBuffer.h" />
+    <ClInclude Include="..\src\opendnp3\APL\Loggable.h" />
+    <ClInclude Include="..\src\opendnp3\APL\Logger.h" />
+    <ClInclude Include="..\src\opendnp3\APL\LogToFile.h" />
+    <ClInclude Include="..\src\opendnp3\APL\LogToStdio.h" />
+    <ClInclude Include="..\src\opendnp3\APL\LogTypes.h" />
+    <ClInclude Include="..\src\opendnp3\APL\LogVar.h" />
+    <ClInclude Include="..\src\opendnp3\APL\MetricBuffer.h" />
+    <ClInclude Include="..\src\opendnp3\APL\EventSet.h" />
+    <ClInclude Include="..\src\opendnp3\APL\IOServiceThread.h" />
+    <ClInclude Include="..\src\opendnp3\APL\ISubject.h" />
+    <ClInclude Include="..\src\opendnp3\APL\ITransactable.h" />
+    <ClInclude Include="..\src\opendnp3\APL\SubjectBase.h" />
+    <ClInclude Include="..\src\opendnp3\APL\SyncVar.h" />
+    <ClInclude Include="..\src\opendnp3\APL\Thread.h" />
+    <ClInclude Include="..\src\opendnp3\APL\Threadable.h" />
+    <ClInclude Include="..\src\opendnp3\APL\ThreadBase.h" />
+    <ClInclude Include="..\src\opendnp3\APL\ThreadBoost.h" />
+    <ClInclude Include="..\src\opendnp3\APL\BoundNotifier.h" />
+    <ClInclude Include="..\src\opendnp3\APL\EventLock.h" />
+    <ClInclude Include="..\src\opendnp3\APL\EventLockBase.h" />
+    <ClInclude Include="..\src\opendnp3\APL\IEventLock.h" />
+    <ClInclude Include="..\src\opendnp3\APL\INotifier.h" />
+    <ClInclude Include="..\src\opendnp3\APL\Lock.h" />
+    <ClInclude Include="..\src\opendnp3\APL\LockBase.h" />
+    <ClInclude Include="..\src\opendnp3\APL\LockBoost.h" />
+    <ClInclude Include="..\src\opendnp3\APL\Notifier.h" />
+    <ClInclude Include="..\src\opendnp3\APL\Configure.h" />
+    <ClInclude Include="..\src\opendnp3\APL\DeleteAny.h" />
+    <ClInclude Include="..\src\opendnp3\APL\Exception.h" />
+    <ClInclude Include="..\src\opendnp3\APL\GetKeys.h" />
+    <ClInclude Include="..\src\opendnp3\APL\Parsing.h" />
+    <ClInclude Include="..\src\opendnp3\APL\Random.h" />
+    <ClInclude Include="..\src\opendnp3\APL\RandomDouble.h" />
+    <ClInclude Include="..\src\opendnp3\APL\Singleton.h" />
+    <ClInclude Include="..\src\opendnp3\APL\Types.h" />
+    <ClInclude Include="..\src\opendnp3\APL\Uncopyable.h" />
+    <ClInclude Include="..\src\opendnp3\APL\Util.h" />
+    <ClInclude Include="..\src\opendnp3\APL\ITimeSource.h" />
+    <ClInclude Include="..\src\opendnp3\APL\TimeBase.h" />
+    <ClInclude Include="..\src\opendnp3\APL\TimeBoost.h" />
+    <ClInclude Include="..\src\opendnp3\APL\Timeout.h" />
+    <ClInclude Include="..\src\opendnp3\APL\TimeSource.h" />
+    <ClInclude Include="..\src\opendnp3\APL\TimeTypes.h" />
+    <ClInclude Include="..\src\opendnp3\APL\TimingTools.h" />
+    <ClInclude Include="..\src\opendnp3\APL\LowerLayerToPhysAdapter.h" />
+    <ClInclude Include="..\src\opendnp3\APL\ProtocolUtil.h" />
+    <ClInclude Include="..\src\opendnp3\APL\ToHex.h" />
+    <ClInclude Include="..\src\opendnp3\APL\PackingTemplates.h" />
+    <ClInclude Include="..\src\opendnp3\APL\PackingUnpacking.h" />
+    <ClInclude Include="..\src\opendnp3\APL\AsyncLayerInterfaces.h" />
+    <ClInclude Include="..\src\opendnp3\APL\CopyableBuffer.h" />
+    <ClInclude Include="..\src\opendnp3\APL\RandomizedBuffer.h" />
+    <ClInclude Include="..\src\opendnp3\APL\ShiftableBuffer.h" />
+    <ClInclude Include="..\src\opendnp3\APL\CRC.h" />
+    <ClInclude Include="..\src\opendnp3\APL\AsyncResult.h" />
+    <ClInclude Include="..\src\opendnp3\APL\ITimer.h" />
+    <ClInclude Include="..\src\opendnp3\APL\ITimerSource.h" />
+    <ClInclude Include="..\src\opendnp3\APL\PostingNotifier.h" />
+    <ClInclude Include="..\src\opendnp3\APL\PostingNotifierSource.h" />
+    <ClInclude Include="..\src\opendnp3\APL\SuspendTimerSource.h" />
+    <ClInclude Include="..\src\opendnp3\APL\TimerASIO.h" />
+    <ClInclude Include="..\src\opendnp3\APL\TimerSourceASIO.h" />
+    <ClInclude Include="..\src\opendnp3\APL\AsyncTaskBase.h" />
+    <ClInclude Include="..\src\opendnp3\APL\AsyncTaskContinuous.h" />
+    <ClInclude Include="..\src\opendnp3\APL\AsyncTaskGroup.h" />
+    <ClInclude Include="..\src\opendnp3\APL\AsyncTaskInterfaces.h" />
+    <ClInclude Include="..\src\opendnp3\APL\AsyncTaskNonPeriodic.h" />
+    <ClInclude Include="..\src\opendnp3\APL\AsyncTaskPeriodic.h" />
+    <ClInclude Include="..\src\opendnp3\APL\AsyncTaskScheduler.h" />
+    <ClInclude Include="..\src\opendnp3\APL\TrackingTaskGroup.h" />
+    <ClInclude Include="..\src\opendnp3\APL\BaseDataTypes.h" />
+    <ClInclude Include="..\src\opendnp3\APL\ChangeBuffer.h" />
+    <ClInclude Include="..\src\opendnp3\APL\CommandInterfaces.h" />
+    <ClInclude Include="..\src\opendnp3\APL\CommandManager.h" />
+    <ClInclude Include="..\src\opendnp3\APL\CommandQueue.h" />
+    <ClInclude Include="..\src\opendnp3\APL\CommandResponseQueue.h" />
+    <ClInclude Include="..\src\opendnp3\APL\CommandTypes.h" />
+    <ClInclude Include="..\src\opendnp3\APL\DataInterfaces.h" />
+    <ClInclude Include="..\src\opendnp3\APL\DataTypes.h" />
+    <ClInclude Include="..\src\opendnp3\APL\FlexibleDataObserver.h" />
+    <ClInclude Include="..\src\opendnp3\APL\MultiplexingDataObserver.h" />
+    <ClInclude Include="..\src\opendnp3\APL\QualityConverter.h" />
+    <ClInclude Include="..\src\opendnp3\APL\QualityMasks.h" />
+    <ClInclude Include="..\src\opendnp3\APL\QueueingFDO.h" />
+    <ClInclude Include="..\src\opendnp3\APL\Function.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\opendnp3\APL\PhysicalLayerInstance.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\PhysicalLayerManager.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\PhysicalLayerMap.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\PhysLoopback.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\IHandlerAsync.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\IOService.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\PhysicalLayerAsyncBase.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\PhysicalLayerFactory.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\ASIOSerialHelpers.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\PhysicalLayerAsyncSerial.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\PhysicalLayerAsyncBaseTCP.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\PhysicalLayerAsyncTCPClient.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\PhysicalLayerAsyncTCPServer.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\PhysicalLayerMonitor.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\PhysicalLayerMonitorStates.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\PhysicalLayerStates.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\Log.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\LogEntry.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\LogEntryCircularBuffer.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\Loggable.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\Logger.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\LogToFile.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\LogToStdio.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\LogTypes.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\MetricBuffer.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\IOServiceThread.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\Threadable.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\ThreadBase.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\ThreadBoost.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\EventLock.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\LockBase.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\LockBoost.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\Exception.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\Parsing.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\Util.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\TimeBase.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\TimeBoost.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\Timeout.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\TimeSource.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\TimingTools.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\LowerLayerToPhysAdapter.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\ProtocolUtil.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\ToHex.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\PackingUnpacking.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\AsyncLayerInterfaces.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\CopyableBuffer.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\RandomizedBuffer.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\ShiftableBuffer.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\CRC.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\AsyncResult.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\ITimerSource.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\PostingNotifier.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\PostingNotifierSource.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\SuspendTimerSource.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\TimerASIO.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\TimerSourceASIO.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\AsyncTaskBase.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\AsyncTaskContinuous.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\AsyncTaskGroup.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\AsyncTaskNonPeriodic.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\AsyncTaskPeriodic.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\AsyncTaskScheduler.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\TrackingTaskGroup.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\BaseDataTypes.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\CommandManager.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\CommandQueue.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\CommandResponseQueue.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\CommandTypes.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\FlexibleDataObserver.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\MultiplexingDataObserver.cpp" />
+    <ClCompile Include="..\src\opendnp3\APL\QualityConverter.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
