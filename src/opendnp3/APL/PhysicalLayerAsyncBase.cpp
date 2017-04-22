@@ -23,7 +23,12 @@
 #include "Exception.h"
 
 #include <sstream>
-
+#ifdef _DEBUG
+#  define _CRTDBG_MAP_ALLOC
+#  define _CRTDBG_MAP_ALLOC_NEW
+#  include <crtdbg.h>
+#  include <assert.h>
+#endif
 
 using namespace std;
 
@@ -188,7 +193,7 @@ void PhysicalLayerAsyncBase::OnOpenCallback(const boost::system::error_code& arE
 		mState.mOpening = false;
 
 		this->DoOpenCallback();
-
+		assert(_CrtCheckMemory());
 		if(arErr) {
 			LOG_BLOCK(LEV_WARNING, arErr.message());
 			mState.CheckForClose();

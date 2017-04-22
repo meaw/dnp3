@@ -1,20 +1,6 @@
-﻿Build started 2/20/2017 12:06:21 AM.
-     1>Project "D:\582\dnp3-master\vstudio10\TerminalTest.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"D:\582\dnp3-master\vstudio10\\..\src\\" /I"D:\582\dnp3-master\vstudio10\\" /IC:\boost\boost_1_55_0\ /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _WIN32_WINNT=0x0501 /D BOOST_ASIO_ENABLE_CANCELIO /D BOOST_REGEX_NO_LIB /D BOOST_ALL_DYN_LINK /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"TerminalTest\Debug\\" /Fd"TerminalTest\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt /wd4355 ..\src\opendnp3\terminal\test\TestPhysicalLayerSyncProxy.cpp ..\src\opendnp3\terminal\test\TestTerminal.cpp
-         TestTerminal.cpp
-         TestPhysicalLayerSyncProxy.cpp
-         Generating Code...
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"TerminalTest\Debug\TerminalTest.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\boost\boost_1_55_0\stage\lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"TerminalTest\Debug\TerminalTest.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"TerminalTest\Debug\TerminalTest.lib" /MACHINE:X86 /SAFESEH TerminalTest\Debug\TestPhysicalLayerSyncProxy.obj
-         TerminalTest\Debug\TestTerminal.obj
-         "D:\582\dnp3-master\vstudio10\APL\Debug\APL.lib"
-         "D:\582\dnp3-master\vstudio10\APLTestTools\Debug\APLTestTools.lib"
-         "D:\582\dnp3-master\vstudio10\Terminal\Debug\Terminal.lib"
-     1>TestPhysicalLayerSyncProxy.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
-         TerminalTest.vcxproj -> D:\582\dnp3-master\vstudio10\TerminalTest\Debug\TerminalTest.exe
-     1>Done Building Project "D:\582\dnp3-master\vstudio10\TerminalTest.vcxproj" (Build target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:18.82
+﻿  TestTerminal.cpp
+  TestPhysicalLayerSyncProxy.cpp
+  Generating Code...
+TestPhysicalLayerSyncProxy.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+  TerminalTest.vcxproj -> D:\GitHub\dnp3\vstudio10\TerminalTest\Debug\TerminalTest.exe
+  TerminalTest.vcxproj -> TerminalTest\Debug\TerminalTest.pdb (Full PDB)

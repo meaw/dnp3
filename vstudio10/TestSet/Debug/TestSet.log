@@ -1,26 +1,7 @@
-﻿Build started 2/20/2017 12:06:21 AM.
-     1>Project "D:\582\dnp3-master\vstudio10\TestSet.vcxproj" on node 5 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"D:\582\dnp3-master\vstudio10\\..\src\\" /I"D:\582\dnp3-master\vstudio10\\" /IC:\boost\boost_1_55_0\ /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _WIN32_WINNT=0x0501 /D BOOST_ASIO_ENABLE_CANCELIO /D BOOST_REGEX_NO_LIB /D BOOST_ALL_DYN_LINK /D _MBCS /Gm /EHsc /MDd /GS- /fp:precise /Zc:wchar_t /Zc:forScope /Fo"TestSet\Debug\\" /Fd"TestSet\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ..\src\opendnp3\testset\AddressScanner.cpp ..\src\opendnp3\testset\main.cpp ..\src\opendnp3\testset\StackHelpers.cpp
-         StackHelpers.cpp
-         main.cpp
-         AddressScanner.cpp
-         Generating Code...
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"TestSet\Debug\TestSet.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\boost\boost_1_55_0\stage\lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"TestSet\Debug\TestSet.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"TestSet\Debug\TestSet.lib" /MACHINE:X86 /SAFESEH TestSet\Debug\AddressScanner.obj
-         TestSet\Debug\main.obj
-         TestSet\Debug\StackHelpers.obj
-         "D:\582\dnp3-master\vstudio10\DNP3\Debug\DNP3.lib"
-         "D:\582\dnp3-master\vstudio10\APLXML\Debug\APLXML.lib"
-         "D:\582\dnp3-master\vstudio10\APL\Debug\APL.lib"
-         "D:\582\dnp3-master\vstudio10\tinyxml\Debug\tinyxml.lib"
-         "D:\582\dnp3-master\vstudio10\DNP3XML\Debug\DNP3XML.lib"
-         "D:\582\dnp3-master\vstudio10\Terminal\Debug\Terminal.lib"
-         "D:\582\dnp3-master\vstudio10\XMLBindings\Debug\XMLBindings.lib"
-     1>AddressScanner.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
-         TestSet.vcxproj -> D:\582\dnp3-master\vstudio10\TestSet\Debug\TestSet.exe
-     1>Done Building Project "D:\582\dnp3-master\vstudio10\TestSet.vcxproj" (Build target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:33.67
+﻿  StackHelpers.cpp
+  main.cpp
+  AddressScanner.cpp
+  Generating Code...
+AddressScanner.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+  TestSet.vcxproj -> D:\GitHub\dnp3\vstudio10\TestSet\Debug\TestSet.exe
+  TestSet.vcxproj -> TestSet\Debug\TestSet.pdb (Full PDB)

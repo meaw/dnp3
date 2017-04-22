@@ -1,46 +1,19 @@
-﻿Build started 2/20/2017 12:03:49 AM.
-     1>Project "D:\582\dnp3-master\vstudio10\APLTestTools.vcxproj" on node 4 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"D:\582\dnp3-master\vstudio10\\..\src\\" /I"D:\582\dnp3-master\vstudio10\\" /IC:\boost\boost_1_55_0\ /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _LIB /D _DEBUG /D _WIN32_WINNT=0x0501 /D BOOST_ASIO_ENABLE_CANCELIO /D BOOST_REGEX_NO_LIB /D BOOST_ALL_DYN_LINK /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"APLTestTools\Debug\\" /Fd"APLTestTools\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt /wd4355 ..\src\opendnp3\APL\test\util\BufferHelpers.cpp ..\src\opendnp3\APL\test\util\BufferTestObject.cpp ..\src\opendnp3\APL\test\util\MockLowerLayer.cpp ..\src\opendnp3\APL\test\util\MockUpperLayer.cpp ..\src\opendnp3\APL\test\util\AsyncPhysTestObject.cpp ..\src\opendnp3\APL\test\util\AsyncTestObjectASIO.cpp ..\src\opendnp3\APL\test\util\LoopbackPhysicalLayerAsync.cpp ..\src\opendnp3\APL\test\util\MockPhysicalLayerAsync.cpp ..\src\opendnp3\APL\test\util\MockPhysicalLayerAsyncTS.cpp ..\src\opendnp3\APL\test\util\MockPhysicalLayerMonitor.cpp ..\src\opendnp3\APL\test\util\MockPhysicalLayerSource.cpp ..\src\opendnp3\APL\test\util\PhysicalLayerWrapper.cpp ..\src\opendnp3\APL\test\util\WrappedTcpPipe.cpp ..\src\opendnp3\APL\test\util\MockTimerSource.cpp ..\src\opendnp3\APL\test\util\LogTester.cpp ..\src\opendnp3\APL\test\util\MockResponseAcceptor.cpp ..\src\opendnp3\APL\test\util\AsyncTestObject.cpp
-         AsyncTestObject.cpp
-         MockResponseAcceptor.cpp
-         LogTester.cpp
-         MockTimerSource.cpp
-         WrappedTcpPipe.cpp
-         PhysicalLayerWrapper.cpp
-         MockPhysicalLayerSource.cpp
-         MockPhysicalLayerMonitor.cpp
-         MockPhysicalLayerAsyncTS.cpp
-         MockPhysicalLayerAsync.cpp
-         LoopbackPhysicalLayerAsync.cpp
-         AsyncTestObjectASIO.cpp
-         AsyncPhysTestObject.cpp
-         MockUpperLayer.cpp
-         MockLowerLayer.cpp
-         BufferTestObject.cpp
-         BufferHelpers.cpp
-         Generating Code...
-       Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\Lib.exe /OUT:"APLTestTools\Debug\APLTestTools.lib" /NOLOGO APLTestTools\Debug\BufferHelpers.obj
-         APLTestTools\Debug\BufferTestObject.obj
-         APLTestTools\Debug\MockLowerLayer.obj
-         APLTestTools\Debug\MockUpperLayer.obj
-         APLTestTools\Debug\AsyncPhysTestObject.obj
-         APLTestTools\Debug\AsyncTestObjectASIO.obj
-         APLTestTools\Debug\LoopbackPhysicalLayerAsync.obj
-         APLTestTools\Debug\MockPhysicalLayerAsync.obj
-         APLTestTools\Debug\MockPhysicalLayerAsyncTS.obj
-         APLTestTools\Debug\MockPhysicalLayerMonitor.obj
-         APLTestTools\Debug\MockPhysicalLayerSource.obj
-         APLTestTools\Debug\PhysicalLayerWrapper.obj
-         APLTestTools\Debug\WrappedTcpPipe.obj
-         APLTestTools\Debug\MockTimerSource.obj
-         APLTestTools\Debug\LogTester.obj
-         APLTestTools\Debug\MockResponseAcceptor.obj
-         APLTestTools\Debug\AsyncTestObject.obj
-         APLTestTools.vcxproj -> D:\582\dnp3-master\vstudio10\APLTestTools\Debug\APLTestTools.lib
-     1>Done Building Project "D:\582\dnp3-master\vstudio10\APLTestTools.vcxproj" (Build target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:01:05.11
+﻿  AsyncTestObject.cpp
+  MockResponseAcceptor.cpp
+  LogTester.cpp
+  MockTimerSource.cpp
+  WrappedTcpPipe.cpp
+  PhysicalLayerWrapper.cpp
+  MockPhysicalLayerSource.cpp
+  MockPhysicalLayerMonitor.cpp
+  MockPhysicalLayerAsyncTS.cpp
+  MockPhysicalLayerAsync.cpp
+  LoopbackPhysicalLayerAsync.cpp
+  AsyncTestObjectASIO.cpp
+  AsyncPhysTestObject.cpp
+  MockUpperLayer.cpp
+  MockLowerLayer.cpp
+  BufferTestObject.cpp
+  BufferHelpers.cpp
+  Generating Code...
+  APLTestTools.vcxproj -> D:\GitHub\dnp3\vstudio10\APLTestTools\Debug\APLTestTools.lib

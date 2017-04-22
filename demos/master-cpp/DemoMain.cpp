@@ -99,7 +99,7 @@ int main(int argc, char* argv[])
 
 	// Specify a FilterLevel for the stack/physical layer to use.
 	// Log statements with a lower priority will not be logged.
-	const FilterLevel LOG_LEVEL = LEV_INFO;
+	const FilterLevel LOG_LEVEL = LEV_INFO; //LEV_INFO; //DJSC
 
 	// Create our demo application that handles commands and
 	// demonstrates how to publish data give it a logger with a

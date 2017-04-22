@@ -3,3 +3,8 @@ D:\582\dnp3-master\windows\CSToCppXMLBinder\bin\debug\CSToCppXMLBinder.pdb
 D:\582\dnp3-master\windows\CSToCppXMLBinder\obj\Debug\CSToCppXMLBinder.csprojResolveAssemblyReference.cache
 D:\582\dnp3-master\windows\CSToCppXMLBinder\obj\Debug\CSToCppXMLBinder.exe
 D:\582\dnp3-master\windows\CSToCppXMLBinder\obj\Debug\CSToCppXMLBinder.pdb
+D:\GitHub\dnp3\windows\CSToCppXMLBinder\bin\debug\CSToCppXMLBinder.exe
+D:\GitHub\dnp3\windows\CSToCppXMLBinder\bin\debug\CSToCppXMLBinder.pdb
+D:\GitHub\dnp3\windows\CSToCppXMLBinder\obj\Debug\CSToCppXMLBinder.csprojResolveAssemblyReference.cache
+D:\GitHub\dnp3\windows\CSToCppXMLBinder\obj\Debug\CSToCppXMLBinder.exe
+D:\GitHub\dnp3\windows\CSToCppXMLBinder\obj\Debug\CSToCppXMLBinder.pdb

@@ -1,72 +1,35 @@
-﻿Build started 2/20/2017 12:06:21 AM.
-     1>Project "D:\582\dnp3-master\vstudio10\TestAPL.vcxproj" on node 3 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\boost\boost_1_55_0\ /I"D:\582\dnp3-master\vstudio10\\..\src\\" /I"D:\582\dnp3-master\vstudio10\\" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _WIN32_WINNT=0x0501 /D BOOST_ASIO_ENABLE_CANCELIO /D BOOST_REGEX_NO_LIB /D BOOST_ALL_DYN_LINK /D _VC80_UPGRADE=0x0710 /D _MBCS /Gm /EHsc /MDd /GS- /fp:precise /Zc:wchar_t /Zc:forScope /Fo"APLTest\Debug\\" /Fd"APLTest\Debug\vc110.pdb" /Gd /TP /wd4355 /analyze- /errorReport:prompt /wd4355 ..\src\opendnp3\APL\test\TestPhysicalLayerAsyncBase.cpp ..\src\opendnp3\APL\test\TestPhysicalLayerAsyncSerial.cpp ..\src\opendnp3\APL\test\TestPhysicalLayerAsyncTCP.cpp ..\src\opendnp3\APL\test\TestPhysicalLayerLoopback.cpp ..\src\opendnp3\APL\test\TestPhysicalLayerMonitor.cpp ..\src\opendnp3\APL\test\AsyncPhysBaseTest.cpp ..\src\opendnp3\APL\test\AsyncSerialTestObject.cpp ..\src\opendnp3\APL\test\TestTime.cpp ..\src\opendnp3\APL\test\TestASIO.cpp ..\src\opendnp3\APL\test\TestCastLongLongDouble.cpp ..\src\opendnp3\APL\test\TestMisc.cpp ..\src\opendnp3\APL\test\TestParsing.cpp ..\src\opendnp3\APL\test\TestTypes.cpp ..\src\opendnp3\APL\test\TestLocks.cpp ..\src\opendnp3\APL\test\TestSyncVar.cpp ..\src\opendnp3\APL\test\TestThreading.cpp ..\src\opendnp3\APL\test\TestLog.cpp ..\src\opendnp3\APL\test\TestCommandQueue.cpp ..\src\opendnp3\APL\test\TestCommandTypes.cpp ..\src\opendnp3\APL\test\TestQualityMasks.cpp ..\src\opendnp3\APL\test\TestXmlBinding.cpp ..\src\opendnp3\APL\test\TestUtil.cpp ..\src\opendnp3\APL\test\TestPackingUnpacking.cpp ..\src\opendnp3\APL\test\TestShiftableBuffer.cpp ..\src\opendnp3\APL\test\TestTimers.cpp ..\src\opendnp3\APL\test\TestAsyncTask.cpp
-         TestAsyncTask.cpp
-         TestTimers.cpp
-         TestShiftableBuffer.cpp
-         TestPackingUnpacking.cpp
-         TestUtil.cpp
-         TestXmlBinding.cpp
-         TestQualityMasks.cpp
-         TestCommandTypes.cpp
-         TestCommandQueue.cpp
-         TestLog.cpp
-         TestThreading.cpp
-         TestSyncVar.cpp
-         TestLocks.cpp
-         TestTypes.cpp
-         TestParsing.cpp
-         TestMisc.cpp
-         TestCastLongLongDouble.cpp
-         TestASIO.cpp
-         TestTime.cpp
-         AsyncSerialTestObject.cpp
-         Generating Code...
-         Compiling...
-         AsyncPhysBaseTest.cpp
-         TestPhysicalLayerMonitor.cpp
-         TestPhysicalLayerLoopback.cpp
-         TestPhysicalLayerAsyncTCP.cpp
-         TestPhysicalLayerAsyncSerial.cpp
-         TestPhysicalLayerAsyncBase.cpp
-         Generating Code...
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"APLTest\Debug\APLTest.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\boost\boost_1_55_0\stage\lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"APLTest\Debug\DNPTest.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"APLTest\Debug\APLTest.lib" /MACHINE:X86 /SAFESEH wsock32.lib APLTest\Debug\TestPhysicalLayerAsyncBase.obj
-         APLTest\Debug\TestPhysicalLayerAsyncSerial.obj
-         APLTest\Debug\TestPhysicalLayerAsyncTCP.obj
-         APLTest\Debug\TestPhysicalLayerLoopback.obj
-         APLTest\Debug\TestPhysicalLayerMonitor.obj
-         APLTest\Debug\AsyncPhysBaseTest.obj
-         APLTest\Debug\AsyncSerialTestObject.obj
-         APLTest\Debug\TestTime.obj
-         APLTest\Debug\TestASIO.obj
-         APLTest\Debug\TestCastLongLongDouble.obj
-         APLTest\Debug\TestMisc.obj
-         APLTest\Debug\TestParsing.obj
-         APLTest\Debug\TestTypes.obj
-         APLTest\Debug\TestLocks.obj
-         APLTest\Debug\TestSyncVar.obj
-         APLTest\Debug\TestThreading.obj
-         APLTest\Debug\TestLog.obj
-         APLTest\Debug\TestCommandQueue.obj
-         APLTest\Debug\TestCommandTypes.obj
-         APLTest\Debug\TestQualityMasks.obj
-         APLTest\Debug\TestXmlBinding.obj
-         APLTest\Debug\TestUtil.obj
-         APLTest\Debug\TestPackingUnpacking.obj
-         APLTest\Debug\TestShiftableBuffer.obj
-         APLTest\Debug\TestTimers.obj
-         APLTest\Debug\TestAsyncTask.obj
-         "D:\582\dnp3-master\vstudio10\APL\Debug\APL.lib"
-         "D:\582\dnp3-master\vstudio10\APLTestTools\Debug\APLTestTools.lib"
-         "D:\582\dnp3-master\vstudio10\tinyxml\Debug\tinyxml.lib"
-         "D:\582\dnp3-master\vstudio10\APLXML\Debug\APLXML.lib"
-         "D:\582\dnp3-master\vstudio10\XMLBindings\Debug\XMLBindings.lib"
-     1>TestPhysicalLayerAsyncBase.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
-         TestAPL.vcxproj -> D:\582\dnp3-master\vstudio10\APLTest\Debug\APLTest.exe
-     1>Done Building Project "D:\582\dnp3-master\vstudio10\TestAPL.vcxproj" (Build target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:01:53.52
+﻿  TestAsyncTask.cpp
+  TestTimers.cpp
+  TestShiftableBuffer.cpp
+  TestPackingUnpacking.cpp
+  TestUtil.cpp
+  TestXmlBinding.cpp
+  TestQualityMasks.cpp
+  TestCommandTypes.cpp
+  TestCommandQueue.cpp
+  TestLog.cpp
+  TestThreading.cpp
+  TestSyncVar.cpp
+  TestLocks.cpp
+  TestTypes.cpp
+  TestParsing.cpp
+  TestMisc.cpp
+  TestCastLongLongDouble.cpp
+  TestASIO.cpp
+  TestTime.cpp
+  AsyncSerialTestObject.cpp
+  Generating Code...
+  Compiling...
+  AsyncPhysBaseTest.cpp
+  TestPhysicalLayerMonitor.cpp
+  TestPhysicalLayerLoopback.cpp
+  TestPhysicalLayerAsyncTCP.cpp
+  TestPhysicalLayerAsyncSerial.cpp
+  TestPhysicalLayerAsyncBase.cpp
+  Generating Code...
+TestPhysicalLayerAsyncBase.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+  TestAPL.vcxproj -> D:\GitHub\dnp3\vstudio10\APLTest\Debug\APLTest.exe
+  TestAPL.vcxproj -> APLTest\Debug\DNPTest.pdb (Full PDB)
+  D:\GitHub\dnp3\vstudio10\..\windows\shared\DotNetAdapter.dll
+  D:\GitHub\dnp3\vstudio10\..\windows\shared\DotNetInterface.dll
+  2 File(s) copied

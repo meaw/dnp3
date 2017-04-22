@@ -2,3 +2,8 @@ D:\582\dnp3-master\windows\DotNetInterface\bin\Debug\DotNetInterface.dll
 D:\582\dnp3-master\windows\DotNetInterface\bin\Debug\DotNetInterface.pdb
 D:\582\dnp3-master\windows\DotNetInterface\obj\Debug\DotNetInterface.dll
 D:\582\dnp3-master\windows\DotNetInterface\obj\Debug\DotNetInterface.pdb
+D:\GitHub\dnp3\windows\DotNetInterface\bin\Debug\DotNetInterface.dll
+D:\GitHub\dnp3\windows\DotNetInterface\bin\Debug\DotNetInterface.pdb
+D:\GitHub\dnp3\windows\DotNetInterface\obj\Debug\DotNetInterface.csprojResolveAssemblyReference.cache
+D:\GitHub\dnp3\windows\DotNetInterface\obj\Debug\DotNetInterface.dll
+D:\GitHub\dnp3\windows\DotNetInterface\obj\Debug\DotNetInterface.pdb

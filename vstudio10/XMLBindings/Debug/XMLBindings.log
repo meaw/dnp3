@@ -1,20 +1,6 @@
-﻿Build started 2/20/2017 12:46:03 AM.
-     1>Project "D:\582\dnp3-master\vstudio10\XMLBindings.vcxproj" on node 3 (Rebuild target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\boost\boost_1_55_0\ /I"D:\582\dnp3-master\vstudio10\\..\src\\" /I"D:\582\dnp3-master\vstudio10\\" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _WIN32_WINNT=0x0501 /D BOOST_ASIO_ENABLE_CANCELIO /D BOOST_REGEX_NO_LIB /D BOOST_ALL_DYN_LINK /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"XMLBindings\Debug\\" /Fd"XMLBindings\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ..\src\opendnp3\xml\binding\APLXML_Base.cpp ..\src\opendnp3\xml\binding\APLXML_DNP.cpp ..\src\opendnp3\xml\binding\APLXML_MTS.cpp ..\src\opendnp3\xml\binding\APLXML_STS.cpp
-         APLXML_STS.cpp
-         APLXML_MTS.cpp
-         APLXML_DNP.cpp
-         APLXML_Base.cpp
-         Generating Code...
-       Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\Lib.exe /OUT:"XMLBindings\Debug\XMLBindings.lib" /NOLOGO XMLBindings\Debug\APLXML_Base.obj
-         XMLBindings\Debug\APLXML_DNP.obj
-         XMLBindings\Debug\APLXML_MTS.obj
-         XMLBindings\Debug\APLXML_STS.obj
-         XMLBindings.vcxproj -> D:\582\dnp3-master\vstudio10\XMLBindings\Debug\XMLBindings.lib
-     1>Done Building Project "D:\582\dnp3-master\vstudio10\XMLBindings.vcxproj" (Rebuild target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:06.26
+﻿  APLXML_STS.cpp
+  APLXML_MTS.cpp
+  APLXML_DNP.cpp
+  APLXML_Base.cpp
+  Generating Code...
+  XMLBindings.vcxproj -> D:\GitHub\dnp3\vstudio10\XMLBindings\Debug\XMLBindings.lib

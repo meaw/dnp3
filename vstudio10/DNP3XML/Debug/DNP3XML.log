@@ -1,18 +1,5 @@
-﻿Build started 2/20/2017 12:45:50 AM.
-     1>Project "D:\582\dnp3-master\vstudio10\DNP3XML.vcxproj" on node 3 (Rebuild target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"D:\582\dnp3-master\vstudio10\\..\src\\" /I"D:\582\dnp3-master\vstudio10\\" /IC:\boost\boost_1_55_0\ /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _WIN32_WINNT=0x0501 /D BOOST_ASIO_ENABLE_CANCELIO /D BOOST_REGEX_NO_LIB /D BOOST_ALL_DYN_LINK /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"DNP3XML\Debug\\" /Fd"DNP3XML\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ..\src\opendnp3\xml\DNP3\XML_DNP3.cpp ..\src\opendnp3\xml\DNP3\XML_TestSet.cpp ..\src\opendnp3\xml\DNP3\XmlToConfig.cpp
-         XmlToConfig.cpp
-         XML_TestSet.cpp
-         XML_DNP3.cpp
-         Generating Code...
-       Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\Lib.exe /OUT:"DNP3XML\Debug\DNP3XML.lib" /NOLOGO DNP3XML\Debug\XML_DNP3.obj
-         DNP3XML\Debug\XML_TestSet.obj
-         DNP3XML\Debug\XmlToConfig.obj
-         DNP3XML.vcxproj -> D:\582\dnp3-master\vstudio10\DNP3XML\Debug\DNP3XML.lib
-     1>Done Building Project "D:\582\dnp3-master\vstudio10\DNP3XML.vcxproj" (Rebuild target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:12.38
+﻿  XmlToConfig.cpp
+  XML_TestSet.cpp
+  XML_DNP3.cpp
+  Generating Code...
+  DNP3XML.vcxproj -> D:\GitHub\dnp3\vstudio10\DNP3XML\Debug\DNP3XML.lib

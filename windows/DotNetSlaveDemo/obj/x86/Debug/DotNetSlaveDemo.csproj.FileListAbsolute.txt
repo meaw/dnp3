@@ -8,3 +8,13 @@ D:\582\dnp3-master\windows\DotNetSlaveDemo\bin\Debug\DotNetInterface.pdb
 D:\582\dnp3-master\windows\DotNetSlaveDemo\bin\Debug\DotNetAdapter.pdb
 D:\582\dnp3-master\windows\DotNetSlaveDemo\obj\x86\Debug\DotNetSlaveDemo.exe
 D:\582\dnp3-master\windows\DotNetSlaveDemo\obj\x86\Debug\DotNetSlaveDemo.pdb
+D:\GitHub\dnp3\windows\DotNetSlaveDemo\bin\Debug\DotNetSlaveDemo.exe.config
+D:\GitHub\dnp3\windows\DotNetSlaveDemo\bin\Debug\DotNetSlaveDemo.exe
+D:\GitHub\dnp3\windows\DotNetSlaveDemo\bin\Debug\DotNetSlaveDemo.pdb
+D:\GitHub\dnp3\windows\DotNetSlaveDemo\bin\Debug\DotNetAdapter.dll
+D:\GitHub\dnp3\windows\DotNetSlaveDemo\bin\Debug\DotNetInterface.dll
+D:\GitHub\dnp3\windows\DotNetSlaveDemo\bin\Debug\DotNetInterface.pdb
+D:\GitHub\dnp3\windows\DotNetSlaveDemo\bin\Debug\DotNetAdapter.pdb
+D:\GitHub\dnp3\windows\DotNetSlaveDemo\obj\x86\Debug\DotNetSlaveDemo.csprojResolveAssemblyReference.cache
+D:\GitHub\dnp3\windows\DotNetSlaveDemo\obj\x86\Debug\DotNetSlaveDemo.exe
+D:\GitHub\dnp3\windows\DotNetSlaveDemo\obj\x86\Debug\DotNetSlaveDemo.pdb

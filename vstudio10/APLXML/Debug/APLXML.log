@@ -1,22 +1,7 @@
-﻿Build started 2/20/2017 12:46:10 AM.
-     1>Project "D:\582\dnp3-master\vstudio10\APLXML.vcxproj" on node 4 (Rebuild target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"D:\582\dnp3-master\vstudio10\\..\src\\" /I"D:\582\dnp3-master\vstudio10\\" /IC:\boost\boost_1_55_0\ /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _WIN32_WINNT=0x0501 /D BOOST_ASIO_ENABLE_CANCELIO /D BOOST_REGEX_NO_LIB /D BOOST_ALL_DYN_LINK /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"APLXML\Debug\\" /Fd"APLXML\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ..\src\opendnp3\xml\APL\PhysicalLayerManagerXML.cpp ..\src\opendnp3\xml\APL\PhysicalLayerXMLFactory.cpp ..\src\opendnp3\xml\APL\tinybinding.cpp ..\src\opendnp3\xml\APL\XML_APL.cpp ..\src\opendnp3\xml\APL\XMLConversion.cpp
-         XMLConversion.cpp
-         XML_APL.cpp
-         tinybinding.cpp
-         PhysicalLayerXMLFactory.cpp
-         PhysicalLayerManagerXML.cpp
-         Generating Code...
-       Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\Lib.exe /OUT:"APLXML\Debug\APLXML.lib" /NOLOGO APLXML\Debug\PhysicalLayerManagerXML.obj
-         APLXML\Debug\PhysicalLayerXMLFactory.obj
-         APLXML\Debug\tinybinding.obj
-         APLXML\Debug\XML_APL.obj
-         APLXML\Debug\XMLConversion.obj
-         APLXML.vcxproj -> D:\582\dnp3-master\vstudio10\APLXML\Debug\APLXML.lib
-     1>Done Building Project "D:\582\dnp3-master\vstudio10\APLXML.vcxproj" (Rebuild target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:11.99
+﻿  XMLConversion.cpp
+  XML_APL.cpp
+  tinybinding.cpp
+  PhysicalLayerXMLFactory.cpp
+  PhysicalLayerManagerXML.cpp
+  Generating Code...
+  APLXML.vcxproj -> D:\GitHub\dnp3\vstudio10\APLXML\Debug\APLXML.lib

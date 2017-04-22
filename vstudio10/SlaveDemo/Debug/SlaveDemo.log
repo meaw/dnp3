@@ -1,24 +1,7 @@
-﻿Build started 2/20/2017 12:06:40 AM.
-     1>Project "D:\582\dnp3-master\vstudio10\SlaveDemo.vcxproj" on node 4 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\boost\boost_1_55_0\ /I"D:\582\dnp3-master\vstudio10\\..\src\\" /I"D:\582\dnp3-master\vstudio10\\" /I....// /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _MBCS /Gm /EHsc /MDd /GS- /fp:precise /Zc:wchar_t /Zc:forScope /Fo"SlaveDemo\Debug\\" /Fd"SlaveDemo\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt  /D "BOOST_ALL_DYN_LINK" "..\demos\slave-cpp\DemoMain.cpp" "..\demos\slave-cpp\SlaveDemo.cpp"
-         SlaveDemo.cpp
-         DemoMain.cpp
-         Generating Code...
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"SlaveDemo\Debug\SlaveDemo.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\boost\boost_1_55_0\stage\lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"SlaveDemo\Debug\SlaveDemo.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"SlaveDemo\Debug\SlaveDemo.lib" /MACHINE:X86 /SAFESEH SlaveDemo\Debug\DemoMain.obj
-         SlaveDemo\Debug\SlaveDemo.obj
-         "D:\582\dnp3-master\vstudio10\DNP3\Debug\DNP3.lib"
-         "D:\582\dnp3-master\vstudio10\APLXML\Debug\APLXML.lib"
-         "D:\582\dnp3-master\vstudio10\APL\Debug\APL.lib"
-         "D:\582\dnp3-master\vstudio10\tinyxml\Debug\tinyxml.lib"
-         "D:\582\dnp3-master\vstudio10\DNP3XML\Debug\DNP3XML.lib"
-         "D:\582\dnp3-master\vstudio10\Terminal\Debug\Terminal.lib"
-         "D:\582\dnp3-master\vstudio10\XMLBindings\Debug\XMLBindings.lib"
-     1>DemoMain.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
-         SlaveDemo.vcxproj -> D:\582\dnp3-master\vstudio10\SlaveDemo\Debug\SlaveDemo.exe
-     1>Done Building Project "D:\582\dnp3-master\vstudio10\SlaveDemo.vcxproj" (Build target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:20.65
+﻿  SlaveDemo.cpp
+  DemoMain.cpp
+  Generating Code...
+DemoMain.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+  SlaveDemo.vcxproj -> D:\GitHub\dnp3\vstudio10\SlaveDemo\Debug\SlaveDemo.exe
+  SlaveDemo.vcxproj -> SlaveDemo\Debug\SlaveDemo.pdb (Full PDB)
+  0 File(s) copied
