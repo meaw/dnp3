@@ -111,7 +111,7 @@
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /y /d  "$(ProjectDir)\..\windows\shared\*.dll"</Command>
+      <Command>copy /y /d  "$(ProjectDir)\..\windows\shared\*.dll" "$(ProjectDir)\$(ProjectName)\$(Configuration)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

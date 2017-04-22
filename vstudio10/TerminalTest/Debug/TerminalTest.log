@@ -1,6 +1,14 @@
-﻿  TestTerminal.cpp
-  TestPhysicalLayerSyncProxy.cpp
-  Generating Code...
-TestPhysicalLayerSyncProxy.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
-  TerminalTest.vcxproj -> D:\GitHub\dnp3\vstudio10\TerminalTest\Debug\TerminalTest.exe
+﻿  TerminalTest.vcxproj -> D:\GitHub\dnp3\vstudio10\TerminalTest\Debug\TerminalTest.exe
   TerminalTest.vcxproj -> TerminalTest\Debug\TerminalTest.pdb (Full PDB)
+  D:\GitHub\dnp3\vstudio10\\..\windows\shared\boost_chrono-vc110-mt-gd-1_55.dll
+  D:\GitHub\dnp3\vstudio10\\..\windows\shared\boost_chrono-vc140-mt-gd-1_64.dll
+  D:\GitHub\dnp3\vstudio10\\..\windows\shared\boost_date_time-vc110-mt-gd-1_55.dll
+  D:\GitHub\dnp3\vstudio10\\..\windows\shared\boost_date_time-vc140-mt-gd-1_64.dll
+  D:\GitHub\dnp3\vstudio10\\..\windows\shared\boost_system-vc110-mt-gd-1_55.dll
+  D:\GitHub\dnp3\vstudio10\\..\windows\shared\boost_system-vc140-mt-gd-1_64.dll
+  D:\GitHub\dnp3\vstudio10\\..\windows\shared\boost_thread-vc110-mt-gd-1_55.dll
+  D:\GitHub\dnp3\vstudio10\\..\windows\shared\boost_thread-vc140-mt-gd-1_64.dll
+  D:\GitHub\dnp3\vstudio10\\..\windows\shared\boost_unit_test_framework-vc140-mt-gd-1_64.dll
+  D:\GitHub\dnp3\vstudio10\\..\windows\shared\DotNetAdapter.dll
+  D:\GitHub\dnp3\vstudio10\\..\windows\shared\DotNetInterface.dll
+         11 file(s) copied.

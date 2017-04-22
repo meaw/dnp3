@@ -1,0 +1,1 @@
+<TCPServer Name="HelloWorld" OpenRetryMS="19916760" Endpoint="" Port="1000" />

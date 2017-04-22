@@ -4,4 +4,15 @@
 DemoMain.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
   MasterDemo.vcxproj -> D:\GitHub\dnp3\vstudio10\MasterDemo\Debug\MasterDemo.exe
   MasterDemo.vcxproj -> MasterDemo\Debug\MasterDemo.pdb (Full PDB)
-  0 File(s) copied
+  D:\GitHub\dnp3\vstudio10\\..\windows\shared\boost_chrono-vc110-mt-gd-1_55.dll
+  D:\GitHub\dnp3\vstudio10\\..\windows\shared\boost_chrono-vc140-mt-gd-1_64.dll
+  D:\GitHub\dnp3\vstudio10\\..\windows\shared\boost_date_time-vc110-mt-gd-1_55.dll
+  D:\GitHub\dnp3\vstudio10\\..\windows\shared\boost_date_time-vc140-mt-gd-1_64.dll
+  D:\GitHub\dnp3\vstudio10\\..\windows\shared\boost_system-vc110-mt-gd-1_55.dll
+  D:\GitHub\dnp3\vstudio10\\..\windows\shared\boost_system-vc140-mt-gd-1_64.dll
+  D:\GitHub\dnp3\vstudio10\\..\windows\shared\boost_thread-vc110-mt-gd-1_55.dll
+  D:\GitHub\dnp3\vstudio10\\..\windows\shared\boost_thread-vc140-mt-gd-1_64.dll
+  D:\GitHub\dnp3\vstudio10\\..\windows\shared\boost_unit_test_framework-vc140-mt-gd-1_64.dll
+  D:\GitHub\dnp3\vstudio10\\..\windows\shared\DotNetAdapter.dll
+  D:\GitHub\dnp3\vstudio10\\..\windows\shared\DotNetInterface.dll
+         11 file(s) copied.

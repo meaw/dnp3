@@ -46,8 +46,11 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+
+*.obj
 **.obj
 *.VC.db
 *.sdf
 *.pdb
 *.sdf
+*.obj
