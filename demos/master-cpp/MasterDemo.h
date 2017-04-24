@@ -115,7 +115,7 @@ class MasterDemoApp : public MasterDemoBase, public IStackObserver
 {
 public:
 	void Tick();
-	void Timer();
+	void Timer(int interval);
 	int counter;
 	Tmer t;
 	MasterDemoApp(Logger* apLogger);

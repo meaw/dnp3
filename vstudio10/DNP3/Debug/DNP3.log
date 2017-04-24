@@ -1,15 +1,77 @@
-﻿  AsyncStackManager.cpp
+﻿  UnsolicitedChannel.cpp
+  SolicitedChannel.cpp
+  AppLayerChannel.cpp
+  AppChannelStates.cpp
+  ObjectWriteIterator.cpp
+  ObjectReadIterator.cpp
+  IndexedWriteIterator.cpp
+  HeaderReadIterator.cpp
+  Objects.cpp
+  ObjectInterfaces.cpp
+  ObjectHeader.cpp
+  AppHeader.cpp
+  APDUConstants.cpp
+  APDU.cpp
+  AppLayer.cpp
+  AppInterfaces.cpp
+  VtoWriter.cpp
+  VtoRouterSettings.cpp
+  VtoRouterManager.cpp
+  VtoRouter.cpp
   Generating Code...
   Compiling...
+  VtoReader.cpp
+  VtoData.cpp
+  EnhancedVtoRouter.cpp
+  EnhancedVto.cpp
+  AlwaysOpeningVtoRouter.cpp
   StackManager.cpp
-  SlaveStates.cpp
-  SlaveStack.cpp
-  Slave.cpp
+  LinkChannel.cpp
+  IStackObserver.cpp
+  AsyncStackManager.cpp
+  TransportTx.cpp
+  TransportStates.cpp
+  TransportRx.cpp
+  TransportLayer.cpp
+  TLS_Base.cpp
+  VtoTransmitTask.cpp
+  StartupTasks.cpp
+  MasterTaskBase.cpp
+  DataPoll.cpp
+  ControlTasks.cpp
+  ResponseLoader.cpp
+  Generating Code...
+  Compiling...
   MasterStates.cpp
-  MasterStack.cpp
   MasterSchedule.cpp
   Master.cpp
+  Stack.cpp
+  SlaveStack.cpp
+  MasterStack.cpp
+  SlaveStates.cpp
+  SlaveResponseTypes.cpp
+  SlaveEventBuffer.cpp
+  SlaveConfig.cpp
+  Slave.cpp
+  ResponseContext.cpp
+  PointClass.cpp
   DNPCommandMaster.cpp
-  ControlTasks.cpp
+  DeviceTemplate.cpp
+  Database.cpp
+  ClassCounter.cpp
+  BufferTypes.cpp
+  SecLinkLayerStates.cpp
+  PriLinkLayerStates.cpp
+  Generating Code...
+  Compiling...
+  LinkRoute.cpp
+  LinkReceiverStates.cpp
+  LinkLayerRouter.cpp
+  LinkLayerReceiver.cpp
+  LinkLayerConstants.cpp
+  LinkLayer.cpp
+  LinkHeader.cpp
+  LinkFrame.cpp
+  DNPCrc.cpp
   Generating Code...
   DNP3.vcxproj -> D:\GitHub\dnp3\vstudio10\DNP3\Debug\DNP3.lib

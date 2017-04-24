@@ -42,15 +42,15 @@ SlaveDemoBase::SlaveDemoBase(Logger* apLogger) :
 
 
 }
-void SlaveDemoApp::Timer() {
+void SlaveDemoApp::Timer(int offset) {
 
 	auto tid = t.create(5000, 1000, std::bind(&SlaveDemoApp::Tick, this));
-	counter = 0;
+	counter = offset;
 }
 
 void SlaveDemoApp::Tick() {
 	counter++;
-	std::cout << "Update "<< counter <<""<< std::endl;
+	std::cout << "Update "<< counter <<" "<<name<< std::endl;
 	Binary b((counter & 0x0001), BQ_ONLINE);
 	b.SetToNow();
 	Counter c(counter, CQ_ONLINE);
@@ -59,10 +59,15 @@ void SlaveDemoApp::Tick() {
 	c.SetToNow();
 	// We would like all updates to be sent at one time.When the Transaction object
 	// goes out of scope, all updates will be sent in one block to do the slave database.
-	Transaction t(mpObserver);
-	mpObserver->Update(a, 0);
-	mpObserver->Update(c, 0);
-	mpObserver->Update(b, 0);
+	Transaction t1(mpObserver1);
+	mpObserver1->Update(a, 0);
+	mpObserver1->Update(c, 0);
+	mpObserver1->Update(b, 0);
+
+	Transaction t2(mpObserver2);
+	mpObserver2->Update(a, 0);
+	mpObserver2->Update(c, 0);
+	mpObserver2->Update(b, 0);
 }
 
 void SlaveDemoBase::Shutdown()
@@ -78,11 +83,15 @@ void SlaveDemoBase::OnCommandNotify()
 	mCommandQueue.ExecuteCommand(this);
 }
 
-SlaveDemoApp::SlaveDemoApp(Logger* apLogger) :
+
+
+
+ SlaveDemoApp::SlaveDemoApp(Logger* apLogger,char sname[]) :
 	SlaveDemoBase(apLogger),
 	mCountSetPoints(0),
 	mCountBinaryOutput(0),
-	mpObserver(NULL){
+	mpObserver1(NULL), mpObserver2(NULL) {
+	 sprintf(name, "%s",sname);
 	// Timer fires every second, starting now    
 //	
 }
@@ -91,15 +100,20 @@ SlaveDemoApp::SlaveDemoApp(Logger* apLogger) :
 
 
 
-void SlaveDemoApp::SetDataObserver(IDataObserver* apObserver)
-{
-	mpObserver = apObserver;
+void SlaveDemoApp::SetDataObserver(IDataObserver* apObserver, int instance)
+{ if (instance==1){
+	mpObserver1 = apObserver;}
+if (instance == 2) {
+	mpObserver2 = apObserver;
+}
 }
 
 CommandStatus SlaveDemoApp::HandleControl(Setpoint& aControl, size_t aIndex)
 {
 	LOG_BLOCK(LEV_APP, "Received " << aControl.ToString() << " on index: " << aIndex);
 
+
+	/*
 	// Update a  feedback point that has the same value as the setpoint we were
 	// given from the master. Configure it with the current time and good quality
 	Analog a(aControl.GetValue(), AQ_ONLINE);
@@ -123,22 +137,27 @@ CommandStatus SlaveDemoApp::HandleControl(Setpoint& aControl, size_t aIndex)
 	mpObserver->Update(a, aIndex);
 	mpObserver->Update(c, 1);
 	mpObserver->Update(b, 0);
-	
+	*/
 
 	// This is the control code returned to the slave stack, and forwared
 	// on to the master. These are DNP3 control codes.
-	return CS_SUCCESS;
+	int xv = aControl.GetValue();
+	if (xv % 100 == 0) {
+		return  CS_TIMEOUT;
+	}else{
+	
+	return CS_SUCCESS;}
 }
 
 // same as for the setpoint
 CommandStatus SlaveDemoApp::HandleControl(BinaryOutput& aControl, size_t aIndex)
 {
-	LOG_BLOCK(LEV_INFO, "Received " << aControl.ToString() << " on index: " << aIndex);
-
+	LOG_BLOCK(LEV_APP, "Received " << aControl.ToString() << " on index: " << aIndex);
+	
 	// set the binary to ON if the command  code was LATCH_ON, otherwise set it off (LATCH_OFF)
 	apl::Binary b(aControl.GetCode() == CC_LATCH_ON, BQ_ONLINE);
 	b.SetToNow();
-
+    /*
 	// count how many BinaryOutput commands we recieve
 	apl::Counter c(++mCountBinaryOutput, CQ_ONLINE);
 	c.SetToNow();
@@ -146,7 +165,7 @@ CommandStatus SlaveDemoApp::HandleControl(BinaryOutput& aControl, size_t aIndex)
 	Transaction t(mpObserver);
 	mpObserver->Update(b, aIndex);
 	mpObserver->Update(c, 2);
-
+	*/
 	return CS_SUCCESS;
 }
 

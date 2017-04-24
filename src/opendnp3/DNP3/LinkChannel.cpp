@@ -47,6 +47,7 @@ void LinkChannel::BindStackToChannel(const std::string& arStackName, Stack* apSt
 	apStack->mLink.SetRouter(this);
 	this->AddContext(&apStack->mLink, arRoute); // this function can throw, do it before adjusting the map
 	mStackMap[arStackName] = StackRecord(apStack, arRoute);
+
 }
 
 void LinkChannel::RemoveStackFromChannel(const std::string& arStackName)

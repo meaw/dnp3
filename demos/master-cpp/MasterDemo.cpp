@@ -129,7 +129,7 @@ void MasterDemoBase::Accessor(int counter)
 		1, // sequence value
 		this   // IResponseAcceptor*
 	);
-	int qlen = mpCommandAcceptor->
+	int qlen = mpCommandAcceptor->Size(true);
 	std::cout << "qlen " << qlen << "" << std::endl;
 }
 
@@ -138,9 +138,9 @@ MasterDemoApp::MasterDemoApp(Logger* apLogger)
 {
 
 }
-void MasterDemoApp::Timer() {
+void MasterDemoApp::Timer(int interval) {
 
-	auto tid = t.create(5000, 100, std::bind(&MasterDemoApp::Tick, this));
+	auto tid = t.create(5000, interval, std::bind(&MasterDemoApp::Tick, this));
 	counter = 0;
 }
 

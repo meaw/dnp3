@@ -195,6 +195,8 @@ void PhysicalLayerAsyncBase::OnOpenCallback(const boost::system::error_code& arE
 		this->DoOpenCallback();
 		assert(_CrtCheckMemory());
 		if(arErr) {
+			
+			
 			LOG_BLOCK(LEV_WARNING, arErr.message());
 			mState.CheckForClose();
 			this->DoOpenFailure();

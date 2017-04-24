@@ -64,6 +64,7 @@ int main(int argc, char* argv[])
 	unsigned remote_dnp3 = 1;
 	string   remote_ip   = "127.0.0.1";
 	unsigned remote_port = 4999;
+	int timeout = 100;
 
 	// Parse the command line arguments using a "fall-through"
 	// switch statement.
@@ -73,6 +74,11 @@ int main(int argc, char* argv[])
 	}
 
 	switch (argc) {
+	case 6:
+	{
+		istringstream iss(argv[5]);
+		iss >> timeout;
+	}
 	case 5:
 		{
 			istringstream iss(argv[4]);
@@ -105,7 +111,9 @@ int main(int argc, char* argv[])
 	// demonstrates how to publish data give it a logger with a
 	// unique name and log level.
 	MasterDemoApp app(log.GetLogger(LOG_LEVEL, "demoapp"));
-	app.Timer();
+	
+		app.Timer(timeout);
+	
 	// This is the main point of interaction with the stack. The
 	// AsyncStackManager object instantiates master/slave DNP
 	// stacks, as well as their physical layers.

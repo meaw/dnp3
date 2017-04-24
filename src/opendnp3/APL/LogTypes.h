@@ -46,7 +46,7 @@ class LogTypes
 
 public:
 
-	static const size_t NUM_FILTER = 7;
+	static const size_t NUM_FILTER = 8;
 	static const FilterAssoc filters[NUM_FILTER];
 
 // Mask for all of the values

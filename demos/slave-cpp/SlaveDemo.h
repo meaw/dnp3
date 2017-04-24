@@ -83,10 +83,11 @@ private:
 class SlaveDemoApp : public SlaveDemoBase
 {
 public:
-	SlaveDemoApp(Logger* apLogger);
-	void SetDataObserver(IDataObserver* apObserver);
+	char name[64] = "";
+	SlaveDemoApp(Logger* apLogger,char sname[]);
+	void SetDataObserver(IDataObserver* apObserver,int instance);
 	void Tick();
-	void Timer();
+	void Timer(int offset);
 	int counter;
 	Tmer t;
 	/**
@@ -105,7 +106,8 @@ private:
 	int mCountSetPoints;    // count how many setpoints we recieve to demonstrate counters
 	int mCountBinaryOutput; // count how many binary controls we recieve to demonstrate counters
 
-	IDataObserver* mpObserver;  // The data sink for updating the slave database.
+	IDataObserver* mpObserver1;  // The data sink for updating the slave database.
+	IDataObserver* mpObserver2;  // The data sink for updating the slave database.
 };
 
 }

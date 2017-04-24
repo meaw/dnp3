@@ -27,6 +27,7 @@ namespace apl
 
 const FilterAssoc LogTypes::filters[LogTypes::NUM_FILTER] = {
 	{LEV_DEBUG, 'd'},
+	{ LEV_APP, 'u' },
 	{LEV_COMM, 'c'},
 	{LEV_INTERPRET, 'p'},
 	{LEV_INFO, 'i'},
@@ -48,6 +49,7 @@ int LogTypes::GetFilterMask(char c)
 	switch(c) {
 	case('a'): return MASK_ALL_LEVELS;
 	case('d'): return LEV_DEBUG;
+	case('u'): return LEV_APP;
 	case('c'): return LEV_COMM;
 	case('p'): return LEV_INTERPRET;
 	case('i'): return LEV_INFO;
@@ -72,6 +74,7 @@ int LogTypes::GetFilterMask(const std::string& arg)
 std::string LogTypes::GetLevelString( FilterLevel aLevel )
 {
 	switch(aLevel) {
+	case(LEV_APP): return "APP";
 	case(LEV_DEBUG): return "DEBUG";
 	case(LEV_COMM): return "COMM";
 	case(LEV_INTERPRET): return "INTERPRET";
