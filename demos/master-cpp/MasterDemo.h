@@ -19,6 +19,10 @@
 
 #ifndef __MASTER_DEMO_H_
 #define __MASTER_DEMO_H_
+#include <iostream>
+#include <boost/asio.hpp>
+#include <boost/bind.hpp>
+#include <boost/date_time/posix_time/posix_time.hpp>
 
 #include <opendnp3/APL/CommandQueue.h>
 #include <opendnp3/APL/FlexibleDataObserver.h>
@@ -34,7 +38,7 @@
 
 #include <opendnp3/DNP3/AsyncStackManager.h>
 #include <opendnp3/DNP3/MasterStackConfig.h>
-
+#include "Tmer.h"
 namespace apl { namespace dnp {
 
 /**
@@ -77,14 +81,14 @@ public:
 
 	void AcceptResponse(const CommandResponse& aResponse,
 			int aSequence);
-
+	void Accessor(int counter);
 private:
 	/**
 	 * A notifier that gets triggered when data updates are
 	 * received.
 	 */
+	void ResetStartupTasks();
 	void OnDataUpdate();
-
 	/**
 	 * The QueueingFDO object which is responsible for keeping track
 	 * of new data updates.
@@ -110,6 +114,10 @@ private:
 class MasterDemoApp : public MasterDemoBase, public IStackObserver
 {
 public:
+	void Tick();
+	void Timer();
+	int counter;
+	Tmer t;
 	MasterDemoApp(Logger* apLogger);
 
 	void OnStateChange(StackStates aState);

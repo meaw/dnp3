@@ -144,13 +144,26 @@ void Master::ProcessIIN(const IINField& arIIN)
 
 	if(check_state) mpTaskGroup->CheckState();
 }
-
+int paused = 0;
 void Master::ProcessCommand(ITask* apTask)
 {
 	CommandData info;
 
 	if(mpState == AMS_Closed::Inst()) { //we're closed
-		if(!mCommandQueue.RespondToCommand(CS_HARDWARE_ERROR)) apTask->Disable();
+		/*if (!mCommandQueue.RespondToCommand(CS_HARDWARE_ERROR)) {   
+			apTask->Disable();
+		}
+		*/
+		//This code should enable to pop old queues
+
+		if (mCommandQueue.Size(true) > mCommandQueue.MaxSize-1)
+		{
+ 			apl::Setpoint cmd;
+			mCommandQueue.Read(cmd, info);
+		}
+
+		paused = 1;
+			apTask->SilentDisableS();   //DJSC
 	} else {
 
 		switch(mCommandQueue.Next()) {
@@ -241,7 +254,7 @@ void Master::TransmitVtoData(ITask* apTask)
 
 void Master::OnLowerLayerUp()
 {
-	mpState->OnLowerLayerUp(this);
+	mpState->OnLowerLayerUp(this); //DJSC
 	mSchedule.EnableOnlineTasks();
 }
 

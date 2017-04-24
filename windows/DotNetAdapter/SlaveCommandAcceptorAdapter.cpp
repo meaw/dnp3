@@ -40,7 +40,10 @@ SlaveCommandAcceptorAdapter::SlaveCommandAcceptorAdapter(DNP3::Interface::IComma
 {
 
 }
-
+int SlaveCommandAcceptorAdapter::Size(bool  setPoint)
+{
+	return 0; //Not supported in C#
+}
 void SlaveCommandAcceptorAdapter::AcceptCommand(const apl::BinaryOutput& arCmd, size_t aIndex, int aSequence, apl::IResponseAcceptor* apRspAcceptor)
 {
 	IFuture<CommandStatus>^ future = proxy->AcceptCommand(Conversions::convertBO(arCmd), aIndex);

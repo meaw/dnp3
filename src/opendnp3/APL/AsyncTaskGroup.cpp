@@ -105,7 +105,7 @@ void AsyncTaskGroup::Shutdown()
 void AsyncTaskGroup::Enable()
 {
 	BOOST_FOREACH(AsyncTaskBase * p, mTaskVec) {
-		p->SilentEnable();
+		p->SilentEnable();      //Proposed bug fix DJSC
 	}
 	this->CheckState();
 }
@@ -121,7 +121,13 @@ void AsyncTaskGroup::Disable()
 void AsyncTaskGroup::Enable(int aMask)
 {
 	BOOST_FOREACH(AsyncTaskBase * p, mTaskVec) {
-		if((p->GetFlags() & aMask) != 0) p->SilentEnable();
+		if (p->IsEnabled()==0 && p->IsRunning()==1 ) {
+			p->SilentEnable();
+		}
+		if ((p->GetFlags() & aMask) != 0) {
+			p->SilentEnable();
+		}
+		
 	}
 	this->CheckState();
 }
@@ -142,7 +148,13 @@ AsyncTaskBase* AsyncTaskGroup::GetNext(const boost::posix_time::ptime& arTime)
 	AsyncTaskBase* pRet = NULL;
 	if(max != mTaskVec.end()) {
 		AsyncTaskBase* p = *max;
-		if(!p->IsRunning() && p->IsEnabled()) pRet = p;
+		if (!p->IsRunning() && p->IsEnabled()) { 
+			pRet = p; 
+		}
+
+		if (p->IsRunning() && p->IsEnabled() && !p->IsComplete()) {
+		//	pRet = p;
+		}
 	}
 
 	return pRet;

@@ -222,9 +222,11 @@
   <ItemGroup>
     <ClCompile Include="..\demos\slave-cpp\DemoMain.cpp" />
     <ClCompile Include="..\demos\slave-cpp\SlaveDemo.cpp" />
+    <ClCompile Include="tmer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\demos\slave-cpp\SlaveDemo.h" />
+    <ClInclude Include="tmer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

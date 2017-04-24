@@ -65,7 +65,7 @@ public:
 
 	void SilentEnable(); // Enable without notifying the task group
 	void SilentDisable();
-
+	void SilentDisableS();
 	std::string Name() const {
 		return mName;
 	}

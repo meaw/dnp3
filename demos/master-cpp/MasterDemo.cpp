@@ -56,6 +56,13 @@ void MasterDemoBase::Shutdown()
 	mpInfiniteTimer->Cancel();
 }
 
+void MasterDemoBase::ResetStartupTasks()
+{
+	LOG_BLOCK(LEV_INFO,		"RESET  updates");
+}
+
+
+
 void MasterDemoBase::OnDataUpdate()
 {
 	// Obtain a lock on the QueueingFDO
@@ -73,7 +80,7 @@ void MasterDemoBase::OnDataUpdate()
 		} while ( !mFDO.updates.empty() );
 	}
 
-	if ( num_updates > 1 ) {
+	/*if ( num_updates > 1 ) {
 		// Increment the values on the Setpoints (Analog Outputs)
 		typedef PointMap<SetpointStatus>::Type SetpointMap;
 		typedef SetpointMap::iterator SetpointMapIter;
@@ -101,7 +108,7 @@ void MasterDemoBase::OnDataUpdate()
 		LOG_BLOCK(LEV_INFO,
 				"Sent " << index
 				<< " updates");
-	}
+	}*/
 }
 
 void MasterDemoBase::AcceptResponse(const CommandResponse& aResponse,
@@ -112,10 +119,37 @@ void MasterDemoBase::AcceptResponse(const CommandResponse& aResponse,
 			<< ToString(aResponse.mResult));
 }
 
+void MasterDemoBase::Accessor(int counter)
+{
+	const int16_t value = counter;
+	Setpoint sp(value);
+	mpCommandAcceptor->AcceptCommand(
+		sp,    // Setpoint instance
+		1, // point index
+		1, // sequence value
+		this   // IResponseAcceptor*
+	);
+	int qlen = mpCommandAcceptor->
+	std::cout << "qlen " << qlen << "" << std::endl;
+}
+
 MasterDemoApp::MasterDemoApp(Logger* apLogger)
 	: MasterDemoBase(apLogger)
-{}
+{
 
+}
+void MasterDemoApp::Timer() {
+
+	auto tid = t.create(5000, 100, std::bind(&MasterDemoApp::Tick, this));
+	counter = 0;
+}
+
+void MasterDemoApp::Tick() {
+	counter++;
+	std::cout << "Tick " << counter << "" << std::endl;
+	Accessor(counter);
+	
+	}
 void MasterDemoApp::OnStateChange(StackStates aState)
 {
 	LOG_BLOCK(LEV_INFO, "Communications link state change: "

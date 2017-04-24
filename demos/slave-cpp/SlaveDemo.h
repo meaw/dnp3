@@ -33,11 +33,12 @@
 
 #include <opendnp3/DNP3/SlaveStackConfig.h>
 #include <opendnp3/DNP3/AsyncStackManager.h>
-
+#include "Tmer.h"
 namespace apl
 {
 namespace dnp
 {
+	
 
 /**
 	This class takes care of all the plumbing and bingings between application code and the stack.
@@ -83,9 +84,11 @@ class SlaveDemoApp : public SlaveDemoBase
 {
 public:
 	SlaveDemoApp(Logger* apLogger);
-
 	void SetDataObserver(IDataObserver* apObserver);
-
+	void Tick();
+	void Timer();
+	int counter;
+	Tmer t;
 	/**
 		Processes a setpoint (Analog output) request from the master. This is where the user
 		code will do some work. In this example, we'll just update the slave database.

@@ -1,8 +1,4 @@
-﻿  StackHelpers.cpp
-  main.cpp
-  AddressScanner.cpp
-  Generating Code...
-AddressScanner.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+﻿AddressScanner.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
   TestSet.vcxproj -> D:\GitHub\dnp3\vstudio10\TestSet\Debug\TestSet.exe
   TestSet.vcxproj -> TestSet\Debug\TestSet.pdb (Full PDB)
   D:\GitHub\dnp3\vstudio10\\..\windows\shared\boost_chrono-vc110-mt-gd-1_55.dll

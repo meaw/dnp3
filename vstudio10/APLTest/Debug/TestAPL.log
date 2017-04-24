@@ -1,31 +1,7 @@
-﻿  TestAsyncTask.cpp
-  TestTimers.cpp
-  TestShiftableBuffer.cpp
-  TestPackingUnpacking.cpp
-  TestUtil.cpp
-  TestXmlBinding.cpp
-  TestQualityMasks.cpp
-  TestCommandTypes.cpp
-  TestCommandQueue.cpp
-  TestLog.cpp
-  TestThreading.cpp
-  TestSyncVar.cpp
-  TestLocks.cpp
-  TestTypes.cpp
-  TestParsing.cpp
-  TestMisc.cpp
-  TestCastLongLongDouble.cpp
-  TestASIO.cpp
-  TestTime.cpp
-  AsyncSerialTestObject.cpp
+﻿  TestCommandQueue.cpp
   Generating Code...
   Compiling...
-  AsyncPhysBaseTest.cpp
-  TestPhysicalLayerMonitor.cpp
-  TestPhysicalLayerLoopback.cpp
-  TestPhysicalLayerAsyncTCP.cpp
-  TestPhysicalLayerAsyncSerial.cpp
-  TestPhysicalLayerAsyncBase.cpp
+  TestCommandTypes.cpp
   Generating Code...
 TestPhysicalLayerAsyncBase.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
   TestAPL.vcxproj -> D:\GitHub\dnp3\vstudio10\APLTest\Debug\APLTest.exe
@@ -34,6 +10,7 @@ TestPhysicalLayerAsyncBase.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' du
   D:\GitHub\dnp3\vstudio10\\..\windows\shared\boost_chrono-vc140-mt-gd-1_64.dll
   D:\GitHub\dnp3\vstudio10\\..\windows\shared\boost_date_time-vc110-mt-gd-1_55.dll
   D:\GitHub\dnp3\vstudio10\\..\windows\shared\boost_date_time-vc140-mt-gd-1_64.dll
+  D:\GitHub\dnp3\vstudio10\\..\windows\shared\boost_program_options-vc140-mt-gd-1_64.dll
   D:\GitHub\dnp3\vstudio10\\..\windows\shared\boost_system-vc110-mt-gd-1_55.dll
   D:\GitHub\dnp3\vstudio10\\..\windows\shared\boost_system-vc140-mt-gd-1_64.dll
   D:\GitHub\dnp3\vstudio10\\..\windows\shared\boost_thread-vc110-mt-gd-1_55.dll
@@ -41,4 +18,4 @@ TestPhysicalLayerAsyncBase.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' du
   D:\GitHub\dnp3\vstudio10\\..\windows\shared\boost_unit_test_framework-vc140-mt-gd-1_64.dll
   D:\GitHub\dnp3\vstudio10\\..\windows\shared\DotNetAdapter.dll
   D:\GitHub\dnp3\vstudio10\\..\windows\shared\DotNetInterface.dll
-         11 file(s) copied.
+         12 file(s) copied.

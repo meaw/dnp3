@@ -41,6 +41,8 @@ public:
 
 	// Diable ''
 	virtual void SilentDisable() = 0;
+	// Diable ''
+	virtual void SilentDisableS() = 0;
 };
 
 typedef boost::function<void (ITask*)> TaskHandler;

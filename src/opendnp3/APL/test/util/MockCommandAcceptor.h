@@ -29,7 +29,20 @@ namespace apl
 class MockCommandAcceptor : public ICommandAcceptor
 {
 public:
+	/*int AcceptCommandQ(const BinaryOutput& aBo, size_t, int aSequence, IResponseAcceptor* apRspAcceptor) {
+		mBinaryOutputs.push(aBo);
+		this->AcceptCommand(aSequence, apRspAcceptor);
+		return 0;
+	}
 
+	int AcceptCommandQ(const Setpoint& aSt, size_t, int aSequence, IResponseAcceptor* apRspAcceptor) {
+		mSetpoints.push(aSt);
+		this->AcceptCommand(aSequence, apRspAcceptor);
+		return 0;
+	}*/
+	int Size(bool setPoint) {
+		return 0;
+	}
 	void AcceptCommand(const BinaryOutput& aBo, size_t, int aSequence, IResponseAcceptor* apRspAcceptor) {
 		mBinaryOutputs.push(aBo);
 		this->AcceptCommand(aSequence, apRspAcceptor);

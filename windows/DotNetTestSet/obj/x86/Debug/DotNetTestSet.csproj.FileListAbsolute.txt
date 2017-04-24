@@ -13,6 +13,10 @@ D:\582\dnp3-master\windows\DotNetTestSet\bin\Debug\DotNetAdapter.pdb
 D:\582\dnp3-master\windows\DotNetTestSet\bin\Debug\DotNetInterface.pdb
 D:\582\dnp3-master\windows\DotNetTestSet\obj\x86\Debug\DotNetTestSet.exe
 D:\582\dnp3-master\windows\DotNetTestSet\obj\x86\Debug\DotNetTestSet.pdb
+D:\GitHub\dnp3\windows\DotNetTestSet\obj\x86\Debug\DotNetTestSet.csprojResolveAssemblyReference.cache
+D:\GitHub\dnp3\windows\DotNetTestSet\obj\x86\Debug\DotNetTestSet.TestSetForm.resources
+D:\GitHub\dnp3\windows\DotNetTestSet\obj\x86\Debug\DotNetTestSet.Properties.Resources.resources
+D:\GitHub\dnp3\windows\DotNetTestSet\obj\x86\Debug\DotNetTestSet.csproj.GenerateResource.Cache
 D:\GitHub\dnp3\windows\DotNetTestSet\bin\Debug\DotNetTestSet.exe.config
 D:\GitHub\dnp3\windows\DotNetTestSet\bin\Debug\DotNetTestSet.exe
 D:\GitHub\dnp3\windows\DotNetTestSet\bin\Debug\DotNetTestSet.pdb
@@ -22,9 +26,5 @@ D:\GitHub\dnp3\windows\DotNetTestSet\bin\Debug\TestSetControlLibrary.dll
 D:\GitHub\dnp3\windows\DotNetTestSet\bin\Debug\TestSetControlLibrary.pdb
 D:\GitHub\dnp3\windows\DotNetTestSet\bin\Debug\DotNetAdapter.pdb
 D:\GitHub\dnp3\windows\DotNetTestSet\bin\Debug\DotNetInterface.pdb
-D:\GitHub\dnp3\windows\DotNetTestSet\obj\x86\Debug\DotNetTestSet.csprojResolveAssemblyReference.cache
-D:\GitHub\dnp3\windows\DotNetTestSet\obj\x86\Debug\DotNetTestSet.TestSetForm.resources
-D:\GitHub\dnp3\windows\DotNetTestSet\obj\x86\Debug\DotNetTestSet.Properties.Resources.resources
-D:\GitHub\dnp3\windows\DotNetTestSet\obj\x86\Debug\DotNetTestSet.csproj.GenerateResource.Cache
 D:\GitHub\dnp3\windows\DotNetTestSet\obj\x86\Debug\DotNetTestSet.exe
 D:\GitHub\dnp3\windows\DotNetTestSet\obj\x86\Debug\DotNetTestSet.pdb

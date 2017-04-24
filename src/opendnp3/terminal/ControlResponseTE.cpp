@@ -31,7 +31,18 @@ void CommandResponder :: AcceptCommand(const Setpoint& ctrl, size_t i, int aSequ
 	cr.mResult = this->HandleControl(ctrl, i);
 	apRspAcceptor->AcceptResponse(cr, aSequence);
 }
+int CommandResponder::Size(bool setPoint) {
+	return 0;
+}
 
+/*int CommandResponder::AcceptCommandQ(const Setpoint& ctrl, size_t i, int aSequence, IResponseAcceptor* apRspAcceptor)
+{
+	CriticalSection c(&mLock);
+	CommandResponse cr;
+	cr.mResult = this->HandleControl(ctrl, i);
+	apRspAcceptor->AcceptResponse(cr, aSequence);
+	return 0;
+}*/
 CommandStatus CommandResponder :: HandleControl(const BinaryOutput& aControl, size_t aIndex)
 {
 	CommandStatus cs = CS_TOO_MANY_OPS;

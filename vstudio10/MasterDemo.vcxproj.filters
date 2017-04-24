@@ -12,9 +12,15 @@
     <ClCompile Include="..\demos\master-cpp\MasterDemo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="tmer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\demos\master-cpp\MasterDemo.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tmer.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

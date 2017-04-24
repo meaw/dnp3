@@ -222,9 +222,11 @@
   <ItemGroup>
     <ClCompile Include="..\demos\master-cpp\DemoMain.cpp" />
     <ClCompile Include="..\demos\master-cpp\MasterDemo.cpp" />
+    <ClCompile Include="tmer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\demos\master-cpp\MasterDemo.h" />
+    <ClInclude Include="tmer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

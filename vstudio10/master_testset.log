@@ -1,0 +1,141 @@
+2017-Apr-23 18:57:20.529 - EVENT - FileLogger - New Log Started
+2017-Apr-23 18:57:21.543 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 18:57:27.543 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 18:57:33.544 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 18:58:35.956 - EVENT - FileLogger - New Log Started
+2017-Apr-23 18:58:36.969 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 18:58:41.971 - WARNING - dnp.mts.master - Device restart detected
+2017-Apr-23 18:58:41.972 - WARNING - dnp.mts.master - Device restart detected
+2017-Apr-23 19:00:33.758 - WARNING - dnp.channels.tcpclient - An existing connection was forcibly closed by the remote host
+2017-Apr-23 19:00:34.760 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:00:40.760 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:00:46.759 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:00:52.760 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:00:58.764 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:01:04.765 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:01:10.768 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:01:16.769 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:01:22.771 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:01:28.774 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:01:34.775 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:01:40.780 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:01:46.792 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:01:52.794 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:01:58.794 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:02:04.794 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:02:10.795 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:02:16.795 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:02:22.797 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:02:28.799 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:02:34.799 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:02:40.800 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:02:46.802 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:02:52.801 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:02:58.802 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:03:04.805 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:03:10.817 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:03:16.820 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:03:22.821 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:03:28.826 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:03:34.837 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:03:40.839 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:03:46.840 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:03:52.850 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:03:58.851 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:04:04.852 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:04:10.855 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:04:16.858 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:04:22.860 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:04:28.862 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:04:34.862 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:04:40.864 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:04:46.866 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:04:52.865 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:04:58.868 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:05:04.868 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:05:10.873 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:05:16.874 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:05:22.886 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:05:27.439 - EVENT - FileLogger - New Log Started
+2017-Apr-23 19:05:28.453 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 19:07:27.049 - EVENT - FileLogger - New Log Started
+2017-Apr-23 19:07:28.086 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:07:47.981 - EVENT - FileLogger - New Log Started
+2017-Apr-23 20:07:48.009 - WARNING - dnp.mts.master - Device restart detected
+2017-Apr-23 20:07:48.051 - WARNING - dnp.mts.master - Device restart detected
+2017-Apr-23 20:07:48.081 - WARNING - dnp.mts.master - Device restart detected
+2017-Apr-23 20:09:41.628 - EVENT - FileLogger - New Log Started
+2017-Apr-23 20:09:41.657 - WARNING - dnp.mts.master - Device restart detected
+2017-Apr-23 20:09:41.696 - WARNING - dnp.mts.master - Device restart detected
+2017-Apr-23 20:09:41.718 - WARNING - dnp.mts.master - Device restart detected
+2017-Apr-23 20:10:55.733 - WARNING - dnp.channels.tcpclient - An existing connection was forcibly closed by the remote host
+2017-Apr-23 20:10:56.735 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:11:28.154 - EVENT - FileLogger - New Log Started
+2017-Apr-23 20:11:28.173 - WARNING - dnp.mts.master - Device restart detected
+2017-Apr-23 20:11:28.214 - WARNING - dnp.mts.master - Device restart detected
+2017-Apr-23 20:11:28.238 - WARNING - dnp.mts.master - Device restart detected
+2017-Apr-23 20:12:58.370 - EVENT - FileLogger - New Log Started
+2017-Apr-23 20:12:59.400 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:13:11.762 - EVENT - FileLogger - New Log Started
+2017-Apr-23 20:13:12.776 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:13:18.793 - WARNING - dnp.mts.master - Device restart detected
+2017-Apr-23 20:13:18.850 - WARNING - dnp.mts.master - Device restart detected
+2017-Apr-23 20:15:06.612 - WARNING - dnp.channels.tcpclient - An existing connection was forcibly closed by the remote host
+2017-Apr-23 20:15:07.613 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:15:13.614 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:15:19.616 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:15:25.616 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:16:02.849 - EVENT - FileLogger - New Log Started
+2017-Apr-23 20:16:03.883 - WARNING - dnp.mts.master - Device restart detected
+2017-Apr-23 20:16:03.920 - WARNING - dnp.mts.master - Device restart detected
+2017-Apr-23 20:23:16.926 - EVENT - FileLogger - New Log Started
+2017-Apr-23 20:23:17.959 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:23:23.962 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:23:29.963 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:23:34.975 - WARNING - dnp.mts.master - Device restart detected
+2017-Apr-23 20:23:35.009 - WARNING - dnp.mts.master - Device restart detected
+2017-Apr-23 20:25:47.491 - EVENT - FileLogger - New Log Started
+2017-Apr-23 20:25:48.512 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:25:54.514 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:26:00.519 - WARNING - dnp.mts.master - Device restart detected
+2017-Apr-23 20:26:00.520 - WARNING - dnp.mts.master - Device restart detected
+2017-Apr-23 20:26:51.213 - WARNING - dnp.channels.tcpclient - An existing connection was forcibly closed by the remote host
+2017-Apr-23 20:26:52.215 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:26:58.216 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:27:04.219 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:27:10.228 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:27:16.229 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:27:22.232 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:27:28.235 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:27:34.235 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:27:40.237 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:27:46.240 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:27:52.240 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:27:58.241 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:28:18.405 - EVENT - FileLogger - New Log Started
+2017-Apr-23 20:28:18.414 - WARNING - dnp.mts.master - Device restart detected
+2017-Apr-23 20:31:52.605 - WARNING - dnp.channels.tcpclient - An existing connection was forcibly closed by the remote host
+2017-Apr-23 20:31:53.607 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:31:59.608 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:32:05.610 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:32:11.611 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:32:17.612 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:32:23.614 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:32:29.616 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:32:35.617 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:32:41.648 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:32:41.645 - EVENT - FileLogger - New Log Started
+2017-Apr-23 20:32:42.659 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:32:47.651 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:32:50.952 - EVENT - FileLogger - New Log Started
+2017-Apr-23 20:32:51.959 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:32:53.653 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:32:59.654 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:33:05.655 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:33:11.656 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:33:17.666 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:33:23.667 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:33:29.669 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:33:35.681 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:33:41.682 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it
+2017-Apr-23 20:33:47.690 - WARNING - dnp.channels.tcpclient - No connection could be made because the target machine actively refused it

@@ -98,13 +98,13 @@ int main(int argc, char* argv[])
 
 	// Specify a FilterLevel for the stack/physical layer to use.
 	// Log statements with a lower priority will not be logged.
-	const FilterLevel LOG_LEVEL = LEV_INFO;
+	const FilterLevel LOG_LEVEL = LEV_APP;
 
 	// create our demo application that handles commands and
 	// demonstrates how to publish data give it a loffer with a
 	// unique name and log level
 	SlaveDemoApp app(log.GetLogger(LOG_LEVEL, "demoapp"));
-
+	app.Timer();  //Start the timer for catching data
 	// This is the main point of interaction with the stack. The
 	// AsyncStackManager object instantiates master/slave DNP
 	// stacks, as well as their physical layers
@@ -126,11 +126,15 @@ int main(int argc, char* argv[])
 	// Override the default link addressing
 	stackConfig.link.LocalAddr  = local_dnp3;
 	stackConfig.link.RemoteAddr = remote_dnp3;
+	stackConfig.slave.mDisableUnsol = true;
+	stackConfig.slave.mEventMaxConfig.mMaxAnalogEvents = 5;
+	stackConfig.slave.mEventMaxConfig.mMaxBinaryEvents = 5;
+	stackConfig.slave.mEventMaxConfig.mMaxCounterEvents = 5;
 
 	// The DeviceTemplate struct specifies the structure of the
 	// slave's database, as well as the index range of controls and
 	// setpoints it accepts.
-	DeviceTemplate device(5, 5, 5, 5, 5, 5, 5);
+	DeviceTemplate device(2, 2, 2, 2, 2, 2, 2);
 	stackConfig.device = device;
 
 	// Create a new slave on a previously declared port, with a

@@ -72,7 +72,7 @@ namespace DotNetMasterDemo
         {
             var sm = new DNP3.Adapter.StackManager();
             sm.AddLogHandler(new PrintingLogAdapter()); //this is optional
-            sm.AddTCPClient("client", FilterLevel.LEV_INFO, 5000, "192.168.1.104", 20000);
+            sm.AddTCPClient("client", FilterLevel.LEV_INFO, 5000, "192.168.1.201", 20000);
             var config = new MasterStackConfig();
             config.link.useConfirms = true; //setup your stack configuration here.
             var commandAcceptor = sm.AddMaster("client", "master", FilterLevel.LEV_INFO, new PrintingDataObserver(), config);

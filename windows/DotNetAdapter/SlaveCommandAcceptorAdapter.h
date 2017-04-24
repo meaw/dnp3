@@ -36,7 +36,7 @@ namespace Adapter
 	{
 		public:
 			SlaveCommandAcceptorAdapter(DNP3::Interface::ICommandAcceptor^ proxy);
-
+			int Size(bool setPoint);
 			void AcceptCommand(const apl::BinaryOutput&, size_t, int aSequence, apl::IResponseAcceptor* apRspAcceptor);
 			void AcceptCommand(const apl::Setpoint&, size_t, int aSequence, apl::IResponseAcceptor* apRspAcceptor);
 

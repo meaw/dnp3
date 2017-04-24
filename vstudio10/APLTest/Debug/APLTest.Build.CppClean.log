@@ -26,13 +26,14 @@ d:\github\dnp3\vstudio10\apltest\debug\testphysicallayerasynctcp.obj
 d:\github\dnp3\vstudio10\apltest\debug\testphysicallayerloopback.obj
 d:\github\dnp3\vstudio10\apltest\debug\testphysicallayermonitor.obj
 d:\github\dnp3\vstudio10\apltest\debug\asyncphysbasetest.obj
-d:\github\dnp3\vstudio10\apltest\debug\apltest.ilk
-d:\github\dnp3\vstudio10\apltest\debug\apltest.exe
 d:\github\dnp3\vstudio10\apltest\debug\dnptest.pdb
-d:\github\dnp3\vstudio10\apltest\debug\testapl.vcxprojresolveassemblyreference.cache
 d:\github\dnp3\vstudio10\apltest\debug\apltest.tlog\cl.command.1.tlog
 d:\github\dnp3\vstudio10\apltest\debug\apltest.tlog\cl.read.1.tlog
 d:\github\dnp3\vstudio10\apltest\debug\apltest.tlog\cl.write.1.tlog
+d:\github\dnp3\vstudio10\apltest\debug\apltest.tlog\link-cvtres.read.1.tlog
+d:\github\dnp3\vstudio10\apltest\debug\apltest.tlog\link-cvtres.write.1.tlog
+d:\github\dnp3\vstudio10\apltest\debug\apltest.tlog\link-rc.read.1.tlog
+d:\github\dnp3\vstudio10\apltest\debug\apltest.tlog\link-rc.write.1.tlog
 d:\github\dnp3\vstudio10\apltest\debug\apltest.tlog\link.command.1.tlog
 d:\github\dnp3\vstudio10\apltest\debug\apltest.tlog\link.read.1.tlog
 d:\github\dnp3\vstudio10\apltest\debug\apltest.tlog\link.write.1.tlog

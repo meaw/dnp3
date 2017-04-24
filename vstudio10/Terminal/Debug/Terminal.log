@@ -1,12 +1,2 @@
-﻿  LogTerminalExtension.cpp
-  FlexibleObserverTerminalExtension.cpp
-  DOTerminalExtension.cpp
-  ControlTerminalExtension.cpp
-  ControlResponseTE.cpp
-  PhysicalLayerSyncProxy.cpp
-  PhysicalLayerIOStreamAsync.cpp
-  TerminalInterfaces.cpp
-  Terminal.cpp
-  LineReader.cpp
-  Generating Code...
+﻿  ControlResponseTE.cpp
   Terminal.vcxproj -> D:\GitHub\dnp3\vstudio10\Terminal\Debug\Terminal.lib

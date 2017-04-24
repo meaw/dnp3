@@ -1,13 +1,4 @@
-﻿  Stdafx.cpp
-  AssemblyInfo.cpp
-AssemblyInfo.cpp(40): warning C4947: 'System::Security::Permissions::SecurityAction::RequestMinimum': marked as obsolete
-  AssemblyInfo.cpp(40): note: Message: 'Assembly level declarative security is obsolete and is no longer enforced by the CLR by default. See http://go.microsoft.com/fwlink/?LinkID=155570 for more information.'
-  CommandAcceptorAdapter.cpp
-  Conversions.cpp
-  LogAdapter.cpp
-  MasterDataObserverAdapter.cpp
-  SlaveCommandAcceptorAdapter.cpp
-  SlaveDataObserverAdapter.cpp
+﻿  SlaveCommandAcceptorAdapter.cpp
   StackManager.cpp
   Generating Code...
   .NETFramework,Version=v4.5.AssemblyAttributes.cpp

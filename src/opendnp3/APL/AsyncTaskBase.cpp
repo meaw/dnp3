@@ -71,7 +71,11 @@ void AsyncTaskBase::SilentDisable()
 	this->Reset();
 	mIsEnabled = false;
 }
-
+void AsyncTaskBase::SilentDisableS()
+{
+	mIsRunning = false;
+	mIsEnabled = true;
+}
 void AsyncTaskBase::Dispatch()
 {
 	if(mIsRunning) throw InvalidStateException(LOCATION, "Running");

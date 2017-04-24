@@ -28,10 +28,11 @@ enum FilterLevel {
 	LEV_EVENT =		0x01,
 	LEV_ERROR =		0x02,
 	LEV_WARNING =	0x04,
-	LEV_INFO  =		0x08,
-	LEV_INTERPRET =	0x10,
-	LEV_COMM =		0x20,
-	LEV_DEBUG =		0x40
+	LEV_APP = 0x08,
+	LEV_INFO  =		0x10,
+	LEV_INTERPRET =	0x20,
+	LEV_COMM =		0x40,
+	LEV_DEBUG =		0x80
 };
 
 struct FilterAssoc {
@@ -49,7 +50,7 @@ public:
 	static const FilterAssoc filters[NUM_FILTER];
 
 // Mask for all of the values
-	static const int MASK_ALL_LEVELS = LEV_DEBUG | LEV_INFO | LEV_COMM | LEV_INTERPRET | LEV_WARNING | LEV_ERROR | LEV_EVENT;
+	static const int MASK_ALL_LEVELS = LEV_DEBUG | LEV_INFO | LEV_APP | LEV_COMM | LEV_INTERPRET | LEV_WARNING | LEV_ERROR | LEV_EVENT;
 
 // Converts a filter level enumeration to a mask with all higher levels set
 	static int FilterLevelToMask(FilterLevel);

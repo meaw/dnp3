@@ -58,8 +58,10 @@ public:
 	*   @param apRspAcceptor The interface used to make the callback
 	*
 	*/
-	virtual void AcceptCommand(const BinaryOutput& arCommand, size_t aIndex, int aSequence, IResponseAcceptor* apRspAcceptor) = 0;
+	virtual int Size(bool setPoint)=0 ;
 
+	virtual void AcceptCommand(const BinaryOutput& arCommand, size_t aIndex, int aSequence, IResponseAcceptor* apRspAcceptor) = 0;
+	/*virtual int AcceptCommandQ(const BinaryOutput& arCommand, size_t aIndex, int aSequence, IResponseAcceptor* apRspAcceptor) = 0;*/
 	/** Asynchronous request that a Setpoint be executed by the stack. The stack will call back with the supplied IResponseAcceptor.
 	*
 	*	@param arCommand The Setpoint (AnalogOutput in dnp3) to execute
@@ -69,6 +71,8 @@ public:
 	*
 	*/
 	virtual void AcceptCommand(const Setpoint& arCommand, size_t aIndex, int aSequence, IResponseAcceptor* apRspAcceptor) = 0;
+	/*virtual int AcceptCommandQ(const Setpoint& arCommand, size_t aIndex, int aSequence, IResponseAcceptor* apRspAcceptor) = 0;*/
+
 };
 
 

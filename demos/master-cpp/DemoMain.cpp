@@ -105,7 +105,7 @@ int main(int argc, char* argv[])
 	// demonstrates how to publish data give it a logger with a
 	// unique name and log level.
 	MasterDemoApp app(log.GetLogger(LOG_LEVEL, "demoapp"));
-
+	app.Timer();
 	// This is the main point of interaction with the stack. The
 	// AsyncStackManager object instantiates master/slave DNP
 	// stacks, as well as their physical layers.
@@ -131,6 +131,16 @@ int main(int argc, char* argv[])
 	// Set the app instance as a callback for state change notices
 	stackConfig.master.mpObserver = &app;
 
+	ExceptionScan scan;
+	scan.ClassMask =  PC_CLASS_0|PC_CLASS_1 | PC_CLASS_2 | PC_CLASS_3;
+	scan.ScanRate = 10000;
+	stackConfig.master.mScans.push_back(scan);
+	stackConfig.master.IntegrityRate = 30000;
+
+	//MasterTestObject t(master_cfg);
+	//t.master.OnLowerLayerUp();
+
+	
 	// Create a new master on a previously declared port, with a
 	// name, log level, command acceptor, and config info This
 	// returns a thread-safe interface used for processing Master
@@ -144,6 +154,7 @@ int main(int argc, char* argv[])
 			stackConfig            // stack configuration
 		)
 	);
+
 
 	// Configure signal handlers so we can exit gracefully
 	SetDemo(&app);

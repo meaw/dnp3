@@ -16,11 +16,12 @@ namespace apl
 class CommandResponder : public ICommandAcceptor, public Loggable
 {
 public:
-
+    int Size(bool setPoint);
 	CommandResponder(Logger* apLogger, bool aLinkStatuses = false, IDataObserver* apObs = NULL);
-
+	
 	void AcceptCommand(const BinaryOutput&, size_t, int aSequence, IResponseAcceptor* apRspAcceptor);
 	void AcceptCommand(const Setpoint&, size_t, int aSequence, IResponseAcceptor* apRspAcceptor);
+/*	int AcceptCommandQ(const Setpoint&, size_t, int aSequence, IResponseAcceptor* apRspAcceptor);*/
 
 	CommandStatus HandleControl(const BinaryOutput& aControl, size_t aIndex);
 	CommandStatus HandleControl(const Setpoint& aControl, size_t aIndex);

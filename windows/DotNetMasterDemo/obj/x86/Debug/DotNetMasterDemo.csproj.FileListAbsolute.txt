@@ -8,6 +8,7 @@ D:\582\dnp3-master\windows\DotNetMasterDemo\bin\Debug\DotNetAdapter.pdb
 D:\582\dnp3-master\windows\DotNetMasterDemo\bin\Debug\DotNetInterface.pdb
 D:\582\dnp3-master\windows\DotNetMasterDemo\obj\x86\Debug\DotNetMasterDemo.exe
 D:\582\dnp3-master\windows\DotNetMasterDemo\obj\x86\Debug\DotNetMasterDemo.pdb
+D:\GitHub\dnp3\windows\DotNetMasterDemo\obj\x86\Debug\DotNetMasterDemo.csprojResolveAssemblyReference.cache
 D:\GitHub\dnp3\windows\DotNetMasterDemo\bin\Debug\DotNetMasterDemo.exe.config
 D:\GitHub\dnp3\windows\DotNetMasterDemo\bin\Debug\DotNetMasterDemo.exe
 D:\GitHub\dnp3\windows\DotNetMasterDemo\bin\Debug\DotNetMasterDemo.pdb
@@ -15,6 +16,5 @@ D:\GitHub\dnp3\windows\DotNetMasterDemo\bin\Debug\DotNetAdapter.dll
 D:\GitHub\dnp3\windows\DotNetMasterDemo\bin\Debug\DotNetInterface.dll
 D:\GitHub\dnp3\windows\DotNetMasterDemo\bin\Debug\DotNetAdapter.pdb
 D:\GitHub\dnp3\windows\DotNetMasterDemo\bin\Debug\DotNetInterface.pdb
-D:\GitHub\dnp3\windows\DotNetMasterDemo\obj\x86\Debug\DotNetMasterDemo.csprojResolveAssemblyReference.cache
 D:\GitHub\dnp3\windows\DotNetMasterDemo\obj\x86\Debug\DotNetMasterDemo.exe
 D:\GitHub\dnp3\windows\DotNetMasterDemo\obj\x86\Debug\DotNetMasterDemo.pdb

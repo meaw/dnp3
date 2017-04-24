@@ -32,7 +32,7 @@ namespace DotNetSlaveDemo
         static void Main(string[] args)
         {
             var sm = new DNP3.Adapter.StackManager();
-            sm.AddTCPServer("server", FilterLevel.LEV_INFO, 5000, "192.168.1.104", 20000);
+            sm.AddTCPServer("server", FilterLevel.LEV_INFO, 5000, "192.168.1.201", 20000);
             var config = new SlaveStackConfig();
             var publisher = sm.AddSlave("server", "slave", FilterLevel.LEV_INFO, new RejectingCommandAcceptor(), config);
 

@@ -37,6 +37,32 @@ SlaveDemoBase::SlaveDemoBase(Logger* apLogger) :
 
 	// Hand the notifier to the command source, so this happens whenever a new command is present
 	mCommandQueue.SetNotifier(pNotifier);
+
+
+
+
+}
+void SlaveDemoApp::Timer() {
+
+	auto tid = t.create(5000, 1000, std::bind(&SlaveDemoApp::Tick, this));
+	counter = 0;
+}
+
+void SlaveDemoApp::Tick() {
+	counter++;
+	std::cout << "Update "<< counter <<""<< std::endl;
+	Binary b((counter & 0x0001), BQ_ONLINE);
+	b.SetToNow();
+	Counter c(counter, CQ_ONLINE);
+	c.SetToNow();
+	Analog a(counter*1.0, CQ_ONLINE);
+	c.SetToNow();
+	// We would like all updates to be sent at one time.When the Transaction object
+	// goes out of scope, all updates will be sent in one block to do the slave database.
+	Transaction t(mpObserver);
+	mpObserver->Update(a, 0);
+	mpObserver->Update(c, 0);
+	mpObserver->Update(b, 0);
 }
 
 void SlaveDemoBase::Shutdown()
@@ -56,8 +82,14 @@ SlaveDemoApp::SlaveDemoApp(Logger* apLogger) :
 	SlaveDemoBase(apLogger),
 	mCountSetPoints(0),
 	mCountBinaryOutput(0),
-	mpObserver(NULL)
-{}
+	mpObserver(NULL){
+	// Timer fires every second, starting now    
+//	
+}
+
+
+
+
 
 void SlaveDemoApp::SetDataObserver(IDataObserver* apObserver)
 {
@@ -66,7 +98,7 @@ void SlaveDemoApp::SetDataObserver(IDataObserver* apObserver)
 
 CommandStatus SlaveDemoApp::HandleControl(Setpoint& aControl, size_t aIndex)
 {
-	LOG_BLOCK(LEV_INFO, "Received " << aControl.ToString() << " on index: " << aIndex);
+	LOG_BLOCK(LEV_APP, "Received " << aControl.ToString() << " on index: " << aIndex);
 
 	// Update a  feedback point that has the same value as the setpoint we were
 	// given from the master. Configure it with the current time and good quality
@@ -78,6 +110,10 @@ CommandStatus SlaveDemoApp::HandleControl(Setpoint& aControl, size_t aIndex)
 	Counter c(++mCountSetPoints, CQ_ONLINE);
 	c.SetToNow();
 
+
+	Binary b((mCountSetPoints & 00001), BQ_ONLINE);
+	b.SetToNow();
+
 	// We would like all updates to be sent at one time.When the Transaction object
 	// goes out of scope, all updates will be sent in one block to do the slave database.
 	Transaction t(mpObserver);
@@ -85,8 +121,9 @@ CommandStatus SlaveDemoApp::HandleControl(Setpoint& aControl, size_t aIndex)
 	// Push the prepared datapoints to the database of this slave. The slave
 	// can now transmit the changes to the master (polling or unsol)
 	mpObserver->Update(a, aIndex);
-	mpObserver->Update(c, 0);
-
+	mpObserver->Update(c, 1);
+	mpObserver->Update(b, 0);
+	
 
 	// This is the control code returned to the slave stack, and forwared
 	// on to the master. These are DNP3 control codes.
@@ -108,7 +145,7 @@ CommandStatus SlaveDemoApp::HandleControl(BinaryOutput& aControl, size_t aIndex)
 
 	Transaction t(mpObserver);
 	mpObserver->Update(b, aIndex);
-	mpObserver->Update(c, 1);
+	mpObserver->Update(c, 2);
 
 	return CS_SUCCESS;
 }

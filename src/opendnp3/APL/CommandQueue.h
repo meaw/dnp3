@@ -42,12 +42,17 @@ struct CommandData {
 class CommandQueue : public ICommandAcceptor, public ICommandSource
 {
 public:
+	int MaxSize=100; //set the output queue size()
+	int Size(bool setPoint);  //get the # of queued items
+	int SetSize(int QueueSize);   //set the output queue size()
+
 	CommandQueue() : mpNotifier(NULL) {}
 
 	//Implement the ICommandAcceptor interface
 	void AcceptCommand(const apl::BinaryOutput& arType, size_t aIndex, int aSequence, IResponseAcceptor* apRspAcceptor);
+	/*int AcceptCommandQ(const apl::BinaryOutput& arType, size_t aIndex, int aSequence, IResponseAcceptor* apRspAcceptor);*/
 	void AcceptCommand(const apl::Setpoint& arType, size_t aIndex, int aSequence, IResponseAcceptor* apRspAcceptor);
-
+	/*int AcceptCommandQ(const apl::Setpoint& arType, size_t aIndex, int aSequence, IResponseAcceptor* apRspAcceptor);*/
 	void SetNotifier(INotifier* apNotifier);
 
 	size_t Size();
@@ -68,6 +73,7 @@ public:
 	bool RespondToCommand(CommandStatus aStatus);
 
 protected:
+	
 	apl::SigLock mLock;
 	apl::INotifier* mpNotifier;
 
