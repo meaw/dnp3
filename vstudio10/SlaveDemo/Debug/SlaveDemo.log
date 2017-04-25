@@ -1,4 +1,27 @@
-﻿  SlaveDemo.vcxproj -> D:\GitHub\dnp3\vstudio10\SlaveDemo\Debug\SlaveDemo.exe
+﻿  SlaveDemo.cpp
+d:\github\dnp3\demos\slave-cpp\slavedemo.cpp(156): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+d:\github\dnp3\vstudio10\inputqueue.h(58): warning C4018: '>': signed/unsigned mismatch
+  d:\github\dnp3\vstudio10\inputqueue.h(56): note: while compiling class template member function 'int SafeQueue<CommandsQueue>::Enqueue(T)'
+          with
+          [
+              T=CommandsQueue
+          ]
+  d:\github\dnp3\demos\slave-cpp\slavedemo.cpp(157): note: see reference to function template instantiation 'int SafeQueue<CommandsQueue>::Enqueue(T)' being compiled
+          with
+          [
+              T=CommandsQueue
+          ]
+  d:\github\dnp3\demos\slave-cpp\slavedemo.cpp(49): note: see reference to class template instantiation 'SafeQueue<CommandsQueue>' being compiled
+  c:\boost\boost_1_64_0\boost\bind\placeholders.hpp(54): note: see reference to class template instantiation 'boost::arg<9>' being compiled
+  c:\boost\boost_1_64_0\boost\bind\placeholders.hpp(53): note: see reference to class template instantiation 'boost::arg<8>' being compiled
+  c:\boost\boost_1_64_0\boost\bind\placeholders.hpp(52): note: see reference to class template instantiation 'boost::arg<7>' being compiled
+  c:\boost\boost_1_64_0\boost\bind\placeholders.hpp(51): note: see reference to class template instantiation 'boost::arg<6>' being compiled
+  c:\boost\boost_1_64_0\boost\bind\placeholders.hpp(50): note: see reference to class template instantiation 'boost::arg<5>' being compiled
+  c:\boost\boost_1_64_0\boost\bind\placeholders.hpp(49): note: see reference to class template instantiation 'boost::arg<4>' being compiled
+  c:\boost\boost_1_64_0\boost\bind\placeholders.hpp(48): note: see reference to class template instantiation 'boost::arg<3>' being compiled
+  c:\boost\boost_1_64_0\boost\bind\placeholders.hpp(47): note: see reference to class template instantiation 'boost::arg<2>' being compiled
+  c:\boost\boost_1_64_0\boost\bind\placeholders.hpp(46): note: see reference to class template instantiation 'boost::arg<1>' being compiled
+  SlaveDemo.vcxproj -> D:\GitHub\dnp3\vstudio10\SlaveDemo\Debug\SlaveDemo.exe
   SlaveDemo.vcxproj -> SlaveDemo\Debug\SlaveDemo.pdb (Full PDB)
   D:\GitHub\dnp3\vstudio10\\..\windows\shared\boost_chrono-vc110-mt-gd-1_55.dll
   D:\GitHub\dnp3\vstudio10\\..\windows\shared\boost_chrono-vc140-mt-gd-1_64.dll

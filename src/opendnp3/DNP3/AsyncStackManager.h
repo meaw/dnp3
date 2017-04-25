@@ -145,10 +145,10 @@ public:
 		FilterLevel aLevel,
 		ICommandAcceptor* apCmdAcceptor,
 		const SlaveStackConfig&,
-		ResponseContext* apEventBuffer);//DJSC TEST
+		int apEventBuffer);//DJSC TEST
 
-	
-
+	ResponseContext* IQ0;
+	ResponseContext* IQ1;
 	/**
 		Adds a VTO channel to a prexisting stack (master or slave).
 		This function should be used for advanced control of a VTO channel,

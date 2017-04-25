@@ -51,7 +51,7 @@ public:
 		Logger* apLogger,
 		ITimerSource* apTimerSrc,
 		ICommandAcceptor* apCmdAcceptor,
-		const SlaveStackConfig& arCfg, ResponseContext* apEventBuffer);  //TEST DJSC
+		const SlaveStackConfig& arCfg, int apEventBuffer);  //DJSC TEST DJSC
 
 	IVtoWriter* GetVtoWriter();
 
@@ -61,6 +61,7 @@ public:
 	Database mDB;				// The database holds static event data and forwards to an event buffer
 	DNPCommandMaster mCmdMaster;	// Controls the execution of commands
 	Slave mSlave;				// The dnp3 outstation class
+	ResponseContext* OQ;
 };
 
 }

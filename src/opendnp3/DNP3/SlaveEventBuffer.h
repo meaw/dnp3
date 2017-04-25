@@ -193,7 +193,7 @@ public:
 	 * @return				the number of events selected
 	 */
 	size_t Select(BufferTypes aType, PointClass aClass, size_t aMaxEvent = std::numeric_limits<size_t>::max());
-
+	size_t Size(BufferTypes aType);
 	/**
 	 * Selects data in the buffer that matches the given PointClass, up to
 	 * the defined number of entries.

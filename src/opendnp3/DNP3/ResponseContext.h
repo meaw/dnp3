@@ -92,6 +92,12 @@ public:
 	IEventBuffer* GetBuffer() {
 		return &mBuffer;
 	}
+
+
+
+	int GetBufferStats() {
+		return mBinaryEvents.size();
+	}
 	SlaveEventBuffer* GetBufferS() {
 		return &mBuffer;
 	}

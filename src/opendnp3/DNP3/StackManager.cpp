@@ -69,7 +69,7 @@ IDataObserver* StackManager::AddSlave(const std::string& arPortName, const std::
 	return mpImpl->AddSlave(arPortName, arStackName, aLevel, apCmdAcceptor, arCfg);
 }
 IDataObserver* StackManager::AddSlaveI(const std::string& arPortName, const std::string& arStackName, FilterLevel aLevel,
-	ICommandAcceptor* apCmdAcceptor, const SlaveStackConfig& arCfg, ResponseContext* apEventBuffer)  //DJSC TEST
+	ICommandAcceptor* apCmdAcceptor, const SlaveStackConfig& arCfg, int apEventBuffer)  //DJSC TEST DJSC
 {
 	return mpImpl->AddSlaveI(arPortName, arStackName, aLevel, apCmdAcceptor, arCfg,  apEventBuffer);
 }

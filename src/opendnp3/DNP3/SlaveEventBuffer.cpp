@@ -140,6 +140,23 @@ size_t SlaveEventBuffer::Select(BufferTypes aType, PointClass aClass, size_t aMa
 	}
 }
 
+size_t SlaveEventBuffer::Size(BufferTypes aType)
+{
+	switch (aType) {
+	case BT_BINARY:
+		return mBinaryEvents.Size();
+	case BT_ANALOG:
+		return mAnalogEvents.Size();
+	case BT_COUNTER:
+		return mCounterEvents.Size();
+	case BT_VTO:
+		return mVtoEvents.Size();
+	default:
+		throw ArgumentException(LOCATION, "Invalid BufferType");
+	}
+}
+
+
 size_t SlaveEventBuffer::Select(PointClass aClass, size_t aMaxEvent)
 {
 	size_t left = aMaxEvent;

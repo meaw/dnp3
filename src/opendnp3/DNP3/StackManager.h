@@ -86,7 +86,7 @@ public:
 		FilterLevel aLevel,
 		ICommandAcceptor* apCmdAcceptor,
 		const SlaveStackConfig& arCfg, 
-		ResponseContext* apEventBuffer);  //DJSC TEST
+		int apEventBuffer);  //DJSC TEST
 	void AddVtoChannel(const std::string& arStackName,
 	                   IVtoCallbacks* apOnDataCallback);
 

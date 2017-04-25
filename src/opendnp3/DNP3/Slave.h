@@ -85,7 +85,7 @@ class Slave : public Loggable, public IAppUser
 public:
 
 	Slave(Logger*, IAppLayer*, ITimerSource*, ITimeManager* apTime, Database*, IDNPCommandMaster*, const SlaveConfig& arCfg);
-	Slave(Logger*, IAppLayer*, ITimerSource*, ITimeManager* apTime, Database*, IDNPCommandMaster*, const SlaveConfig& arCfg, ResponseContext* apEventBuffer);//TEST DJSC
+	Slave(Logger*, IAppLayer*, ITimerSource*, ITimeManager* apTime, Database*, IDNPCommandMaster*, const SlaveConfig& arCfg, int apEventBuffer);//DJSC TEST DJSC
 	~Slave();
 
 	////////////////////////
@@ -149,7 +149,7 @@ public:
 	IVtoWriter* GetVtoWriter() {
 		return &mVtoWriter;
 	}
-
+ResponseContext* mRspContext;			// Used to track and construct response fragments
 private:
 
 	ChangeBuffer<SigLock> mChangeBuffer;	// how client code gives us updates
@@ -174,7 +174,7 @@ private:
 	APDU mRequest;							// APDU used to save Deferred requests
 	SequenceInfo mSeqInfo;
 	APDU mUnsol;							// APDY used to form unsol respones
-	ResponseContext mRspContext;			// Used to track and construct response fragments
+	
 
 	bool mHaveLastRequest;
 	APDU mLastRequest;						// APDU used to form responses

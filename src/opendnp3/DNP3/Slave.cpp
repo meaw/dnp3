@@ -33,8 +33,8 @@
 namespace apl
 {
 namespace dnp
-{//TEST DJSC
-	Slave::Slave(Logger* apLogger, IAppLayer* apAppLayer, ITimerSource* apTimerSrc, ITimeManager* apTime, Database* apDatabase, IDNPCommandMaster* apCmdMaster, const SlaveConfig& arCfg, ResponseContext* apEventBuffer) :
+{//DJSC TEST DJSC
+	Slave::Slave(Logger* apLogger, IAppLayer* apAppLayer, ITimerSource* apTimerSrc, ITimeManager* apTime, Database* apDatabase, IDNPCommandMaster* apCmdMaster, const SlaveConfig& arCfg, int apEventBuffer) :
 		Loggable(apLogger),
 		mpAppLayer(apAppLayer),
 		mpTimerSrc(apTimerSrc),
@@ -46,7 +46,7 @@ namespace dnp
 		mpUnsolTimer(NULL),
 		mResponse(arCfg.mMaxFragSize),
 		mUnsol(arCfg.mMaxFragSize),
-		mRspContext(apLogger, apDatabase, &mRspTypes, arCfg.mEventMaxConfig),
+		//mRspContext(apLogger, apDatabase, &mRspTypes, arCfg.mEventMaxConfig),
 		mHaveLastRequest(false),
 		mLastRequest(arCfg.mMaxFragSize),
 		mpTime(apTime),
@@ -63,12 +63,9 @@ namespace dnp
 		mVtoWriter(apLogger->GetSubLogger("VtoWriter"), arCfg.mVtoWriterQueueSize)
 	{
 		/* Link the event buffer to the database */
-		//apEventBuffer =new ResponseContext(apLogger, apDatabase, &mRspTypes, arCfg.mEventMaxConfig);
-
-		//
-		apEventBuffer = &mRspContext;
-		//mpDatabase->SetEventBuffer(mRspContext.GetBuffer());
-		mpDatabase->SetEventBuffer(apEventBuffer->GetBuffer());
+		mRspContext =new ResponseContext(apLogger, apDatabase, &mRspTypes, arCfg.mEventMaxConfig);
+	
+		mpDatabase->SetEventBuffer(mRspContext->GetBuffer());
 
 		mIIN.SetDeviceRestart(true);	/* Always set on restart */
 
@@ -116,7 +113,7 @@ Slave::Slave(Logger* apLogger, IAppLayer* apAppLayer, ITimerSource* apTimerSrc, 
 	mpUnsolTimer(NULL),
 	mResponse(arCfg.mMaxFragSize),
 	mUnsol(arCfg.mMaxFragSize),
-	mRspContext(apLogger, apDatabase, &mRspTypes, arCfg.mEventMaxConfig),
+	//mRspContext(apLogger, apDatabase, &mRspTypes, arCfg.mEventMaxConfig),
 	mHaveLastRequest(false),
 	mLastRequest(arCfg.mMaxFragSize),
 	mpTime(apTime),
@@ -133,10 +130,10 @@ Slave::Slave(Logger* apLogger, IAppLayer* apAppLayer, ITimerSource* apTimerSrc, 
 	mVtoWriter(apLogger->GetSubLogger("VtoWriter"), arCfg.mVtoWriterQueueSize)
 {
 	/* Link the event buffer to the database */
-	mpDatabase->SetEventBuffer(mRspContext.GetBuffer());
+	mpDatabase->SetEventBuffer(mRspContext->GetBuffer());
 
 	mIIN.SetDeviceRestart(true);	/* Always set on restart */
-
+	mRspContext = new ResponseContext(apLogger, apDatabase, &mRspTypes, arCfg.mEventMaxConfig);
 	/* Use the cmd master to send and rsp queue to wait for reply */
 	mpCmdMaster->SetResponseObserver(&mRspQueue);
 
@@ -312,7 +309,7 @@ size_t Slave::FlushVtoUpdates()
 	 * Copy as much data as we can from the VtoWriter into the
 	 * SlaveEventBuffer's VtoEvent buffer.
 	 */
-	IEventBuffer* pBuff = this->mRspContext.GetBuffer();
+	IEventBuffer* pBuff = this->mRspContext->GetBuffer();
 	size_t available = mVtoWriter.Size();
 	size_t space = pBuff->NumVtoEventsAvailable();
 	size_t flushed = this->mVtoWriter.Flush(pBuff, space);

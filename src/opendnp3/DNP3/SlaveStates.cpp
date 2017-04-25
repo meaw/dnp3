@@ -88,9 +88,9 @@ void AS_Base::SwitchOnFunction(Slave* c, AS_Base* apNext, const APDU& arRequest,
 	switch (arRequest.GetFunction()) {
 	case (FC_READ): {
 			ChangeState(c, apNext);
-			c->mRspContext.Reset();
-			IINField iin = c->mRspContext.Configure(arRequest);
-			c->mRspContext.LoadResponse(c->mResponse);
+			c->mRspContext->Reset();
+			IINField iin = c->mRspContext->Configure(arRequest);
+			c->mRspContext->LoadResponse(c->mResponse);
 			c->Send(c->mResponse, iin);
 			break;
 		}
@@ -182,7 +182,7 @@ void AS_Base::ChangeState(Slave* c, AS_Base* apState)
 void AS_Base::DoUnsolSuccess(Slave* c)
 {
 	if (!c->mStartupNullUnsol) c->mStartupNullUnsol = true; //it was a null unsol packet
-	c->mRspContext.ClearAndReset();
+	c->mRspContext->ClearAndReset();
 
 	// this will cause us to immediately re-evaluate if we need to send another unsol rsp
 	// we use the Deferred mechanism to give the slave an opportunity to respond to any Deferred request instead
@@ -227,10 +227,10 @@ void AS_Idle::OnDataUpdate(Slave* c)
 	c->FlushUpdates();
 
 	// start the unsol timer or act immediately if there's no pack timer
-	if (!c->mConfig.mDisableUnsol && c->mStartupNullUnsol && c->mRspContext.HasEvents(c->mConfig.mUnsolMask)) {
+	if (!c->mConfig.mDisableUnsol && c->mStartupNullUnsol && c->mRspContext->HasEvents(c->mConfig.mUnsolMask)) {
 		if (c->mConfig.mUnsolPackDelay == 0) {
 			ChangeState(c, AS_WaitForUnsolSuccess::Inst());
-			c->mRspContext.LoadUnsol(c->mUnsol, c->mIIN, c->mConfig.mUnsolMask);
+			c->mRspContext->LoadUnsol(c->mUnsol, c->mIIN, c->mConfig.mUnsolMask);
 			c->SendUnsolicited(c->mUnsol);
 		} else if (c->mpUnsolTimer == NULL) {
 			c->StartUnsolTimer(c->mConfig.mUnsolPackDelay);
@@ -241,15 +241,15 @@ void AS_Idle::OnDataUpdate(Slave* c)
 void AS_Idle::OnUnsolExpiration(Slave* c)
 {
 	if (c->mStartupNullUnsol) {
-		if (c->mRspContext.HasEvents(c->mConfig.mUnsolMask)) {
+		if (c->mRspContext->HasEvents(c->mConfig.mUnsolMask)) {
 			ChangeState(c, AS_WaitForUnsolSuccess::Inst());
-			c->mRspContext.LoadUnsol(c->mUnsol, c->mIIN, c->mConfig.mUnsolMask);
+			c->mRspContext->LoadUnsol(c->mUnsol, c->mIIN, c->mConfig.mUnsolMask);
 			c->SendUnsolicited(c->mUnsol);
 		}
 	} else {
 		// do the startup null unsol task
 		ChangeState(c, AS_WaitForUnsolSuccess::Inst());
-		c->mRspContext.LoadUnsol(c->mUnsol, c->mIIN, ClassMask(false, false, false));
+		c->mRspContext->LoadUnsol(c->mUnsol, c->mIIN, ClassMask(false, false, false));
 		c->SendUnsolicited(c->mUnsol);
 	}
 }
@@ -268,17 +268,17 @@ AS_WaitForRspSuccess AS_WaitForRspSuccess::mInstance;
 void AS_WaitForRspSuccess::OnSolFailure(Slave* c)
 {
 	ChangeState(c, AS_Idle::Inst());
-	c->mRspContext.Reset();
+	c->mRspContext->Reset();
 }
 
 void AS_WaitForRspSuccess::OnSolSendSuccess(Slave* c)
 {
-	c->mRspContext.ClearWritten();
+	c->mRspContext->ClearWritten();
 
-	if (c->mRspContext.IsComplete()) {
+	if (c->mRspContext->IsComplete()) {
 		ChangeState(c, AS_Idle::Inst());
 	} else {
-		c->mRspContext.LoadResponse(c->mResponse);
+		c->mRspContext->LoadResponse(c->mResponse);
 		c->Send(c->mResponse);
 	}
 }
@@ -303,7 +303,7 @@ void AS_WaitForUnsolSuccess::OnUnsolFailure(Slave* c)
 {
 	// if any unsol transaction fails, we re-enable the timer with the unsol retry delay
 	ChangeState(c, AS_Idle::Inst());
-	c->mRspContext.Reset();
+	c->mRspContext->Reset();
 	c->StartUnsolTimer(c->mConfig.mUnsolRetryDelay);
 }
 
@@ -352,7 +352,7 @@ void AS_WaitForSolUnsolSuccess::OnSolSendSuccess(Slave* c)
 void AS_WaitForSolUnsolSuccess::OnUnsolFailure(Slave* c)
 {
 	ChangeState(c, AS_WaitForRspSuccess::Inst());
-	c->mRspContext.Reset();
+	c->mRspContext->Reset();
 	if (c->mConfig.mUnsolRetryDelay > 0)
 		c->StartUnsolTimer(c->mConfig.mUnsolRetryDelay);
 	else

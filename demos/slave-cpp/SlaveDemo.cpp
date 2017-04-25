@@ -73,17 +73,22 @@ void SlaveDemoApp::QTick() {  /*Handles incoming queue items*/
 
 void SlaveDemoApp::Tick() {
 	counter++;
-	std::cout << "Update "<< counter <<" "<<name<< std::endl;
+	//std::cout << "Update "<< counter <<" "<<name<< std::endl;
 	Binary b((counter & 0x0001), BQ_ONLINE);
 	b.SetToNow();
 	Counter c(counter, CQ_ONLINE);
 	c.SetToNow();
 	Analog a(counter*1.0, CQ_ONLINE);
-	c.SetToNow();
+	a.SetToNow();
 	// We would like all updates to be sent at one time.When the Transaction object
 	// goes out of scope, all updates will be sent in one block to do the slave database.
 
 	//mpQueue1
+	SlaveEventBuffer* mBuffer;
+		mBuffer = mpQueue1->GetBufferS();
+	std::cout << "Out Q1: Bin="<<mBuffer->Size(BT_BINARY) << " An="<<mBuffer->Size(BT_ANALOG) << " Ct=" << mBuffer->Size(BT_COUNTER)<< " " << name << std::endl;
+mBuffer = mpQueue2->GetBufferS();
+	std::cout << "Out Q2: Bin=" << mBuffer->Size(BT_BINARY) << " An=" << mBuffer->Size(BT_ANALOG) << " Ct=" << mBuffer->Size(BT_COUNTER) << " " << name << std::endl;
 
 	Transaction t1(mpObserver1);
 	mpObserver1->Update(a, 0);
@@ -134,7 +139,7 @@ if (instance == 2) {
 }
 }
 
-void SlaveDemoApp::SetOutputQueue(ResponseContext* apQueue, int instance)  //TEST DJSC
+void SlaveDemoApp::SetOutputQueue(ResponseContext* apQueue, int instance)  //DJSC TEST DJSC
 {
 	if (instance == 1) {
 		mpQueue1 = apQueue;

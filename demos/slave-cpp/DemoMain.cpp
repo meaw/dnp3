@@ -193,8 +193,8 @@ int main(int argc, char* argv[])
 	OutputQueueHandler.push_back(TempPointer_IEventBuffer);
 
 
-	pDataObserver2.push_back(mgr2[i]->AddSlaveI(tcp_B, slave, LOG_LEVEL, IEDS[i]->GetCmdAcceptor(), *stackConfig2[i], OutputQueueHandler2[i]));
-	pDataObserver.push_back(mgr[i]->AddSlaveI(tcp_A, slave, LOG_LEVEL, IEDS[i]->GetCmdAcceptor(), *stackConfig[i], OutputQueueHandler[i])) ;
+	pDataObserver2.push_back(mgr2[i]->AddSlaveI(tcp_B, slave, LOG_LEVEL, IEDS[i]->GetCmdAcceptor(), *stackConfig2[i], 1));
+	pDataObserver.push_back(mgr[i]->AddSlaveI(tcp_A, slave, LOG_LEVEL, IEDS[i]->GetCmdAcceptor(), *stackConfig[i], 0)) ;
 
 
 //	IDataObserver* pDataObserver2 = mgr2[i]->AddSlave("tcpserver", "slave", LOG_LEVEL, IEDS[i]->GetCmdAcceptor(), *stackConfig2[i]);
@@ -204,8 +204,8 @@ int main(int argc, char* argv[])
 	IEDS[i]->SetDataObserver(pDataObserver2[i], 2);
 	IEDS[i]->SetDataObserver(pDataObserver[i], 1);
 	
-	IEDS[i]->SetOutputQueue(OutputQueueHandler2[i], 2);
-	IEDS[i]->SetOutputQueue(OutputQueueHandler[i], 1);
+	IEDS[i]->SetOutputQueue(mgr2[i]->IQ1, 2);
+	IEDS[i]->SetOutputQueue(mgr[i]->IQ0, 1);
 
 	
 

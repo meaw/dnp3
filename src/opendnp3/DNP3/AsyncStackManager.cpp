@@ -132,7 +132,7 @@ ICommandAcceptor* AsyncStackManager::AddMaster( const std::string& arPortName, c
 
 IDataObserver* AsyncStackManager::AddSlaveI(const std::string& arPortName, const std::string& arStackName, FilterLevel aLevel, ICommandAcceptor* apCmdAcceptor,
 	const SlaveStackConfig& arCfg,
-	ResponseContext* apEventBuffer)
+	int apEventBuffer)
 {
 	this->ThrowIfAlreadyShutdown();
 	LinkChannel* pChannel = this->GetOrCreateChannel(arPortName);
@@ -140,7 +140,15 @@ IDataObserver* AsyncStackManager::AddSlaveI(const std::string& arPortName, const
 	pLogger->SetVarName(arStackName);
 
 	SlaveStack* pSlave = new SlaveStack(pLogger, &mTimerSrc, apCmdAcceptor, arCfg, apEventBuffer);
-
+	if (apEventBuffer == 0) {
+		IQ0 = pSlave->OQ;
+	}
+	else if (apEventBuffer == 1) {
+		IQ1 = pSlave->OQ;
+	}
+	else {
+		assert("Fatal csdr");
+	}
 	LinkRoute route(arCfg.link.RemoteAddr, arCfg.link.LocalAddr);
 	this->AddStackToChannel(arStackName, pSlave, pChannel, route);
 
@@ -150,7 +158,7 @@ IDataObserver* AsyncStackManager::AddSlaveI(const std::string& arPortName, const
 	}
 
 	return pSlave->mSlave.GetDataObserver();
-}  //DJSC TEST
+}  //DJSC TEST DJSC
 
 IDataObserver* AsyncStackManager::AddSlave( const std::string& arPortName, const std::string& arStackName, FilterLevel aLevel, ICommandAcceptor* apCmdAcceptor,
                 const SlaveStackConfig& arCfg)
