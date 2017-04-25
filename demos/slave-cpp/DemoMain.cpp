@@ -121,12 +121,15 @@ int main(int argc, char* argv[])
 	vector <DeviceTemplate*> device2;
 	vector <IDataObserver*>pDataObserver;
 	vector <IDataObserver*>pDataObserver2;
+	vector <ResponseContext*>OutputQueueHandler;
+	vector <ResponseContext*>OutputQueueHandler2;
 
-
+	ResponseContext* TempPointer_IEventBuffer;  /*Serves as a placeholder*/
+	int MAX_IEDS = 1;
 	IEDS.reserve(10);
 
 	int i;
-	for (i = 0; i < 5; i++) {
+	for (i = 0; i < MAX_IEDS; i++) {
 		char name[64];
 			sprintf(name,"IED[%d]", i);
 	IEDS.push_back(new SlaveDemoApp(log.GetLogger(LOG_LEVEL, name),name));
@@ -185,8 +188,13 @@ int main(int argc, char* argv[])
 	char slave[64];
 	sprintf(slave, "slave%d", i);
 
-	pDataObserver2.push_back(mgr2[i]->AddSlave(tcp_B, slave, LOG_LEVEL, IEDS[i]->GetCmdAcceptor(), *stackConfig2[i]));
-	pDataObserver.push_back(mgr[i]->AddSlave(tcp_A, slave, LOG_LEVEL, IEDS[i]->GetCmdAcceptor(), *stackConfig[i])) ;
+	
+	OutputQueueHandler2.push_back(TempPointer_IEventBuffer);
+	OutputQueueHandler.push_back(TempPointer_IEventBuffer);
+
+
+	pDataObserver2.push_back(mgr2[i]->AddSlaveI(tcp_B, slave, LOG_LEVEL, IEDS[i]->GetCmdAcceptor(), *stackConfig2[i], OutputQueueHandler2[i]));
+	pDataObserver.push_back(mgr[i]->AddSlaveI(tcp_A, slave, LOG_LEVEL, IEDS[i]->GetCmdAcceptor(), *stackConfig[i], OutputQueueHandler[i])) ;
 
 
 //	IDataObserver* pDataObserver2 = mgr2[i]->AddSlave("tcpserver", "slave", LOG_LEVEL, IEDS[i]->GetCmdAcceptor(), *stackConfig2[i]);
@@ -195,8 +203,9 @@ int main(int argc, char* argv[])
 	// Tell the app where to write updates
 	IEDS[i]->SetDataObserver(pDataObserver2[i], 2);
 	IEDS[i]->SetDataObserver(pDataObserver[i], 1);
-
-
+	
+	IEDS[i]->SetOutputQueue(OutputQueueHandler2[i], 2);
+	IEDS[i]->SetOutputQueue(OutputQueueHandler[i], 1);
 
 	
 
@@ -206,10 +215,10 @@ int main(int argc, char* argv[])
 	signal(SIGABRT, &Terminate);
 	signal(SIGINT, &Terminate);
 	vector <std::thread*> th;
-	for (i = 0; i < 5; i++) {
+	for (i = 0; i < MAX_IEDS; i++) {
 		th.push_back(new thread(call_from_thread, IEDS[i], i));
 	}
-	for (i = 0; i < 5; i++) {
+	for (i = 0; i < MAX_IEDS; i++) {
 		th[i]->join();
 	}
 	/*std::thread t1(call_from_thread,IEDS[0],0);

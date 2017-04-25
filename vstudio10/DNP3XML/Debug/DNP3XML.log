@@ -1,5 +1,2 @@
 ﻿  XmlToConfig.cpp
-  XML_TestSet.cpp
-  XML_DNP3.cpp
-  Generating Code...
   DNP3XML.vcxproj -> D:\GitHub\dnp3\vstudio10\DNP3XML\Debug\DNP3XML.lib

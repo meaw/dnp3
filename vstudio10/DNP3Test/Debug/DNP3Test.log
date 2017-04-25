@@ -1,18 +1,49 @@
-﻿  IntegrationTest.cpp
+﻿  AppLayerTest.cpp
+  Generating Code...
+  Compiling...
+  IntegrationTest.cpp
   Generating Code...
   Compiling...
   VtoIntegrationTestBase.cpp
   TestVtoOnewayIntegration.cpp
   TestVtoLoopbackIntegration.cpp
-  TestStackManager.cpp
+  TestStartupTeardown.cpp
   TestSlave.cpp
-  TestMaster.cpp
   TestIntegration.cpp
   StartupTeardownTest.cpp
   SlaveTestObject.cpp
-  MasterTestObject.cpp
   Generating Code...
-TestStackManager.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+  Compiling...
+  TestStackManager.cpp
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  TransportTestObject.cpp
+  TransportStackPair.cpp
+  TransportScalabilityTestObject.cpp
+  TransportLoopbackTestObject.cpp
+  TransportIntegrationStack.cpp
+  TestVtoWriter.cpp
+  TestVtoRouterManager.cpp
+  TestVtoRouter.cpp
+  TestVtoInterface.cpp
+  TestTransportScalability.cpp
+  TestTransportLoopback.cpp
+  TestTransportLayer.cpp
+  TestSlaveEventBuffer.cpp
+  TestResponseLoader.cpp
+  TestMaster.cpp
+  TestLinkReceiver.cpp
+  TestLinkLayerRouter.cpp
+  TestLinkLayer.cpp
+  TestEnhancedVtoRouter.cpp
+  TestDatabase.cpp
+  TestAppLayer.cpp
+  ResponseLoaderTestObject.cpp
+  MockAppLayer.cpp
+  MasterTestObject.cpp
+  LinkLayerTest.cpp
+  LinkLayerRouterTest.cpp
+  ComparingDataObserver.cpp
   DNP3Test.vcxproj -> D:\GitHub\dnp3\vstudio10\DNP3Test\Debug\DNP3Test.exe
   DNP3Test.vcxproj -> DNP3Test\Debug\DNP3Test.pdb (Full PDB)
   D:\GitHub\dnp3\vstudio10\\..\windows\shared\boost_chrono-vc110-mt-gd-1_55.dll

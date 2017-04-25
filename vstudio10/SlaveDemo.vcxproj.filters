@@ -15,6 +15,9 @@
     <ClCompile Include="tmer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="InputQueue.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\demos\slave-cpp\SlaveDemo.h">

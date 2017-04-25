@@ -47,6 +47,11 @@ public:
 	        ITimerSource* apTimerSrc,
 	        ICommandAcceptor* apCmdAcceptor,
 	        const SlaveStackConfig& arCfg);
+	SlaveStack(
+		Logger* apLogger,
+		ITimerSource* apTimerSrc,
+		ICommandAcceptor* apCmdAcceptor,
+		const SlaveStackConfig& arCfg, ResponseContext* apEventBuffer);  //TEST DJSC
 
 	IVtoWriter* GetVtoWriter();
 

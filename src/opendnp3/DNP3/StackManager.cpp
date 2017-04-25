@@ -19,7 +19,7 @@
 
 #include <opendnp3/DNP3/AsyncStackManager.h>
 #include <opendnp3/APL/Log.h>
-
+#include <opendnp3/DNP3/ResponseContext.h> //DJSC TEST
 namespace apl
 {
 namespace dnp
@@ -68,6 +68,12 @@ IDataObserver* StackManager::AddSlave(const std::string& arPortName, const std::
 {
 	return mpImpl->AddSlave(arPortName, arStackName, aLevel, apCmdAcceptor, arCfg);
 }
+IDataObserver* StackManager::AddSlaveI(const std::string& arPortName, const std::string& arStackName, FilterLevel aLevel,
+	ICommandAcceptor* apCmdAcceptor, const SlaveStackConfig& arCfg, ResponseContext* apEventBuffer)  //DJSC TEST
+{
+	return mpImpl->AddSlaveI(arPortName, arStackName, aLevel, apCmdAcceptor, arCfg,  apEventBuffer);
+}
+
 
 void StackManager::Shutdown()
 {

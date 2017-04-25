@@ -92,7 +92,9 @@ public:
 	IEventBuffer* GetBuffer() {
 		return &mBuffer;
 	}
-
+	SlaveEventBuffer* GetBufferS() {
+		return &mBuffer;
+	}
 	// Setup the response context with a new read request
 	IINField Configure(const APDU& arRequest);
 

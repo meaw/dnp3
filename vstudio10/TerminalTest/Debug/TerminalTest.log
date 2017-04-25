@@ -1,4 +1,8 @@
-﻿  TerminalTest.vcxproj -> D:\GitHub\dnp3\vstudio10\TerminalTest\Debug\TerminalTest.exe
+﻿  TestPhysicalLayerSyncProxy.cpp
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  TestTerminal.cpp
+  TerminalTest.vcxproj -> D:\GitHub\dnp3\vstudio10\TerminalTest\Debug\TerminalTest.exe
   TerminalTest.vcxproj -> TerminalTest\Debug\TerminalTest.pdb (Full PDB)
   D:\GitHub\dnp3\vstudio10\\..\windows\shared\boost_chrono-vc110-mt-gd-1_55.dll
   D:\GitHub\dnp3\vstudio10\\..\windows\shared\boost_chrono-vc140-mt-gd-1_64.dll

@@ -33,6 +33,17 @@ SlaveStack::SlaveStack(Logger* apLogger, ITimerSource* apTimerSrc, ICommandAccep
 	mDB.Configure(arCfg.device);
 	mCmdMaster.Configure(arCfg.device, apCmdAcceptor);
 }
+//TEST DJSC
+SlaveStack::SlaveStack(Logger* apLogger, ITimerSource* apTimerSrc, ICommandAcceptor* apCmdAcceptor, const SlaveStackConfig& arCfg, ResponseContext* apEventBuffer) :
+	Stack(apLogger->GetSubLogger("slave"), apTimerSrc, arCfg.app, arCfg.link),
+	mDB(apLogger),
+	mCmdMaster(10000),
+	mSlave(apLogger, &mApplication, apTimerSrc, &mTimeSource, &mDB, &mCmdMaster, arCfg.slave, apEventBuffer)
+{
+	this->mApplication.SetUser(&mSlave);
+	mDB.Configure(arCfg.device);
+	mCmdMaster.Configure(arCfg.device, apCmdAcceptor);
+}
 
 IVtoWriter* SlaveStack::GetVtoWriter()
 {

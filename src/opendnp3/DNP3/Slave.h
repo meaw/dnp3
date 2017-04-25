@@ -85,6 +85,7 @@ class Slave : public Loggable, public IAppUser
 public:
 
 	Slave(Logger*, IAppLayer*, ITimerSource*, ITimeManager* apTime, Database*, IDNPCommandMaster*, const SlaveConfig& arCfg);
+	Slave(Logger*, IAppLayer*, ITimerSource*, ITimeManager* apTime, Database*, IDNPCommandMaster*, const SlaveConfig& arCfg, ResponseContext* apEventBuffer);//TEST DJSC
 	~Slave();
 
 	////////////////////////

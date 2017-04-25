@@ -121,8 +121,9 @@ size_t ChangeBuffer<LockType>::FlushUpdates(apl::IDataObserver* apObserver, bool
 {
 	Transaction tr(this);
 	size_t count = 0;
-	if(!this->HasChanges()) return count;
-
+	if (!this->HasChanges()) {
+		return count;
+	}
 	{
 		Transaction t(apObserver);
 		mMidFlush = true;	// Will clear on transaction end if an observer call blows up

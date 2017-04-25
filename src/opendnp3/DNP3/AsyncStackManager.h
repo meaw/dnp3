@@ -38,7 +38,7 @@
 #include "VtoDataInterface.h"
 #include "LinkRoute.h"
 #include "VtoRouterManager.h"
-
+#include <opendnp3/DNP3/ResponseContext.h>//DJSC TEST
 namespace apl
 {
 class IPhysicalLayerAsync;
@@ -140,6 +140,14 @@ public:
 	                        FilterLevel aLevel,
 	                        ICommandAcceptor* apCmdAcceptor,
 	                        const SlaveStackConfig&);
+	IDataObserver* AddSlaveI(const std::string& arPortName,
+		const std::string& arStackName,
+		FilterLevel aLevel,
+		ICommandAcceptor* apCmdAcceptor,
+		const SlaveStackConfig&,
+		ResponseContext* apEventBuffer);//DJSC TEST
+
+	
 
 	/**
 		Adds a VTO channel to a prexisting stack (master or slave).

@@ -1,11 +1,14 @@
-﻿  SlaveCommandAcceptorAdapter.cpp
+﻿  CommandAcceptorAdapter.cpp
+  Conversions.cpp
+  LogAdapter.cpp
+  MasterDataObserverAdapter.cpp
+  SlaveCommandAcceptorAdapter.cpp
+  SlaveDataObserverAdapter.cpp
   StackManager.cpp
   Generating Code...
-  .NETFramework,Version=v4.5.AssemblyAttributes.cpp
 APL.lib(CommandManager.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:LBR' specification
 StackManager.obj : warning LNK4248: unresolved typeref token (01000027) for 'apl.IPhysicalLayerObserver'; image may not run
   DotNetAdapter.vcxproj -> D:\GitHub\dnp3\windows\DotNetAdapter\DotNetAdapter\Debug\DotNetAdapter.dll
   DotNetAdapter.vcxproj -> DotNetAdapter\Debug\DotNetAdapter.pdb (Full PDB)
   D:\GitHub\dnp3\windows\DotNetAdapter\DotNetAdapter\Debug\DotNetAdapter.dll
-  D:\GitHub\dnp3\windows\DotNetAdapter\DotNetAdapter\Debug\DotNetInterface.dll
-  2 File(s) copied
+  1 File(s) copied

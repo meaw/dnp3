@@ -1,8 +1,15 @@
-﻿  TestCommandQueue.cpp
+﻿  AsyncPhysBaseTest.cpp
   Generating Code...
-  Compiling...
-  TestCommandTypes.cpp
-  Generating Code...
+  Skipping... (no relevant changes detected)
+  TestXmlBinding.cpp
+  TestThreading.cpp
+  TestPhysicalLayerMonitor.cpp
+  TestPhysicalLayerLoopback.cpp
+  TestPhysicalLayerAsyncTCP.cpp
+  TestPhysicalLayerAsyncSerial.cpp
+  TestPhysicalLayerAsyncBase.cpp
+  TestLog.cpp
+  AsyncSerialTestObject.cpp
 TestPhysicalLayerAsyncBase.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
   TestAPL.vcxproj -> D:\GitHub\dnp3\vstudio10\APLTest\Debug\APLTest.exe
   TestAPL.vcxproj -> APLTest\Debug\DNPTest.pdb (Full PDB)

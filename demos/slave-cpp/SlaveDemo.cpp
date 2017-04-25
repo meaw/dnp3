@@ -42,11 +42,34 @@ SlaveDemoBase::SlaveDemoBase(Logger* apLogger) :
 
 
 }
+unsigned int Qcounter;
+uint64_t Qticker;
+uint64_t tid;
 void SlaveDemoApp::Timer(int offset) {
-
-	auto tid = t.create(5000, 1000, std::bind(&SlaveDemoApp::Tick, this));
+	InputQueue = new SafeQueue<CommandsQueue>();
+	InputQueue->SetSize(10);
+	Qticker=t.create(5000, InputQueue->Interval, std::bind(&SlaveDemoApp::QTick, this));  /*Queue runs every 10 ms*/
+    tid = t.create(5000, 1000, std::bind(&SlaveDemoApp::Tick, this));
 	counter = offset;
+	Qcounter = 0;
 }
+
+void SlaveDemoApp::QTick() {  /*Handles incoming queue items*/
+	Qcounter++;
+	if (InputQueue->Size() > 0) {
+		CommandsQueue command=InputQueue->Dequeue();
+		if (command.type == 1) { //Setpoint
+			command.type = 2;
+			//do something
+		}
+	}
+
+	if (Qcounter % InputQueue->Period == 0) {
+		cout << name << " Qcounter " << Qcounter / 100 << " R:" << InputQueue->Received << " L:" << InputQueue->Lost << endl;
+		InputQueue->Reset();
+	}
+}
+
 
 void SlaveDemoApp::Tick() {
 	counter++;
@@ -59,6 +82,9 @@ void SlaveDemoApp::Tick() {
 	c.SetToNow();
 	// We would like all updates to be sent at one time.When the Transaction object
 	// goes out of scope, all updates will be sent in one block to do the slave database.
+
+	//mpQueue1
+
 	Transaction t1(mpObserver1);
 	mpObserver1->Update(a, 0);
 	mpObserver1->Update(c, 0);
@@ -90,7 +116,7 @@ void SlaveDemoBase::OnCommandNotify()
 	SlaveDemoBase(apLogger),
 	mCountSetPoints(0),
 	mCountBinaryOutput(0),
-	mpObserver1(NULL), mpObserver2(NULL) {
+	mpObserver1(NULL), mpObserver2(NULL){//, InputQueue(){
 	 sprintf(name, "%s",sname);
 	// Timer fires every second, starting now    
 //	
@@ -108,65 +134,45 @@ if (instance == 2) {
 }
 }
 
+void SlaveDemoApp::SetOutputQueue(ResponseContext* apQueue, int instance)  //TEST DJSC
+{
+	if (instance == 1) {
+		mpQueue1 = apQueue;
+	}
+	if (instance == 2) {
+		mpQueue2 = apQueue;
+	}
+}
+
+
 CommandStatus SlaveDemoApp::HandleControl(Setpoint& aControl, size_t aIndex)
 {
-	LOG_BLOCK(LEV_APP, "Received " << aControl.ToString() << " on index: " << aIndex);
-
-
-	/*
-	// Update a  feedback point that has the same value as the setpoint we were
-	// given from the master. Configure it with the current time and good quality
-	Analog a(aControl.GetValue(), AQ_ONLINE);
-	a.SetToNow();
-
-	// Create an additional counter to let the master know how many setpoints
-	// we've receieved
-	Counter c(++mCountSetPoints, CQ_ONLINE);
-	c.SetToNow();
-
-
-	Binary b((mCountSetPoints & 00001), BQ_ONLINE);
-	b.SetToNow();
-
-	// We would like all updates to be sent at one time.When the Transaction object
-	// goes out of scope, all updates will be sent in one block to do the slave database.
-	Transaction t(mpObserver);
-
-	// Push the prepared datapoints to the database of this slave. The slave
-	// can now transmit the changes to the master (polling or unsol)
-	mpObserver->Update(a, aIndex);
-	mpObserver->Update(c, 1);
-	mpObserver->Update(b, 0);
-	*/
-
-	// This is the control code returned to the slave stack, and forwared
-	// on to the master. These are DNP3 control codes.
-	int xv = aControl.GetValue();
-	if (xv % 100 == 0) {
-		return  CS_TIMEOUT;
-	}else{
-	
-	return CS_SUCCESS;}
+	//LOG_BLOCK(LEV_APP, "Received " << aControl.ToString() << " on index: " << aIndex);
+	CommandsQueue temp(CommandTypes::CT_SETPOINT, aControl.GetValue(),aIndex);
+	int result=InputQueue->Enqueue(temp);
+	if (result == 1) {
+		return CS_SUCCESS;
+	} 
+	else {
+		return CS_TIMEOUT;
+	}	
 }
 
 // same as for the setpoint
 CommandStatus SlaveDemoApp::HandleControl(BinaryOutput& aControl, size_t aIndex)
 {
-	LOG_BLOCK(LEV_APP, "Received " << aControl.ToString() << " on index: " << aIndex);
 	
-	// set the binary to ON if the command  code was LATCH_ON, otherwise set it off (LATCH_OFF)
-	apl::Binary b(aControl.GetCode() == CC_LATCH_ON, BQ_ONLINE);
-	b.SetToNow();
-    /*
-	// count how many BinaryOutput commands we recieve
-	apl::Counter c(++mCountBinaryOutput, CQ_ONLINE);
-	c.SetToNow();
-
-	Transaction t(mpObserver);
-	mpObserver->Update(b, aIndex);
-	mpObserver->Update(c, 2);
-	*/
+	CommandsQueue temp(CommandTypes::CT_BINARY_OUTPUT, aControl.GetCode(), aIndex);
+	int result = InputQueue->Enqueue(temp);
+	if (result == 1) {
+		return CS_SUCCESS;
+	}
+	else {
+		return CS_TIMEOUT;
+	}
+	/*
 	return CS_SUCCESS;
+	*/
 }
 
 }

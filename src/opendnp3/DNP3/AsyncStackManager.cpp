@@ -129,6 +129,29 @@ ICommandAcceptor* AsyncStackManager::AddMaster( const std::string& arPortName, c
 	return pMaster->mMaster.GetCmdAcceptor();
 }
 
+
+IDataObserver* AsyncStackManager::AddSlaveI(const std::string& arPortName, const std::string& arStackName, FilterLevel aLevel, ICommandAcceptor* apCmdAcceptor,
+	const SlaveStackConfig& arCfg,
+	ResponseContext* apEventBuffer)
+{
+	this->ThrowIfAlreadyShutdown();
+	LinkChannel* pChannel = this->GetOrCreateChannel(arPortName);
+	Logger* pLogger = mpLogger->GetSubLogger(arStackName, aLevel);
+	pLogger->SetVarName(arStackName);
+
+	SlaveStack* pSlave = new SlaveStack(pLogger, &mTimerSrc, apCmdAcceptor, arCfg, apEventBuffer);
+
+	LinkRoute route(arCfg.link.RemoteAddr, arCfg.link.LocalAddr);
+	this->AddStackToChannel(arStackName, pSlave, pChannel, route);
+
+	// add any vto routers we've configured
+	BOOST_FOREACH(VtoRouterConfig s, arCfg.vto.mRouterConfigs) {
+		this->StartVtoRouter(s.mPhysicalLayerName, arStackName, s.mSettings);
+	}
+
+	return pSlave->mSlave.GetDataObserver();
+}  //DJSC TEST
+
 IDataObserver* AsyncStackManager::AddSlave( const std::string& arPortName, const std::string& arStackName, FilterLevel aLevel, ICommandAcceptor* apCmdAcceptor,
                 const SlaveStackConfig& arCfg)
 {

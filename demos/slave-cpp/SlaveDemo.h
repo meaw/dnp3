@@ -34,6 +34,7 @@
 #include <opendnp3/DNP3/SlaveStackConfig.h>
 #include <opendnp3/DNP3/AsyncStackManager.h>
 #include "Tmer.h"
+#include "InputQueue.h"
 namespace apl
 {
 namespace dnp
@@ -83,10 +84,13 @@ private:
 class SlaveDemoApp : public SlaveDemoBase
 {
 public:
+	SafeQueue<CommandsQueue> *InputQueue;
 	char name[64] = "";
 	SlaveDemoApp(Logger* apLogger,char sname[]);
 	void SetDataObserver(IDataObserver* apObserver,int instance);
+	void SetOutputQueue(ResponseContext* apQueue, int instance);
 	void Tick();
+	void QTick();  /*Handles incoming queue*/
 	void Timer(int offset);
 	int counter;
 	Tmer t;
@@ -105,6 +109,9 @@ public:
 private:
 	int mCountSetPoints;    // count how many setpoints we recieve to demonstrate counters
 	int mCountBinaryOutput; // count how many binary controls we recieve to demonstrate counters
+
+	ResponseContext* mpQueue1;  // The data sink for updating the Master database.
+	ResponseContext* mpQueue2;  // The data sink for updating the Master database.
 
 	IDataObserver* mpObserver1;  // The data sink for updating the slave database.
 	IDataObserver* mpObserver2;  // The data sink for updating the slave database.

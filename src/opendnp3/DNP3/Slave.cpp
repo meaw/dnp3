@@ -33,8 +33,77 @@
 namespace apl
 {
 namespace dnp
-{
+{//TEST DJSC
+	Slave::Slave(Logger* apLogger, IAppLayer* apAppLayer, ITimerSource* apTimerSrc, ITimeManager* apTime, Database* apDatabase, IDNPCommandMaster* apCmdMaster, const SlaveConfig& arCfg, ResponseContext* apEventBuffer) :
+		Loggable(apLogger),
+		mpAppLayer(apAppLayer),
+		mpTimerSrc(apTimerSrc),
+		mpDatabase(apDatabase),
+		mpCmdMaster(apCmdMaster),
+		mpState(AS_Closed::Inst()),
+		mConfig(arCfg),
+		mRspTypes(arCfg),
+		mpUnsolTimer(NULL),
+		mResponse(arCfg.mMaxFragSize),
+		mUnsol(arCfg.mMaxFragSize),
+		mRspContext(apLogger, apDatabase, &mRspTypes, arCfg.mEventMaxConfig),
+		mHaveLastRequest(false),
+		mLastRequest(arCfg.mMaxFragSize),
+		mpTime(apTime),
+		mCommsStatus(apLogger, "comms_status"),
+		mDeferredUpdate(false),
+		mDeferredRequest(false),
+		mDeferredUnsol(false),
+		mDeferredUnknown(false),
+		mStartupNullUnsol(false),
+		mpObserver(arCfg.mpObserver),
+		mState(SS_UNKNOWN),
+		mpTimeTimer(NULL),
+		mVtoReader(apLogger),
+		mVtoWriter(apLogger->GetSubLogger("VtoWriter"), arCfg.mVtoWriterQueueSize)
+	{
+		/* Link the event buffer to the database */
+		//apEventBuffer =new ResponseContext(apLogger, apDatabase, &mRspTypes, arCfg.mEventMaxConfig);
 
+		//
+		apEventBuffer = &mRspContext;
+		//mpDatabase->SetEventBuffer(mRspContext.GetBuffer());
+		mpDatabase->SetEventBuffer(apEventBuffer->GetBuffer());
+
+		mIIN.SetDeviceRestart(true);	/* Always set on restart */
+
+										/* Use the cmd master to send and rsp queue to wait for reply */
+		mpCmdMaster->SetResponseObserver(&mRspQueue);
+
+		/*
+		* Incoming data will trigger a POST on the timer source to call
+		* Slave::OnDataUpdate().
+		*/
+		mChangeBuffer.AddObserver(
+			mNotifierSource.Get(
+				boost::bind(&Slave::OnDataUpdate, this),
+				mpTimerSrc
+			)
+		);
+
+		/*
+		* Incoming vto data will trigger a POST on the timer source to call
+		* Slave::OnVtoUpdate().
+		*/
+		mVtoWriter.AddObserver(
+			mNotifierSource.Get(
+				boost::bind(&Slave::OnVtoUpdate, this),
+				mpTimerSrc
+			)
+		);
+
+		/* Cause the slave to go through the null-unsol startup sequence */
+		if (!mConfig.mDisableUnsol) {
+			mDeferredUnsol = true;
+		}
+
+		this->UpdateState(SS_COMMS_DOWN);
+	}
 Slave::Slave(Logger* apLogger, IAppLayer* apAppLayer, ITimerSource* apTimerSrc, ITimeManager* apTime, Database* apDatabase, IDNPCommandMaster* apCmdMaster, const SlaveConfig& arCfg) :
 	Loggable(apLogger),
 	mpAppLayer(apAppLayer),

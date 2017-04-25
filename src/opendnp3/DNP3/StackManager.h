@@ -30,6 +30,7 @@
 
 #include <vector>
 
+#include <opendnp3/DNP3/ResponseContext.h>  //DJSC TEST
 namespace apl
 {
 class EventLog;
@@ -80,7 +81,12 @@ public:
 	                        FilterLevel aLevel,
 	                        ICommandAcceptor* apCmdAcceptor,
 	                        const SlaveStackConfig& arCfg);
-
+	IDataObserver* AddSlaveI(const std::string& arPortName,
+		const std::string& arStackName,
+		FilterLevel aLevel,
+		ICommandAcceptor* apCmdAcceptor,
+		const SlaveStackConfig& arCfg, 
+		ResponseContext* apEventBuffer);  //DJSC TEST
 	void AddVtoChannel(const std::string& arStackName,
 	                   IVtoCallbacks* apOnDataCallback);
 
